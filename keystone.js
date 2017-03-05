@@ -18,7 +18,7 @@ keystone.init({
 	'user model': 'User',
 	'cookie secret': process.env.COOKIE_SECRET || '',
 
-	'mongo': process.env.MONGO_URI || ""
+	'mongo': process.env.MONGODB_URI || ""
 
 });
 
