@@ -44,7 +44,7 @@ function sendSaveTheDate(attendees, req, done){
         pass: process.env.GMAIL_PASSWORD || ''
     }
   };
-  var mailer = new Email('savethedate.jade', {
+  var mailer = new Email('savethedate.pug', {
     transport: 'nodemailer',
     root: 'emails',
   });
