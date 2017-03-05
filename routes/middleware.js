@@ -16,10 +16,11 @@ exports.trackAttendeePageView = function(req, res, next) {
     Attendee.model.findById(req.params.id).exec(function(err, attendee) {
       if (err) return res.apiError('database error', err);
       if (attendee) {
-        data = { pagevisits: attendee.pagevisits + 1 }
-        attendee.getUpdateHandler(req).process(data);
-        res.cookie('attendeeId', attendee._id.toHexString())
-        res.redirect(302, '/');
+        attendee.pagevisits++;
+        attendee.save(function() {
+          res.cookie('attendeeId', attendee._id.toHexString())
+          res.redirect(302, '/');
+        });
         return
       } else {
         res.cookie('attendeeId', null)

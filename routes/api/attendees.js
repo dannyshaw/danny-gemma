@@ -57,20 +57,24 @@ function sendSaveTheDate(attendees, req, done){
           email: attendee.email,
           name: `${attendee.name.first} ${attendee.name.last}`,
         },
+        subject: 'Save The Date!',
         nodemailerConfig: nodemailerTransport,
       };
 
       const attendeeId = attendee._id.toHexString();
+      const baseUrl = process.env.BASE_URL;
 
       mailer.send({
         name: attendee.name,
-        webUrl: process.env.BASE_URL,
-        personalisedUrl: `${process.env.BASE_URL}/t/${attendeeId}`,
-        openTracker: `${process.env.BASE_URL}/api/attendees/${attendeeId}/open.gif`,
+        webUrl: baseUrl,
+        personalisedUrl: `${baseUrl}/t/${attendeeId}`,
+        openTracker: `${baseUrl}/api/attendees/${attendeeId}/open.gif`,
       }, options, (err) => {
         if (!err) {
-          attendee.getUpdateHandler(req).process({ savethedatesent: true })
-          callback(null, `Email sent to ${attendee.email}`);
+          attendee.savethedatesent = true
+          attendee.save(function (err) {
+            callback(null, `Email sent to ${attendee.email}`);
+          })
         } else {
           callback(err);
         }
@@ -108,8 +112,12 @@ exports.trackSaveTheDateOpened = function(req, res) {
 
   Attendee.model.findById(req.params.id).exec(function(err, attendee) {
     if (attendee) {
-      attendee.getUpdateHandler(req).process({ savethedateopened: attendee.savethedateopened + 1 });
+      attendee.savethedateopens++;
+      attendee.save(function(err) {
+        res.send(buf, { 'Content-Type': 'image/gif' }, 200);
+      })
+    } else {
+      res.send(buf, { 'Content-Type': 'image/gif' }, 200);
     }
-    res.send(buf, { 'Content-Type': 'image/gif' }, 200);
   });
 }
