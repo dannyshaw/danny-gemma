@@ -1,9 +1,6 @@
 var keystone = require('keystone');
-var Email = require('keystone-email');
-var async = require('async');
-
 var Attendee = keystone.list('Attendee');
-
+var sendSaveTheDate = require('../../emails/lib/sendSaveTheDate');
 /**
  * List Attendees
  */
@@ -35,66 +32,12 @@ exports.get = function(req, res) {
 }
 
 
-function sendSaveTheDate(attendees, req, done){
-
-  var nodemailerTransport = {
-    service: 'gmail',
-    auth: {
-        user: process.env.GMAIL_USERNAME || '',
-        pass: process.env.GMAIL_PASSWORD || ''
-    }
-  };
-  var mailer = new Email('savethedate.pug', {
-    transport: 'nodemailer',
-    root: 'emails',
-  });
-
-  async.series(attendees.map(attendee => callback => {
-    if (!attendee.savethedatesent) {
-      var options = {
-        from: process.env.FROM_ADDRESS || "test@example.com",
-        to: {
-          email: attendee.email,
-          name: `${attendee.name.first} ${attendee.name.last}`,
-        },
-        subject: 'Save The Date!',
-        nodemailerConfig: nodemailerTransport,
-      };
-
-      const attendeeId = attendee._id.toHexString();
-      const baseUrl = process.env.BASE_URL;
-
-      mailer.send({
-        name: attendee.name,
-        webUrl: baseUrl,
-        personalisedUrl: `${baseUrl}/t/${attendeeId}`,
-        openTracker: `${baseUrl}/api/attendees/${attendeeId}/open.gif`,
-      }, options, (err) => {
-        if (!err) {
-          attendee.savethedatesent = true
-          attendee.save(function (err) {
-            callback(null, `Email sent to ${attendee.email}`);
-          })
-        } else {
-          callback(err);
-        }
-      });
-    }
-    else {
-      callback(null, `Already sent to ${attendee.email}`);
-    }
-  }), function(err, res) {
-    done(err, res)
-  });
-}
-
 exports.sendSaveTheDate = function(req, res) {
   Attendee.model
     .find()
     .where('email', process.env.TEST_EMAIL || '') //TODO remove
     .exec(function(err, attendees) {
-
-      sendSaveTheDate(attendees, req, function (errors, results) {
+      sendSaveTheDate(attendees, function (errors, results) {
         res.apiResponse({
           err: errors,
           results: results,

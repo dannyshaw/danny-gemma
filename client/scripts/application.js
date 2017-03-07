@@ -7,8 +7,8 @@ import Request from 'superagent';
 const Note = () => {
   return (
     <div className="note opaque">
-      Location: 1hr West of Melbourne <br/>
-      Accomodation options availble, stay tuned.
+      Location: 1hr West of Melbourne<br/>
+      Accommodation options available, stay tuned
     </div>
   );
 };
