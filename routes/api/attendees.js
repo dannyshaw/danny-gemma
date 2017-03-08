@@ -34,8 +34,17 @@ exports.get = function(req, res) {
 
 exports.sendSaveTheDate = function(req, res) {
   Attendee.model
-    .find()
-    .where('email', process.env.TEST_EMAIL || '') //TODO remove
+    .find(
+      {
+        email: {
+          $in: [
+            'technix@gmail.com',
+            'gemma.neylon.84@gmail.com',
+          ]
+        }
+      }
+    )
+    // .where('email', process.env.TEST_EMAIL || '') //TODO remove
     .exec(function(err, attendees) {
       sendSaveTheDate(attendees, function (errors, results) {
         res.apiResponse({
