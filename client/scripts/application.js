@@ -35,7 +35,18 @@ const Footer = ({ attendee, rsvpEmail }) => {
 
   return (
     <div className="panel footer">
-      <a className="mail" href={`mailto:${rsvpEmail}`}>
+      <a
+        className="mail"
+        href={`mailto:${rsvpEmail}`}
+        onClick={e => {
+          window.ga('send', {
+            hitType: 'event',
+            eventCategory: 'Email',
+            eventAction: 'email button clicked',
+            eventLabel: 'Save the date'
+          });
+        }}
+      >
         <MailIcon />
       </a>
       <p className="text">{string}</p>
