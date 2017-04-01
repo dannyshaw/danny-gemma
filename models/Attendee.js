@@ -13,11 +13,6 @@ Attendee.add({
   savethedatesent: { type: Boolean, label: 'Save The Date Sent' },
   savethedateopens: { type: Types.Number, label: 'Save The Date Opens', default: 0 },
   pagevisits: { type: Types.Number, label: 'Page Visits', default: 0 },
-  // dietaryPreferences: { type: Types.Select, numeric: true, options: [
-  //   { value: 'vegetarian', label: 'Vegetarian' },
-  //   { value: 'vegan', label: 'Vegan' },
-  //   { value: 'glutenfree', label: 'Gluten Free' }
-  // ]},
   createdAt: { type: Date, default: Date.now, noedit: true }
 });
 
