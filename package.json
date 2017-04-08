@@ -7,22 +7,26 @@
     "babel-core": "^6.23.1",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
     "babelify": "^7.3.0",
     "browserify-middleware": "^7.1.0",
     "dotenv": "^4.0.0",
     "js-cookie": "^2.1.3",
     "keystone": "^4.0.0-beta.5",
     "keystone-email": "github:dannyshaw/keystone-email",
+    "local-storage": "^1.4.2",
     "model-transform": "^1.1.0",
     "nodemailer": "^3.1.4",
     "pug": "^2.0.0-beta11",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^4.0.0-beta.6",
-    "react-router-dom": "^4.0.0-beta.6",
+    "react-router-dom": "^4.0.0",
     "react-swipe": "^5.0.6",
     "react-swipeable-views": "^0.11.0",
     "request": "^2.60.0",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.67.2",
     "store-prototype": "^1.1.1",
     "superagent": "^3.5.0",
     "underscore": "^1.8.3"
@@ -35,5 +39,8 @@
     "start": "node keystone.js",
     "resetdb": "mongo danny-gemma --eval 'db.dropDatabase()'"
   },
-  "main": "keystone.js"
+  "main": "keystone.js",
+  "devDependencies": {
+    "react-router": "^4.0.0"
+  }
 }

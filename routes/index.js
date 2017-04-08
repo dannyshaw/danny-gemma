@@ -18,7 +18,7 @@ exports = module.exports = function(app) {
   app.use('/js', browserify('./client/scripts', {
     transform: [
       babelify.configure({
-        presets: ["es2015", "react"]
+        presets: ["es2015", "react", 'stage-0']
       })
     ]
   }));
@@ -29,6 +29,7 @@ exports = module.exports = function(app) {
   app.get('/api/attendees/:id/open.gif', routes.api.attendees.trackSaveTheDateOpened);
   app.get('/api/attendees/:id', keystone.middleware.api, routes.api.attendees.get);
 
+  app.post('/api/invitation/:code', keystone.middleware.api, routes.api.invitation.update);
   app.get('/api/invitation/:code', keystone.middleware.api, routes.api.invitation.get);
 
   // Index and

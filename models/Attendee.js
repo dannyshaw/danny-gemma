@@ -13,10 +13,17 @@ Attendee.add({
   savethedatesent: { type: Boolean, label: 'Save The Date Sent' },
   savethedateopens: { type: Types.Number, label: 'Save The Date Opens', default: 0 },
   pagevisits: { type: Types.Number, label: 'Page Visits', default: 0 },
+  dietaryprefs: { type: Types.Select, options: [
+    { value: 'whatever', label: 'Whatever' },
+    { value: 'vegan', label: 'Vegan' },
+    { value: 'glutenfree', label: 'Gluten Free' },
+    { value: 'other', label: 'Other' }
+  ]},
+  dietaryother: { type: String },
   createdAt: { type: Date, default: Date.now, noedit: true }
 });
 
 transform.toJSON(Attendee);
 
-Attendee.defaultColumns = 'name, email, savethedatesent, savethedateopens, pagevisits';
+Attendee.defaultColumns = 'name, email, savethedatesent, dietaryprefs';
 Attendee.register();
