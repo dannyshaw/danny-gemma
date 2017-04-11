@@ -4,24 +4,68 @@
 		"selected_items":
 		[
 			[
-				"L",
-				"Link"
+				"Accom",
+				"AccommodationGrid"
+			],
+			[
+				"A",
+				"AccommodationGrid"
+			],
+			[
+				"Your",
+				"YourDetails"
+			],
+			[
+				"You",
+				"YourDetails"
+			],
+			[
+				"redir",
+				"redirectToStep"
+			],
+			[
+				"atten",
+				"attendees"
+			],
+			[
+				"Att",
+				"AttendeeRecord"
+			],
+			[
+				"rsv",
+				"rsvpStep"
+			],
+			[
+				"image",
+				"imageSrc"
 			],
 			[
 				"inv",
 				"invitation"
 			],
 			[
-				"invi",
-				"inviteCode"
+				"a",
+				"Accommodation"
+			],
+			[
+				"rene",
+				"renderLoginForm"
+			],
+			[
+				"Login",
+				"LoginForm"
 			],
 			[
 				"att",
-				"attendee"
+				"attendees"
 			],
 			[
-				"atten",
-				"attendee"
+				"invi",
+				"invitation"
+			],
+			[
+				"L",
+				"Link"
 			],
 			[
 				"update",
@@ -470,50 +514,6 @@
 			[
 				"dif",
 				"difficultyIndicator"
-			],
-			[
-				"grokked",
-				"grokkedOverride"
-			],
-			[
-				"not",
-				"notGrokOverride"
-			],
-			[
-				"grok",
-				"grokOverride"
-			],
-			[
-				"Exa",
-				"ExamGridResultSquare"
-			],
-			[
-				"but",
-				"buttonStyles"
-			],
-			[
-				"show",
-				"showVCAA"
-			],
-			[
-				"Exam",
-				"ExamGrid"
-			],
-			[
-				"sitt",
-				"sittingData"
-			],
-			[
-				"tot",
-				"totalMarksObtained"
-			],
-			[
-				"sub",
-				"submittedSittings"
-			],
-			[
-				"resp",
-				"responseCount"
 			]
 		]
 	},
@@ -555,16 +555,6 @@
 			}
 		},
 		{
-			"contents": "Searching 949 files for \"new UpdateHandler\"\n\n/home/danny/dev/repos/danny-gemma/node_modules/keystone/lib/list/register.js:\n   50: \t\treturn new UpdateHandler(list, this, req, res, ops);\n\n1 match in 1 file\n",
-			"settings":
-			{
-				"buffer_size": 204,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
 			"file": "node_modules/keystone/lib/list/register.js",
 			"settings":
 			{
@@ -594,7 +584,7 @@
 			"file": "client/scripts/application.js",
 			"settings":
 			{
-				"buffer_size": 316,
+				"buffer_size": 242,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -626,25 +616,69 @@
 			}
 		},
 		{
+			"file": "public/styles/site.less",
+			"settings":
+			{
+				"buffer_size": 2554,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "client/scripts/components/Header.js",
 			"settings":
 			{
-				"buffer_size": 1191,
+				"buffer_size": 2435,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/App.js",
+			"contents": "\nSearching 297 files for \"center\" (case sensitive)\n\n/home/danny/dev/repos/danny-gemma/client/scripts/components/pages/Accommodation.js:\n   11:   <Card centered>\n   42: \t\t\t\t <Header as='h2' icon textAlign='center'>\n   48: \t\t\t\t<Card.Group center>\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.less:\n   30:   background-position: left center;\n   48:   align-items: center;\n   49:   justify-content: center;\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.min.css:\n    1: html,body,#app{height:100%}div,body,#app{margin:0;padding:0}#app{background-color:#fff}.background{direction:rtl;background-image:url(/images/savethedate.jpg);background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#fff;background-position:left center;height:100%;width:100%;position:absolute}.wrapper{direction:ltr}.panel{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;height:75px;display:flex;align-items:center;justify-content:center;position:fixed;background-color:rgba(255,255,255,0.75);color:#303030}.header{top:0;justify-content:flex-start}.footer{bottom:0;justify-content:flex-end}.content{color:#fff;position:absolute;width:100vw;height:calc(100% - 150px);margin:75px 0;display:flex;flex-direction:column-reverse}.opaque{background-color:rgba(0,0,0,0.5)}.envelope{fill:#303030}.mail{width:20px;margin:auto;margin-left:20px;align-self:flex-start}.text{font-family:'Brusher';font-size:50px;font-weight:100;padding:10px 20px}.note{font-family:Arial,\"Helvetica Neue\",Helvetica,sans-serif;font-size:18px;font-style:'light';letter-spacing:2px;font-weight:100;padding:20px;margin-left:auto}@media (max-width:769px){.panel{height:50px}.background{background-position:13% 0}.text{font-size:22px;padding:5px}.mail{margin-left:5px}.note{font-size:11px;padding:5px;letter-spacing:1px}.content{height:calc(100% - 100px);margin:50px 0}}@font-face{font-family:'Brusher';src:local('Brusher'),url('/fonts/Brusher-Regular.otf') format('opentype')}@font-face{font-family:'AmaticSC';src:local('AmaticSC'),url('/fonts/AmaticSC-Regular.ttf') format('truetype')}@font-face{font-family:'MawnsHandwriting';src:local('MawnsHandwriting'),url('/fonts/Mawns_Handwriting.ttf') format('truetype')}\n\n9 matches across 3 files\n",
 			"settings":
 			{
-				"buffer_size": 2412,
+				"buffer_size": 2266,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "client/scripts/Invitation.js",
+			"settings":
+			{
+				"buffer_size": 433,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/pages/Home.js",
+			"contents": "{\n  \"invitation\": {\n    \"_id\": \"58df48fb91cc0a19dd50386b\",\n    \"code\": \"ADHJS\",\n    \"__v\": 4,\n    \"accommodation\": \"glamping\",\n    \"createdAt\": \"2017-04-01T06:30:19.952Z\",\n    \"attending\": true,\n    \"attendees\": [\n      {\n        \"email\": \"technix@gmail.com\",\n        \"dietaryother\": \"ojnkjnw\",\n        \"dietaryprefs\": \"other\",\n        \"createdAt\": \"2017-03-05T04:39:43.059Z\",\n        \"pagevisits\": 1,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Shaw\",\n          \"first\": \"Danny\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf38648\"\n      },\n      {\n        \"email\": \"gemma.neylon.84@gmail.com\",\n        \"dietaryother\": \"ojnkjnw\",\n        \"dietaryprefs\": \"other\",\n        \"createdAt\": \"2017-03-05T04:39:43.061Z\",\n        \"pagevisits\": 0,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Neylon\",\n          \"first\": \"Gemma\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf38649\"\n      },\n      {\n        \"email\": \"michaelneylon@hotmail.co.uk\",\n        \"createdAt\": \"2017-03-05T04:39:43.063Z\",\n        \"pagevisits\": 0,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Neylon\",\n          \"first\": \"Mick\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf3864a\"\n      },\n      {\n        \"email\": \"alexneylon@hotmail.com\",\n        \"createdAt\": \"2017-03-05T04:39:43.066Z\",\n        \"pagevisits\": 0,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Neylon\",\n          \"first\": \"Alex\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf3864c\"\n      },\n      {\n        \"email\": \"claire_thorogood@hotmail.co.uk\",\n        \"createdAt\": \"2017-03-05T04:39:43.067Z\",\n        \"pagevisits\": 0,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Neylon\",\n          \"first\": \"Claire\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf3864d\"\n      }\n    ]\n  }\n}",
+			"settings":
+			{
+				"buffer_size": 1988,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/containers/App.js",
+			"settings":
+			{
+				"buffer_size": 3545,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/views/index.pug",
+			"settings":
+			{
+				"buffer_size": 1524,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/Home.js",
 			"settings":
 			{
 				"buffer_size": 99,
@@ -653,28 +687,64 @@
 			}
 		},
 		{
-			"file": "client/scripts/components/pages/Accommodation.js",
+			"file": "client/scripts/components/Accommodation.js",
 			"settings":
 			{
-				"buffer_size": 126,
+				"buffer_size": 520,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/pages/Rsvp.js",
+			"file": "client/scripts/components/AccommodationGrid.js",
 			"settings":
 			{
-				"buffer_size": 99,
+				"buffer_size": 3705,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/pages/Location.js",
+			"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
+			"settings":
+			{
+				"buffer_size": 335,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/rsvpsteps/Attending.js",
+			"settings":
+			{
+				"buffer_size": 1855,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/containers/Rsvp.js",
+			"settings":
+			{
+				"buffer_size": 3110,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/Location.js",
 			"settings":
 			{
 				"buffer_size": 110,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/Site.js",
+			"settings":
+			{
+				"buffer_size": 158,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -701,7 +771,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 1195,
+				"buffer_size": 1253,
 				"line_ending": "Unix"
 			}
 		},
@@ -731,9 +801,13 @@
 	"command_palette":
 	{
 		"height": 566.0,
-		"last_filter": "preser",
+		"last_filter": "json",
 		"selected_items":
 		[
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
 			[
 				"preser",
 				"MultiEditUtils: Preserve Case"
@@ -875,10 +949,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"json",
-				"Pretty JSON: Format (Pretty Print) JSON"
-			],
-			[
 				"set babel",
 				"Set Syntax: JavaScript (Babel)"
 			],
@@ -932,9 +1002,12 @@
 		"/home/danny/dev/repos/danny-gemma/client",
 		"/home/danny/dev/repos/danny-gemma/client/scripts",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/pages",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers",
 		"/home/danny/dev/repos/danny-gemma/emails",
 		"/home/danny/dev/repos/danny-gemma/models",
+		"/home/danny/dev/repos/danny-gemma/public",
+		"/home/danny/dev/repos/danny-gemma/public/styles",
 		"/home/danny/dev/repos/danny-gemma/routes",
 		"/home/danny/dev/repos/danny-gemma/routes/api",
 		"/home/danny/dev/repos/danny-gemma/templates",
@@ -1088,6 +1161,7 @@
 		"height": 317.0,
 		"where_history":
 		[
+			"/home/danny/dev/repos/danny-gemma",
 			"/home/danny/dev/repos/danny-gemma/node_modules/keystone/",
 			"/home/danny/dev/repos/danny-gemma",
 			"/home/danny/dev/repos/danny-gemma/node_modules/keystone/",
@@ -1214,15 +1288,45 @@
 			"/home/danny/dev/edrolo/tod/tod_project/tod_django/,-/home/danny/dev/edrolo/tod/tod_project/tod_django/react/src/**",
 			"/home/danny/dev/edrolo/tod/tod_project/tod_django/react/src",
 			"/home/danny/dev/edrolo/tod/tod_project/tod_django/,-/home/danny/dev/edrolo/tod/tod_project/tod_django/react/src/**",
-			"/home/danny/dev/edrolo/tod/tod_project/tod_django/react/src",
-			"/home/danny/dev/edrolo/tod/tod_project/tod_django/,-/home/danny/dev/edrolo/tod/tod_project/tod_django/react/src/**"
+			"/home/danny/dev/edrolo/tod/tod_project/tod_django/react/src"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			".submit",
+			"this.props.",
+			"Button",
+			"this.props.invitation",
+			"this.props.invitation.attendees.length",
+			"YourDetails",
+			"this.state.invitation",
+			",",
+			"label",
+			"selected={this.props.selected",
+			"pages",
+			"Accommodation",
+			"nextStep",
+			"details",
+			"\"",
+			"RsvpSteps",
+			"this.onChoose",
+			"Icon",
+			"center",
+			"<Menu.Item",
+			"MenuItem",
+			"Route",
+			"StepExampleGroups",
+			",",
+			"a",
+			"invitation",
+			"inputRef",
+			"debugger",
+			"code",
+			"LoginModal",
+			"Link",
 			"debugger",
 			"Show",
 			"show",
@@ -1319,38 +1423,7 @@
 			"extends.*layouts/default",
 			"extends.*layouts/mainheader",
 			"mainheader",
-			"mainheaer",
-			"extend.*default",
-			"default",
-			"donateheader",
-			"mainheader",
-			"keystone",
-			"Keystone",
-			"keystone",
-			"Keystone",
-			"keystone",
-			"open keystone",
-			"canAccessKeystone",
-			"open keystone",
-			"powered",
-			"jquery",
-			"event",
-			"list.*events",
-			"events",
-			"Category",
-			"WishListItem",
-			"console",
-			"board",
-			"intro",
-			"initMiddleware",
-			"domains",
-			"domain",
-			"well-known",
-			"gmail",
-			"AmaticSC",
-			"async",
-			"Email",
-			"req"
+			"mainheaer"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1496,7 +1569,7 @@
 	"groups":
 	[
 		{
-			"selected": 13,
+			"selected": 12,
 			"sheets":
 			[
 				{
@@ -1530,7 +1603,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
@@ -1565,7 +1638,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -1598,7 +1671,7 @@
 						"translation.y": 30691.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -1632,58 +1705,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 204,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										139,
-										156
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								139,
-								139
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/home/danny/dev/repos/danny-gemma",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "node_modules/keystone/lib/list/register.js",
 					"semi_transient": false,
 					"settings":
@@ -1713,11 +1739,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "routes/index.js",
 					"semi_transient": false,
 					"settings":
@@ -1747,11 +1773,11 @@
 						"translation.y": 61.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "routes/api/invitation.js",
 					"semi_transient": false,
 					"settings":
@@ -1782,24 +1808,24 @@
 						"translation.y": 231.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "client/scripts/application.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 316,
+						"buffer_size": 242,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								130,
-								130
+								123,
+								123
 							]
 						],
 						"settings":
@@ -1816,11 +1842,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "client/scripts/components/MailIcon.js",
 					"semi_transient": false,
 					"settings":
@@ -1851,11 +1877,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "client/scripts/components/Footer.js",
 					"semi_transient": false,
 					"settings":
@@ -1885,11 +1911,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "client/scripts/savethedate.js",
 					"semi_transient": false,
 					"settings":
@@ -1901,8 +1927,8 @@
 						"selection":
 						[
 							[
-								360,
-								360
+								1294,
+								1294
 							]
 						],
 						"settings":
@@ -1917,10 +1943,44 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 992.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "public/styles/site.less",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								391,
+								391
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -1929,15 +1989,129 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1191,
+						"buffer_size": 2435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								862,
-								862
+								1308,
+								1308
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1155.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2266,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										151,
+										157
+									],
+									[
+										205,
+										211
+									],
+									[
+										237,
+										243
+									],
+									[
+										340,
+										346
+									],
+									[
+										370,
+										376
+									],
+									[
+										404,
+										410
+									],
+									[
+										766,
+										772
+									],
+									[
+										971,
+										977
+									],
+									[
+										994,
+										1000
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/home/danny/dev/repos/danny-gemma",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "client/scripts/Invitation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
 							]
 						],
 						"settings":
@@ -1954,24 +2128,52 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
-					"file": "client/scripts/components/App.js",
+					"buffer": 15,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2412,
+						"buffer_size": 1988,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								885,
-								885
+								182,
+								182
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/home/danny/dev/repos/danny-gemma",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "client/scripts/containers/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3545,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2748,
+								2748
 							]
 						],
 						"settings":
@@ -1985,15 +2187,49 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 267.0,
+						"translation.y": 2937.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
-					"file": "client/scripts/components/pages/Home.js",
+					"buffer": 17,
+					"file": "templates/views/index.pug",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								643,
+								643
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "client/scripts/components/Home.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -2004,8 +2240,8 @@
 						"selection":
 						[
 							[
-								97,
-								97
+								93,
+								93
 							]
 						],
 						"settings":
@@ -2016,6 +2252,109 @@
 							"open_with_edit": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "client/scripts/components/Accommodation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								520,
+								520
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "client/scripts/components/AccommodationGrid.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3011,
+								3011
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2239.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
@@ -2026,20 +2365,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
-					"file": "client/scripts/components/pages/Accommodation.js",
+					"buffer": 22,
+					"file": "client/scripts/components/rsvpsteps/Attending.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 126,
+						"buffer_size": 1855,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								94,
-								94
+								528,
+								528
 							]
 						],
 						"settings":
@@ -2050,38 +2389,31 @@
 							"open_with_edit": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
-					"file": "client/scripts/components/pages/Rsvp.js",
+					"buffer": 23,
+					"file": "client/scripts/containers/Rsvp.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 99,
+						"buffer_size": 3110,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								38,
-								38
-							],
-							[
-								66,
-								66
-							],
-							[
-								97,
-								97
+								1213,
+								1213
 							]
 						],
 						"settings":
@@ -2092,18 +2424,19 @@
 							"open_with_edit": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 858.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
-					"file": "client/scripts/components/pages/Location.js",
+					"buffer": 24,
+					"file": "client/scripts/components/Location.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -2132,11 +2465,45 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 25,
+					"file": "client/scripts/components/Site.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 158,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
 					"file": "client/scripts/api.js",
 					"semi_transient": false,
 					"settings":
@@ -2148,12 +2515,8 @@
 						"selection":
 						[
 							[
-								210,
-								210
-							],
-							[
-								521,
-								521
+								61,
+								61
 							]
 						],
 						"settings":
@@ -2171,11 +2534,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 27,
 					"file": "client/scripts/components/Content.js",
 					"semi_transient": false,
 					"settings":
@@ -2205,16 +2568,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 28,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1195,
+						"buffer_size": 1253,
 						"regions":
 						{
 						},
@@ -2239,11 +2602,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 29,
 					"file": "/home/danny/dev/repos/our-school-liberia/models/Gallery.js",
 					"semi_transient": false,
 					"settings":
@@ -2273,11 +2636,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 30,
 					"file": "readme.md",
 					"semi_transient": false,
 					"settings":
@@ -2307,7 +2670,7 @@
 						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 29,
 					"type": "text"
 				}
 			]
@@ -2315,7 +2678,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 107.0
+		"height": 40.0
 	},
 	"input":
 	{
@@ -2373,6 +2736,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"api",
+				"danny-gemma/client/scripts/api.js"
+			],
+			[
+				"invit",
+				"danny-gemma/models/Invitation.js"
+			],
 			[
 				"pack",
 				"danny-gemma/package.json"
@@ -2646,10 +3017,6 @@
 				"react/src/core/api/Request.js"
 			],
 			[
-				"api",
-				"react/src/edrolo/api.js"
-			],
-			[
 				"reactapi",
 				"static/css/react-date-picker.css"
 			],
@@ -2880,10 +3247,6 @@
 			[
 				"courseex",
 				"react/src/edrolo/components/dashboard/CourseExamSelector/CourseExamSelector.jsx"
-			],
-			[
-				"topic",
-				"react/src/edrolo/components/dashboard/CourseExamSelector/TopicSelect.jsx"
 			]
 		],
 		"width": 0.0

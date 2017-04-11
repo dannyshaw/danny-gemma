@@ -8,14 +8,6 @@ import {
 } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import ls from 'local-storage';
-import Invitation from '../Invitation';
-import Content from './Content';
-import * as API from '../api';
-import Header from './Header';
-import Home from './pages/Home';
-import Location from './pages/Location';
-import Accommodation from './pages/Accommodation';
-import Rsvp from './pages/Rsvp';
 import {
   Container,
   Modal,
@@ -25,6 +17,19 @@ import {
   Label,
   Header as SemanticHeader
 } from 'semantic-ui-react';
+
+import Invitation from '../Invitation';
+import * as API from '../api';
+
+import Rsvp from './Rsvp';
+
+import Content from '../components/Content';
+import Header from '../components/Header';
+import Home from '../components/Home';
+import Location from '../components/Location';
+import Accommodation from '../components/Accommodation';
+import Site from '../components/Site';
+
 
 class App extends React.Component {
   constructor (props) {
@@ -37,6 +42,7 @@ class App extends React.Component {
       inviteCode: inviteCode,
       error: null,
       invitation,
+      rsvpStep: 0,
     };
   }
 
@@ -63,6 +69,10 @@ class App extends React.Component {
     });
   };
 
+  onUpdate = (...args) => {
+    console.log(args);
+  }
+
   componentDidMount() {
     if (this.state.inviteCode) {
       this.login(this.state.inviteCode)
@@ -80,9 +90,20 @@ class App extends React.Component {
           />
           <Switch>
             <Route exact path="/" component={Home}/>
-            <PrivateRoute loggedIn={!!this.state.invitation} path="/rsvp" component={Rsvp}/>
-            <PrivateRoute loggedIn={!!this.state.invitation} path="/location" component={Location}/>
-            <PrivateRoute loggedIn={!!this.state.invitation} path="/accommodation" component={Accommodation}/>
+            <PrivateRoute
+              loggedIn={!!this.state.invitation}
+              path="/rsvp/:step?"
+              component={(props) => (
+                <Rsvp
+                  invitation={this.state.invitation}
+                  onUpdate={this.onUpdate}
+                  {...props}
+                />
+              )}
+            />
+            <PrivateRoute loggedIn={!!this.state.invitation} path="/about/location" component={Location}/>
+            <PrivateRoute loggedIn={!!this.state.invitation} path="/about/accommodation" component={Accommodation}/>
+            <PrivateRoute loggedIn={!!this.state.invitation} path="/about/site" component={Site}/>
             <Route component={NoMatch}/>
           </Switch>
         </div>

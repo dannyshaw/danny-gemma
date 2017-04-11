@@ -21,15 +21,14 @@ class Header extends React.Component {
     const { invitation, login, logout } = this.props;
 
     if (invitation) {
-      return [
-          <Menu.Item key={0}>{`Hey ${invitation.getGreeting()}!`}</Menu.Item>,
+      return (
           <Menu.Item
             key={1}
             name='logout'
             active={false}
             onClick={logout}
           />
-      ];
+      );
     } else {
       return (
         <Form>
@@ -39,10 +38,13 @@ class Header extends React.Component {
               ref={c => this.code = c}
               placeholder='Invite Code'
             />
-            <Button onClick={(e) => {
-              e.preventDefault();
-              login(this.code.inputRef.value)
-            }}>Login</Button>
+            <Button
+              onClick={(e) => {
+                e.preventDefault();
+                login(this.code.inputRef.value)
+              }}
+              basic
+            >Login</Button>
           </Form.Field>
         </Form>
        );
@@ -53,13 +55,14 @@ class Header extends React.Component {
     const loggedIn = this.props.invitation;
     return (
       <div>
-        <Menu pointing>
+        <Menu fluid>
           <Menu.Item as={Link} to="/" >Home</Menu.Item>
           <Menu.Item as={Link} disabled={!loggedIn} to="/rsvp" >RSVP</Menu.Item>
           <Dropdown item text='About' disabled={!loggedIn} >
             <Dropdown.Menu>
-              <Dropdown.Item as={Link} disabled={!loggedIn} to="/location" >Location</Dropdown.Item>
-              <Dropdown.Item as={Link} disabled={!loggedIn} to="/accommodation" >Accommodation</Dropdown.Item>
+              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/location" >Location</Dropdown.Item>
+              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/accommodation" >Accommodation</Dropdown.Item>
+              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/site" >This Site</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Menu.Menu position='right'>
