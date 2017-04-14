@@ -5,7 +5,7 @@ keystone.init({
 
 	'name': 'Danny &amp; Gemma',
 	'brand': 'Danny &amp; Gemma',
-
+	'port': 3000,
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',

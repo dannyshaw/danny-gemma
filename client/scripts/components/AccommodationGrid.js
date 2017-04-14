@@ -29,7 +29,7 @@ const AccommodationOption = ({
     <Card.Content extra>
        <Modal trigger={<Button>More Info</Button>} dimmer="blurring" closeIcon='close' basic>
 		     <Modal.Header>{title}</Modal.Header>
-		     <Modal.Content image inverted>
+		     <Modal.Content image>
 		       <Image wrapped size='medium' src={imageSrc} />
 		       <Modal.Description>
 		         {children}

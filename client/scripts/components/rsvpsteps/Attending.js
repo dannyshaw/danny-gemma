@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { Container, Form, Radio, Input, Label, Modal, Card, Icon, Image, Button, Header } from 'semantic-ui-react'
+import { Container, Form, Radio, Input, Label, Modal, Card, Icon, Image, Button, Header, Menu } from 'semantic-ui-react'
 
 class Attending extends React.Component {
 
 	handleChange = coming => e => {
-		debugger;
 		e.preventDefault();
-		this.props.onChange(coming);
+		this.props.onChange(coming, this.next);
 	};
 
 
-	submit = (e) => {
-		e.preventDefault();
+	next = () => {
 		if (this.props.invitation.attending === false) {
 			this.props.history.push('/rsvp/thanks');
 		} else if (this.props.invitation.attending === true) {
@@ -29,11 +27,11 @@ class Attending extends React.Component {
 				 <Header as='h2' icon textAlign="center">
 		      <Icon name='question' circular />
 		      <Header.Content>
-		        So are you{count ? ' guys' : ''} coming or what?
+		        Can you make it?
 		      </Header.Content>
 		    </Header>
 	      <Form>
-	      	<Form.Group widths="1" style={{ alignItems: 'center' }}>
+	      	<Form.Group style={{ justifyContent: 'center' }}>
 	          <Form.Button
 	            active={attending === true}
 	            onClick={this.handleChange(true)}
@@ -51,16 +49,21 @@ class Attending extends React.Component {
 	          	{count > 1 ? 'We can\'t make it...' : 'I can\'t make it...'}
 	          </Form.Button>
 	        </Form.Group>
-	        <Button
-	          	onClick={this.submit}
-	          	disabled={attending === void 0}
-	          >
-	          	{attending !== false ? "Next" : "Save"}
-	          </Button>
 			  </Form>
 		  </Container>
 		);
 	}
 };
-
+/*
+			  <Menu fixed="bottom">
+			  	  <Menu.Item
+			  	  	position="right"
+			  	  	as="Button"
+	          	onClick={this.submit}
+	          	disabled={attending === void 0}
+	          >
+	          	{attending !== false ? "Next" : "Save"}
+	          </Menu.Item>
+			  </Menu>
+*/
 export default withRouter(Attending);

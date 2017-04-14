@@ -7,9 +7,9 @@ export const getInvitation = (code) => {
       .get(`/api/invitation/${code}`)
       .end((err, result) => {
         if (err) {
-          reject(err);
+          resolve(false, result.body.error);
         } else {
-          resolve(result.body.invitation);
+          resolve(result.body.invitation, false);
         }
       })
     ;
@@ -23,7 +23,7 @@ export const updateInvitation = (code, data) => {
       .send(data)
       .end((err, result) => {
         if (err) {
-          reject(err);
+          reject(result.body.error);
         } else {
           resolve();
         }

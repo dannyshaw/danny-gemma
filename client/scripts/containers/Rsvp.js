@@ -10,6 +10,7 @@ import {
 
 import Attending from '../components/rsvpsteps/Attending';
 import AccommodationChoice from '../components/rsvpsteps/AccommodationChoice';
+import Dietary from '../components/rsvpsteps/Dietary';
 
 const steps = [
   {
@@ -32,9 +33,9 @@ const steps = [
     dependent: true
   },
   {
-    id: 'thanks',
+    id: 'submit',
     icon: 'heart',
-    title: 'Thank You',
+    title: 'Submit',
     description: '',
     dependent: true
   },
@@ -51,7 +52,7 @@ class Rsvp extends React.Component {
       return {
         ...step,
         active,
-        disabled: dependent && this.state.invitation.attending !== true && !(active && id === 'thanks'),
+        disabled: dependent && this.state.invitation.attending !== true && !(active && id === 'submit'),
         onClick: () => this.redirectToStep(id),
       };
     })
@@ -71,14 +72,19 @@ class Rsvp extends React.Component {
   };
 
   setField = (field, value, then) => {
-    debugger;
     this.setState({
       invitation: {
         ...this.state.invitation,
         [field]: value,
       }
     }, then);
-  }
+  };
+
+  updateAttendee = (index, newAttendeeData) => {
+    const attendees = [...this.state.invitation.attendees];
+    attendees[index] = newAttendeeData
+    this.setField('attendees', attendees);
+  };
 
   saveInvitation() {
 
@@ -96,8 +102,7 @@ class Rsvp extends React.Component {
             (props) => (
               <Attending
                 invitation={invitation}
-                onChange={value => this.setField('attending', value)}
-                next={() => this.redirectToStep('accommodation')}
+                onChange={(value, callback) => this.setField('attending', value, callback)}
               />
             )}
           />
@@ -111,9 +116,14 @@ class Rsvp extends React.Component {
             )
           }/>
           <Route exact path="/rsvp/dietary" component={
-            (props) => <div {...props}>Food</div>
+            (props) => (
+              <Dietary
+                attendees={invitation.attendees}
+                updateAttendee={this.updateAttendee}
+              />
+            )
           }/>
-          <Route exact path="/rsvp/thanks" component={
+          <Route exact path="/rsvp/submit" component={
             (props) => <div {...props}>Thanks</div>
           }/>
           <Redirect to="/rsvp/attending" />

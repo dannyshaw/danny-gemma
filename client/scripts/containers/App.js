@@ -36,7 +36,7 @@ class App extends React.Component {
     super(props);
     const inviteCode = Cookies.get('inviteCode');
     const data = ls(inviteCode);
-    const invitation = data && new Invitation(data);
+    const invitation = (data && new Invitation(data)) || null;
 
     this.state = {
       inviteCode: inviteCode,
@@ -46,18 +46,33 @@ class App extends React.Component {
     };
   }
 
-  login = (inviteCode, callback) => {
-    API.getInvitation(inviteCode)
-      .then(data => {
-        this.setState({ invitation: new Invitation(data) }, () => {
-          Cookies.set('inviteCode', inviteCode);
-          ls(inviteCode, invitation);
-        });
-      })
-      .catch(error => {
-        this.setState({ error })
-      })
-    ;
+  login = () => {
+    if (!this.isCodeValid()) {
+      this.setState({ error: "Code must be 5 characters." })
+    } else {
+      API.getInvitation(this.state.inviteCode)
+        .then((data, error) => {
+          if (error) {
+            this.setState({ error })
+          } else {
+            this.setState({
+              invitation: new Invitation(data),
+              error: null
+            }, () => {
+              Cookies.set('inviteCode', this.state.inviteCode);
+              ls(this.state.inviteCode, data);
+            });
+          }
+        })
+      ;
+    }
+  };
+
+  isCodeValid = () => {
+    if (this.state.inviteCode && /^[A-Z]{5}$/.test(this.state.inviteCode)) {
+      return true;
+    }
+    return false
   };
 
   logout = () => {
@@ -85,6 +100,15 @@ class App extends React.Component {
         <div>
           <Header
             invitation={this.state.invitation}
+            error={this.state.error}
+            inviteCode={this.state.inviteCode}
+            onInviteCodeChange={code => {
+              this.setState({
+                inviteCode: code.toUpperCase(),
+                error: null
+              });
+            }}
+            isValid={this.isCodeValid()}
             login={this.login}
             logout={this.logout}
           />

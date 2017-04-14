@@ -22,7 +22,7 @@ var sendSaveTheDate = require('../../emails/lib/sendSaveTheDate');
 exports.get = function(req, res) {
   Attendee.model.findById(req.params.id).exec(function(err, attendee) {
     if (err) return res.apiError('database error', err);
-    if (!attendee) return res.apiError('not found');
+    if (!attendee) return res.apiError('That invite code was not found.');
 
     res.apiResponse({
       attendee: attendee

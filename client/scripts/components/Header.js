@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import { Dropdown, Container, Menu, Button, Form, Input, Image } from 'semantic-ui-react';
+import { Dropdown, Container, Message, Menu, Button, Form, Input, Image } from 'semantic-ui-react';
 
 const MenuItem = withRouter(({  history, location, to, children, ...rest }) => {
 	return (
@@ -21,28 +21,31 @@ class Header extends React.Component {
     const { invitation, login, logout } = this.props;
 
     if (invitation) {
-      return (
+      return [
+          <Menu.Item key="greeting">{this.props.invitation.getGreeting()}</Menu.Item>,
           <Menu.Item
             key={1}
             name='logout'
             active={false}
             onClick={logout}
           />
-      );
+      ];
     } else {
       return (
         <Form>
           <Form.Field inline>
             <label>Invite Code:</label>
             <Input
-              ref={c => this.code = c}
+              value={this.props.inviteCode}
               placeholder='Invite Code'
+              onChange={e => this.props.onInviteCodeChange(e.target.value)}
             />
             <Button
               onClick={(e) => {
                 e.preventDefault();
-                login(this.code.inputRef.value)
+                this.props.login()
               }}
+              disabled={!this.props.isValid}
               basic
             >Login</Button>
           </Form.Field>
@@ -52,7 +55,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const loggedIn = this.props.invitation;
+    const loggedIn = !!this.props.invitation;
     return (
       <div>
         <Menu fluid>
@@ -69,6 +72,12 @@ class Header extends React.Component {
             {this.renderLoginForm()}
           </Menu.Menu>
         </Menu>
+        {this.props.error && (
+          <Message
+            error
+            floating
+          ><span>{this.props.error}</span></Message>
+        )}
       </div>
     );
   }
