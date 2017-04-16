@@ -67,15 +67,12 @@ function processRsvp(invitation, data) {
     invitation.attending = data.attending;
     invitation.accommodation = data.accommodation;
     invitation.attendees.forEach(attendee => {
-      const attendeeData = data.allsame
-        ? data.attendees[0]
-        : _.find(data.attendees, attendee => attendee.id = attendee.id)
-      ;
-
+      const attendeeData = _.find(data.attendees, att => att.id == attendee._id);
       attendee.dietaryprefs = attendeeData.dietaryprefs
-      if (attendee.dietaryprefs === 'other') {
-        attendee.dietaryother = attendeeData.dietaryother
-      }
+      attendee.dietaryother = attendee.dietaryprefs === 'other'
+        ? attendeeData.dietaryother
+        : null
+      ;
       attendee.save();
     })
     invitation.save();

@@ -3,7 +3,7 @@ var transform = require('model-transform');
 var Types = keystone.Field.Types;
 
 var Attendee = new keystone.List('Attendee',{
-    defaultSort: 'createdAt'
+    defaultSort: 'createdAt',
 });
 
 Attendee.add({
@@ -18,7 +18,7 @@ Attendee.add({
     { value: 'vegan', label: 'Vegan' },
     { value: 'glutenfree', label: 'Gluten Free' },
     { value: 'other', label: 'Other' }
-  ]},
+  ], default: 'whatever'},
   dietaryother: { type: String },
   createdAt: { type: Date, default: Date.now, noedit: true }
 });

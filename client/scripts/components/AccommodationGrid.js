@@ -81,7 +81,7 @@ class AccommodationGrid extends React.Component {
 					title="Happy Glamper"
 					value="glamping"
 					active={this.props.selected === "glamping"}
-					price="$420 double"
+					price="$420 double (2 nights)"
 					onChoose={this.props.onChoose}
 					oneLiner="Doing it in style"
 					imageSrc="/images/accommodation/glamping.jpg"

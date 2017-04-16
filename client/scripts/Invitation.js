@@ -19,4 +19,36 @@ Invitation.prototype = {
 			}, '')
 		;
 	},
+	// serialize() {
+	// 	return {
+	// 		attending: this.attending,
+	// 		accommodation: this.accommodation,
+	// 		attendees: this.attendees.map(attendee => ({
+	// 			id: attendee.id,
+	// 			dietaryprefs: attendee.dietaryprefs,
+	// 			dietaryother: attendee.dietaryother,
+	// 		}),
+	// 	};
+	// },
+	clone() {
+		return new Invitation({...this});
+	}
 };
+
+
+		/*
+			{
+	    attending: true,
+	    accommodation: 'glamping',
+	    allsame: true,
+	    attendees: [
+	      '12gh1g2f4jh1gf24': {
+	        dietaryprefs: 'other'
+	        dietaryother: 'ojnkjnw'
+	      },
+	      'kjhfkjwhefkwejhf': {
+	        dietaryprefs: 'vegan'
+	      }
+	    ]
+	 	}
+	 */

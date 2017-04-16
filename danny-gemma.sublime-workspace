@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"att",
+				"attendee"
+			],
+			[
+				"av",
+				"activeIndex"
+			],
+			[
+				"atten",
+				"attendee"
+			],
+			[
+				"atte",
+				"attendee"
+			],
+			[
+				"active",
+				"activeAttendee"
+			],
+			[
+				"attend",
+				"attendees"
+			],
+			[
+				"die",
+				"dietaryprefs"
+			],
+			[
+				"onChange",
+				"onChangeOther"
+			],
+			[
+				"invi",
+				"inviteCode"
+			],
+			[
+				"not",
+				"notFound"
+			],
+			[
+				"inv",
+				"inviteCode"
+			],
+			[
 				"Accom",
 				"AccommodationGrid"
 			],
@@ -24,10 +68,6 @@
 				"redirectToStep"
 			],
 			[
-				"atten",
-				"attendees"
-			],
-			[
 				"Att",
 				"AttendeeRecord"
 			],
@@ -40,10 +80,6 @@
 				"imageSrc"
 			],
 			[
-				"inv",
-				"invitation"
-			],
-			[
 				"a",
 				"Accommodation"
 			],
@@ -54,14 +90,6 @@
 			[
 				"Login",
 				"LoginForm"
-			],
-			[
-				"att",
-				"attendees"
-			],
-			[
-				"invi",
-				"invitation"
 			],
 			[
 				"L",
@@ -98,10 +126,6 @@
 			[
 				"save",
 				"savethedateopened"
-			],
-			[
-				"attend",
-				"attendee"
 			],
 			[
 				"res",
@@ -490,40 +514,19 @@
 			[
 				"getAl",
 				"getAllClassLessonProgress"
-			],
-			[
-				"pr",
-				"privilegedContent"
-			],
-			[
-				"pri",
-				"privilegedContentByCourseId"
-			],
-			[
-				"getCLa",
-				"getClassPrivilegedContent"
-			],
-			[
-				"getClassEnrol",
-				"getClassEnrolmentProfiles"
-			],
-			[
-				"getCla",
-				"getClassDetail"
-			],
-			[
-				"dif",
-				"difficultyIndicator"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"contents": "var keystone = require('keystone');\nvar transform = require('model-transform');\nvar Types = keystone.Field.Types;\n\nvar Attendee = new keystone.List('Attendee',{\n    defaultSort: 'createdAt',\n    autokey: { from: 'name', unique: true, path: 'slug' },\n\n});\n\nAttendee.add({\n  name: { type: Types.Name, required: true, index: true },\n  slug: { type: String },\n  email: { type: Types.Email, initial: true, index: true },\n  password: { type: Types.Password, initial: true },\n  savethedatesent: { type: Boolean, label: 'Save The Date Sent' },\n  savethedateopens: { type: Types.Number, label: 'Save The Date Opens', default: 0 },\n  pagevisits: { type: Types.Number, label: 'Page Visits', default: 0 },\n  dietaryprefs: { type: Types.Select, options: [\n    { value: 'whatever', label: 'Whatever' },\n    { value: 'vegan', label: 'Vegan' },\n    { value: 'glutenfree', label: 'Gluten Free' },\n    { value: 'other', label: 'Other' }\n  ], default: 'whatever'},\n  dietaryother: { type: String },\n  createdAt: { type: Date, default: Date.now, noedit: true }\n});\n\ntransform.toJSON(Attendee);\n\nAttendee.defaultColumns = 'name, email, savethedatesent, dietaryprefs';\nAttendee.register();\n",
 			"file": "models/Attendee.js",
+			"file_size": 1213,
+			"file_write_time": 131367920737316363,
 			"settings":
 			{
-				"buffer_size": 1060,
+				"buffer_size": 1168,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -575,16 +578,19 @@
 			"file": "routes/api/invitation.js",
 			"settings":
 			{
-				"buffer_size": 1869,
+				"buffer_size": 1812,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport Cookies from 'js-cookie';\nimport App from './containers/App';\n\nReactDOM.render(\n  <App\n    rsvpEmail={window.dannygemma.rsvpEmail}\n  />,\n  document.getElementById('app')\n);\n",
 			"file": "client/scripts/application.js",
+			"file_size": 242,
+			"file_write_time": 131361941518954724,
 			"settings":
 			{
-				"buffer_size": 242,
+				"buffer_size": 241,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -619,7 +625,25 @@
 			"file": "client/scripts/components/Header.js",
 			"settings":
 			{
-				"buffer_size": 2435,
+				"buffer_size": 2799,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/api/attendees.js",
+			"settings":
+			{
+				"buffer_size": 1757,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/styles/site.less",
+			"settings":
+			{
+				"buffer_size": 63,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -634,10 +658,10 @@
 			}
 		},
 		{
-			"contents": "\nSearching 297 files for \"center\" (case sensitive)\n\n/home/danny/dev/repos/danny-gemma/client/scripts/components/pages/Accommodation.js:\n   11:   <Card centered>\n   42: \t\t\t\t <Header as='h2' icon textAlign='center'>\n   48: \t\t\t\t<Card.Group center>\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.less:\n   30:   background-position: left center;\n   48:   align-items: center;\n   49:   justify-content: center;\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.min.css:\n    1: html,body,#app{height:100%}div,body,#app{margin:0;padding:0}#app{background-color:#fff}.background{direction:rtl;background-image:url(/images/savethedate.jpg);background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#fff;background-position:left center;height:100%;width:100%;position:absolute}.wrapper{direction:ltr}.panel{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;height:75px;display:flex;align-items:center;justify-content:center;position:fixed;background-color:rgba(255,255,255,0.75);color:#303030}.header{top:0;justify-content:flex-start}.footer{bottom:0;justify-content:flex-end}.content{color:#fff;position:absolute;width:100vw;height:calc(100% - 150px);margin:75px 0;display:flex;flex-direction:column-reverse}.opaque{background-color:rgba(0,0,0,0.5)}.envelope{fill:#303030}.mail{width:20px;margin:auto;margin-left:20px;align-self:flex-start}.text{font-family:'Brusher';font-size:50px;font-weight:100;padding:10px 20px}.note{font-family:Arial,\"Helvetica Neue\",Helvetica,sans-serif;font-size:18px;font-style:'light';letter-spacing:2px;font-weight:100;padding:20px;margin-left:auto}@media (max-width:769px){.panel{height:50px}.background{background-position:13% 0}.text{font-size:22px;padding:5px}.mail{margin-left:5px}.note{font-size:11px;padding:5px;letter-spacing:1px}.content{height:calc(100% - 100px);margin:50px 0}}@font-face{font-family:'Brusher';src:local('Brusher'),url('/fonts/Brusher-Regular.otf') format('opentype')}@font-face{font-family:'AmaticSC';src:local('AmaticSC'),url('/fonts/AmaticSC-Regular.ttf') format('truetype')}@font-face{font-family:'MawnsHandwriting';src:local('MawnsHandwriting'),url('/fonts/Mawns_Handwriting.ttf') format('truetype')}\n\n9 matches across 3 files\n",
+			"contents": "\nSearching 297 files for \"center\" (case sensitive)\n\n/home/danny/dev/repos/danny-gemma/client/scripts/components/pages/Accommodation.js:\n   11:   <Card centered>\n   42: \t\t\t\t <Header as='h2' icon textAlign='center'>\n   48: \t\t\t\t<Card.Group center>\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.less:\n   30:   background-position: left center;\n   48:   align-items: center;\n   49:   justify-content: center;\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.min.css:\n    1: html,body,#app{height:100%}div,body,#app{margin:0;padding:0}#app{background-color:#fff}.background{direction:rtl;background-image:url(/images/savethedate.jpg);background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#fff;background-position:left center;height:100%;width:100%;position:absolute}.wrapper{direction:ltr}.panel{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;height:75px;display:flex;align-items:center;justify-content:center;position:fixed;background-color:rgba(255,255,255,0.75);color:#303030}.header{top:0;justify-content:flex-start}.footer{bottom:0;justify-content:flex-end}.content{color:#fff;position:absolute;width:100vw;height:calc(100% - 150px);margin:75px 0;display:flex;flex-direction:column-reverse}.opaque{background-color:rgba(0,0,0,0.5)}.envelope{fill:#303030}.mail{width:20px;margin:auto;margin-left:20px;align-self:flex-start}.text{font-family:'Brusher';font-size:50px;font-weight:100;padding:10px 20px}.note{font-family:Arial,\"Helvetica Neue\",Helvetica,sans-serif;font-size:18px;font-style:'light';letter-spacing:2px;font-weight:100;padding:20px;margin-left:auto}@media (max-width:769px){.panel{height:50px}.background{background-position:13% 0}.text{font-size:22px;padding:5px}.mail{margin-left:5px}.note{font-size:11px;padding:5px;letter-spacing:1px}.content{height:calc(100% - 100px);margin:50px 0}}@font-face{font-family:'Brusher';src:local('Brusher'),url('/fonts/Brusher-Regular.otf') format('opentype')}@font-face{font-family:'AmaticSC';src:local('AmaticSC'),url('/fonts/AmaticSC-Regular.ttf') format('truetype')}@font-face{font-family:'MawnsHandwriting';src:local('MawnsHandwriting'),url('/fonts/Mawns_Handwriting.ttf') format('truetype')}\n\n9 matches across 3 files\n\n\nSearching 412 files for \"debugg\" (case sensitive)\n\n/home/danny/dev/repos/danny-gemma/client/scripts/api.js:\n   20:   debugger;\n\n/home/danny/dev/repos/danny-gemma/client/scripts/containers/Rsvp.js:\n   49:       debugger;\n\n/home/danny/dev/repos/danny-gemma/public/js/bundle.js:\n 4127:  * Create a debugger with the given `namespace`.\n\n3 matches across 3 files\n",
 			"settings":
 			{
-				"buffer_size": 2266,
+				"buffer_size": 2626,
 				"line_ending": "Unix",
 				"name": "Find Results",
 				"scratch": true
@@ -647,7 +671,7 @@
 			"file": "client/scripts/Invitation.js",
 			"settings":
 			{
-				"buffer_size": 433,
+				"buffer_size": 1070,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -664,7 +688,7 @@
 			"file": "client/scripts/containers/App.js",
 			"settings":
 			{
-				"buffer_size": 3545,
+				"buffer_size": 4403,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -673,7 +697,7 @@
 			"file": "templates/views/index.pug",
 			"settings":
 			{
-				"buffer_size": 1699,
+				"buffer_size": 1695,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -700,7 +724,7 @@
 			"file": "client/scripts/components/AccommodationGrid.js",
 			"settings":
 			{
-				"buffer_size": 3705,
+				"buffer_size": 3707,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -715,10 +739,40 @@
 			}
 		},
 		{
+			"file": "client/scripts/components/rsvpsteps/Thankyou.js",
+			"settings":
+			{
+				"buffer_size": 658,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/rsvpsteps/Dietary.js",
+			"settings":
+			{
+				"buffer_size": 3023,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "client/scripts/components/AttendeeDietaryOptions.js",
+			"file_size": 268,
+			"file_write_time": 131366138682242199,
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "client/scripts/components/rsvpsteps/Attending.js",
 			"settings":
 			{
-				"buffer_size": 1855,
+				"buffer_size": 1883,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -727,7 +781,7 @@
 			"file": "client/scripts/containers/Rsvp.js",
 			"settings":
 			{
-				"buffer_size": 3110,
+				"buffer_size": 3659,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -748,6 +802,16 @@
 				"buffer_size": 1405,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "TODO",
+			"settings":
+			{
+				"buffer_size": 325,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "info - friday evening/sat morning arrival,"
 			}
 		},
 		{
@@ -792,7 +856,7 @@
 			"file": "client/scripts/api.js",
 			"settings":
 			{
-				"buffer_size": 670,
+				"buffer_size": 713,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1038,6 +1102,13 @@
 	"expanded_folders":
 	[
 		"/home/danny/dev/repos/danny-gemma",
+		"/home/danny/dev/repos/danny-gemma/client",
+		"/home/danny/dev/repos/danny-gemma/client/scripts",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers",
+		"/home/danny/dev/repos/danny-gemma/models",
+		"/home/danny/dev/repos/danny-gemma/public/styles",
 		"/home/danny/dev/repos/danny-gemma/routes",
 		"/home/danny/dev/repos/danny-gemma/routes/api",
 		"/home/danny/dev/repos/danny-gemma/templates",
@@ -1053,6 +1124,8 @@
 	],
 	"file_history":
 	[
+		"/home/danny/dev/repos/danny-gemma/public/styles/old.less",
+		"/home/danny/dev/repos/danny-gemma/public/styles/site.min.css",
 		"/home/danny/dev/repos/danny-gemma/templates/views/index.pug",
 		"/home/danny/dev/repos/danny-gemma/node_modules/react-router-dom/Link.js",
 		"/home/danny/dev/repos/danny-gemma/models/Accommodation.js",
@@ -1157,7 +1230,6 @@
 		"/home/danny/dev/repos/danny-gemma/client/scripts/application.js",
 		"/home/danny/dev/repos/dannyandgem/src/scss/_variables.scss",
 		"/home/danny/dev/repos/danny-gemma/public/styles/site.less",
-		"/home/danny/dev/repos/danny-gemma/public/styles/site.min.css",
 		"/home/danny/dev/repos/danny-gemma/.editorconfig",
 		"/home/danny/dev/repos/danny-gemma/updates/0.0.1-admins.js",
 		"/home/danny/dev/repos/danny-gemma/.gitignore",
@@ -1179,8 +1251,7 @@
 		"/home/danny/dev/repos/dannyandgemma/app/layouts/SaveTheDate.js",
 		"/home/danny/dev/repos/dannyandgem/Procfile",
 		"/home/danny/dev/repos/keystone-multilingual/lib/languageView.js",
-		"/home/danny/dev/repos/our-school-liberia/updates/0.0.3-locales.js",
-		"/home/danny/dev/opensource/tallsandsmalls2016/app/components/Parallax/Parallax.js"
+		"/home/danny/dev/repos/our-school-liberia/updates/0.0.3-locales.js"
 	],
 	"find":
 	{
@@ -1326,6 +1397,34 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"debugger",
+			"this.props.invitation.",
+			"Dietary",
+			"activeAttendee",
+			"SemanticHeader",
+			"AccommodationChoice",
+			"submit",
+			"debugg",
+			"setField",
+			"this.state.invitation",
+			"dietaryprefs",
+			"onUpdate",
+			"this.props",
+			"AttendeeDietaryOptions",
+			"thanks",
+			"updateAttendee",
+			"attendeees",
+			"this.props",
+			"attendee",
+			"value",
+			"Dietary",
+			"AccommodationGrid",
+			"AccommodationChoice",
+			"invitation",
+			"inviteCode",
+			"inviteC",
+			"state",
+			"callback",
 			"_.noop",
 			".submit",
 			"this.props.",
@@ -1425,35 +1524,7 @@
 			"'about.",
 			"languageNavMap",
 			"languages",
-			"createStaticRoute",
-			"createSt",
-			"createStaticRoute",
-			"Update",
-			"\\.filters.*:",
-			"\\.filters",
-			"filter",
-			"\\.filter",
-			"\\.key",
-			".key",
-			"key",
-			"createStaticRoute",
-			"section",
-			"locals.",
-			"setLanguageAndCookie",
-			"TranslatableList",
-			"TranslatableModel",
-			"canAccessKeystone",
-			"extendscripts",
-			"intro-container",
-			"script.*js",
-			"block intro",
-			"intro-container",
-			"mainheader",
-			"block intro",
-			"sign in",
-			"extends.*layouts/default",
-			"extends.*layouts/mainheader",
-			"mainheader"
+			"createStaticRoute"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1599,7 +1670,7 @@
 	"groups":
 	[
 		{
-			"selected": 25,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1608,15 +1679,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1060,
+						"buffer_size": 1168,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								910,
-								910
+								353,
+								353
 							]
 						],
 						"settings":
@@ -1633,7 +1704,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 32,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1668,7 +1739,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1701,7 +1772,7 @@
 						"translation.y": 30691.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 39,
 					"type": "text"
 				},
 				{
@@ -1735,7 +1806,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
@@ -1769,7 +1840,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 38,
 					"type": "text"
 				},
 				{
@@ -1803,7 +1874,7 @@
 						"translation.y": 61.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
@@ -1812,15 +1883,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1869,
+						"buffer_size": 1812,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								506,
-								506
+								1560,
+								1560
 							]
 						],
 						"settings":
@@ -1835,10 +1906,10 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 231.0,
+						"translation.y": 1518.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1847,15 +1918,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 242,
+						"buffer_size": 241,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								123,
-								123
+								155,
+								155
 							]
 						],
 						"settings":
@@ -1872,7 +1943,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -1907,7 +1978,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
@@ -1941,7 +2012,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
@@ -1976,7 +2047,7 @@
 						"translation.y": 992.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
@@ -1985,15 +2056,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2435,
+						"buffer_size": 2799,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1308,
-								1308
+								2224,
+								2224
 							]
 						],
 						"settings":
@@ -2008,14 +2079,82 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1155.0,
+						"translation.y": 891.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
 					"buffer": 12,
+					"file": "routes/api/attendees.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								695,
+								695
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 99.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "public/styles/site.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 63,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 66.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
 					"file": ".babelrc",
 					"semi_transient": false,
 					"settings":
@@ -2044,15 +2183,15 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2266,
+						"buffer_size": 2626,
 						"regions":
 						{
 							"match":
@@ -2095,6 +2234,18 @@
 									[
 										994,
 										1000
+									],
+									[
+										2385,
+										2391
+									],
+									[
+										2478,
+										2484
+									],
+									[
+										2563,
+										2569
 									]
 								],
 								"scope": ""
@@ -2103,8 +2254,8 @@
 						"selection":
 						[
 							[
-								239,
-								239
+								2481,
+								2481
 							]
 						],
 						"settings":
@@ -2112,7 +2263,7 @@
 							"default_dir": "/home/danny/dev/repos/danny-gemma",
 							"detect_indentation": false,
 							"line_numbers": false,
-							"output_tag": 1,
+							"output_tag": 2,
 							"result_base_dir": "",
 							"result_file_regex": "^([^ \t].*):$",
 							"result_line_regex": "^ +([0-9]+):",
@@ -2120,27 +2271,27 @@
 							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 924.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
 					"file": "client/scripts/Invitation.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 433,
+						"buffer_size": 1070,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								28,
-								28
+								723,
+								723
 							]
 						],
 						"settings":
@@ -2158,11 +2309,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 17,
 					"semi_transient": false,
 					"settings":
 					{
@@ -2188,24 +2339,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 18,
 					"file": "client/scripts/containers/App.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3545,
+						"buffer_size": 4403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2748,
-								2748
+								3581,
+								3581
 							]
 						],
 						"settings":
@@ -2219,27 +2370,27 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2937.0,
+						"translation.y": 2178.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 19,
 					"file": "templates/views/index.pug",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1699,
+						"buffer_size": 1695,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								793,
-								793
+								598,
+								598
 							]
 						],
 						"settings":
@@ -2256,11 +2407,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 20,
 					"file": "client/scripts/components/Home.js",
 					"semi_transient": false,
 					"settings":
@@ -2290,11 +2441,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 21,
 					"file": "client/scripts/components/Accommodation.js",
 					"semi_transient": false,
 					"settings":
@@ -2325,24 +2476,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 22,
 					"file": "client/scripts/components/AccommodationGrid.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3705,
+						"buffer_size": 3707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3011,
-								3011
+								2337,
+								2337
 							]
 						],
 						"settings":
@@ -2356,14 +2507,14 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2239.0,
+						"translation.y": 891.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 23,
 					"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
 					"semi_transient": false,
 					"settings":
@@ -2375,8 +2526,8 @@
 						"selection":
 						[
 							[
-								272,
-								272
+								294,
+								294
 							]
 						],
 						"settings":
@@ -2394,24 +2545,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
-					"file": "client/scripts/components/rsvpsteps/Attending.js",
+					"buffer": 24,
+					"file": "client/scripts/components/rsvpsteps/Thankyou.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1855,
+						"buffer_size": 658,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								528,
-								528
+								259,
+								259
 							]
 						],
 						"settings":
@@ -2422,31 +2573,30 @@
 							"open_with_edit": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
-					"file": "client/scripts/containers/Rsvp.js",
+					"buffer": 25,
+					"file": "client/scripts/components/rsvpsteps/Dietary.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3110,
+						"buffer_size": 3023,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1213,
-								1213
+								2615,
+								2615
 							]
 						],
 						"settings":
@@ -2461,14 +2611,118 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 858.0,
+						"translation.y": 2244.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 26,
+					"file": "client/scripts/components/AttendeeDietaryOptions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": false,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "client/scripts/components/rsvpsteps/Attending.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1883,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								706,
+								706
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "client/scripts/containers/Rsvp.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1694,
+								1694
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2077.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
 					"file": "client/scripts/components/Location.js",
 					"semi_transient": false,
 					"settings":
@@ -2499,11 +2753,11 @@
 						"translation.y": 4455.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 30,
 					"file": "vagrant-bootstrap.sh",
 					"semi_transient": false,
 					"settings":
@@ -2534,11 +2788,45 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 31,
+					"file": "TODO",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"auto_name": "info - friday evening/sat morning arrival,",
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
 					"file": "Vagrantflie",
 					"semi_transient": false,
 					"settings":
@@ -2568,11 +2856,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 33,
 					"file": "webpack.config.js",
 					"semi_transient": false,
 					"settings":
@@ -2603,11 +2891,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 34,
 					"file": "keystone.js",
 					"semi_transient": false,
 					"settings":
@@ -2637,11 +2925,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 35,
 					"file": "client/scripts/components/Site.js",
 					"semi_transient": false,
 					"settings":
@@ -2671,24 +2959,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 36,
 					"file": "client/scripts/api.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 670,
+						"buffer_size": 713,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								61,
-								61
+								442,
+								442
 							]
 						],
 						"settings":
@@ -2706,11 +2994,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 37,
 					"file": "client/scripts/components/Content.js",
 					"semi_transient": false,
 					"settings":
@@ -2740,11 +3028,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 38,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
@@ -2771,14 +3059,14 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 523.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 39,
 					"file": "/home/danny/dev/repos/our-school-liberia/models/Gallery.js",
 					"semi_transient": false,
 					"settings":
@@ -2808,11 +3096,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 40,
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 40,
 					"file": "readme.md",
 					"semi_transient": false,
 					"settings":
@@ -2842,7 +3130,7 @@
 						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 33,
+					"stack_index": 20,
 					"type": "text"
 				}
 			]
@@ -2909,6 +3197,38 @@
 		"selected_items":
 		[
 			[
+				"atte",
+				"danny-gemma/models/Attendee.js"
+			],
+			[
+				"rsvp",
+				"danny-gemma/client/scripts/containers/Rsvp.js"
+			],
+			[
+				"diet",
+				"danny-gemma/client/scripts/components/rsvpsteps/Dietary.js"
+			],
+			[
+				"app",
+				"danny-gemma/client/scripts/containers/App.js"
+			],
+			[
+				"api",
+				"danny-gemma/client/scripts/api.js"
+			],
+			[
+				"invia",
+				"danny-gemma/routes/api/invitation.js"
+			],
+			[
+				"invita",
+				"danny-gemma/client/scripts/Invitation.js"
+			],
+			[
+				"invi",
+				"danny-gemma/models/Invitation.js"
+			],
+			[
 				"inde",
 				"danny-gemma/templates/views/index.pug"
 			],
@@ -2919,10 +3239,6 @@
 			[
 				"pack",
 				"danny-gemma/package.json"
-			],
-			[
-				"api",
-				"danny-gemma/client/scripts/api.js"
 			],
 			[
 				"invit",
@@ -3391,34 +3707,6 @@
 			[
 				"class.",
 				"react/src/edrolo/reducers/class.js"
-			],
-			[
-				"classcours",
-				"react/src/edrolo/selectors/bound/createClassCourseSelectors.js"
-			],
-			[
-				"redclass",
-				"react/src/edrolo/reducers/class.js"
-			],
-			[
-				"lessonindex",
-				"react/src/edrolo/domains/studyplanner/components/Lesson/index.js"
-			],
-			[
-				"schemas",
-				"react/src/edrolo/schemas.js"
-			],
-			[
-				"sagasclass",
-				"react/src/edrolo/sagas/class.js"
-			],
-			[
-				"apiurl",
-				"react/src/edrolo/components/account/PendingUsersLink.jsx"
-			],
-			[
-				"component",
-				"react/src/core/components/layout/ComponentGrouper.jsx"
 			]
 		],
 		"width": 0.0
@@ -3431,7 +3719,7 @@
 		[
 			[
 				"",
-				"~/dev/our-school-liberia..sublime-project"
+				"~/dev/personal/personal.sublime-project"
 			],
 			[
 				"tod",

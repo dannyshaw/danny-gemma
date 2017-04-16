@@ -5,7 +5,6 @@ import App from './containers/App';
 
 ReactDOM.render(
   <App
-
     rsvpEmail={window.dannygemma.rsvpEmail}
   />,
   document.getElementById('app')

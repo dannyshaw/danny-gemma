@@ -11,6 +11,7 @@ import {
 import Attending from '../components/rsvpsteps/Attending';
 import AccommodationChoice from '../components/rsvpsteps/AccommodationChoice';
 import Dietary from '../components/rsvpsteps/Dietary';
+import Thankyou from '../components/rsvpsteps/Thankyou';
 
 const steps = [
   {
@@ -22,29 +23,22 @@ const steps = [
     id: 'accommodation',
     icon: 'home',
     title: 'Choose Accommodation',
-    description: 'Choose your Accommodation',
     dependent: true
   },
   {
     id: 'dietary',
     icon: 'food',
-    title: 'Dietary Preferences',
-    description: 'Let us know what you can\'t eat!',
+    title: 'Guest Details',
     dependent: true
   },
   {
-    id: 'submit',
+    id: 'thankyou',
     icon: 'heart',
-    title: 'Submit',
-    description: '',
-    dependent: true
+    title: 'Thankyou',
   },
 ];
 
 class Rsvp extends React.Component {
-  state = {
-    invitation: this.props.invitation,
-  };
 
   getSteps() {
     return steps.map(({ dependent, id, ...step }, index) => {
@@ -52,7 +46,7 @@ class Rsvp extends React.Component {
       return {
         ...step,
         active,
-        disabled: dependent && this.state.invitation.attending !== true && !(active && id === 'submit'),
+        disabled: dependent && this.props.invitation.attending !== true && !(active && id === 'thankyou'),
         onClick: () => this.redirectToStep(id),
       };
     })
@@ -72,28 +66,26 @@ class Rsvp extends React.Component {
   };
 
   setField = (field, value, then) => {
-    this.setState({
-      invitation: {
-        ...this.state.invitation,
-        [field]: value,
-      }
-    }, then);
+    const invitation = this.props.invitation.clone();
+    invitation[field] = value;
+    this.props.saveInvitation(invitation, then);
   };
 
   updateAttendee = (index, newAttendeeData) => {
-    const attendees = [...this.state.invitation.attendees];
+    debugger;
+    const attendees = [...this.props.invitation.attendees];
     attendees[index] = newAttendeeData
     this.setField('attendees', attendees);
   };
 
-  saveInvitation() {
-
+  setActiveAttendee = (index) => {
+    this.setState({
+      activeAttendee: index
+    });
   }
 
   render() {
-    const { location, history, route } = this.props;
-    const { invitation } = this.state;
-
+    const { location, history, route, invitation } = this.props;
     return (
       <div>
         <Step.Group items={this.getSteps()} fluid size="small" />
@@ -115,16 +107,21 @@ class Rsvp extends React.Component {
               />
             )
           }/>
-          <Route exact path="/rsvp/dietary" component={
-            (props) => (
-              <Dietary
-                attendees={invitation.attendees}
-                updateAttendee={this.updateAttendee}
-              />
-            )
+          <Route exact path="/rsvp/dietary/:index?" component={
+            (props) => {
+              return (
+                <Dietary
+                  attendees={invitation.attendees}
+                  updateAttendee={this.updateAttendee}
+                  activeIndex={parseInt(props.match.params.index, 10)}
+                  setActiveIndex={(index) => props.history.push(`/rsvp/dietary/${index}`)}
+                  next={() => props.history.push(`/rsvp/thankyou`)}
+                />
+              );
+            }
           }/>
-          <Route exact path="/rsvp/submit" component={
-            (props) => <div {...props}>Thanks</div>
+          <Route exact path="/rsvp/thankyou" component={
+            (props) => <Thankyou invitation={invitation} />
           }/>
           <Redirect to="/rsvp/attending" />
         </Switch>

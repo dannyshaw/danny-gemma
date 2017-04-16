@@ -4,16 +4,16 @@ import { Container, Form, Radio, Input, Label, Modal, Card, Icon, Image, Button,
 
 class Attending extends React.Component {
 
-	handleChange = coming => e => {
+	handleChange = attending => e => {
 		e.preventDefault();
-		this.props.onChange(coming, this.next);
+		this.props.onChange(attending, () => this.next(attending));
 	};
 
 
-	next = () => {
-		if (this.props.invitation.attending === false) {
-			this.props.history.push('/rsvp/thanks');
-		} else if (this.props.invitation.attending === true) {
+	next = (attending) => {
+		if (attending === false) {
+			this.props.history.push('/rsvp/thankyou');
+		} else if (attending === true) {
 			this.props.history.push('/rsvp/accommodation');
 		}
 	};

@@ -29,6 +29,7 @@ import Home from '../components/Home';
 import Location from '../components/Location';
 import Accommodation from '../components/Accommodation';
 import Site from '../components/Site';
+import Spotify from '../components/Spotify';
 
 
 class App extends React.Component {
@@ -84,8 +85,13 @@ class App extends React.Component {
     });
   };
 
-  onUpdate = (...args) => {
-    console.log(args);
+  saveInvitation = (invitation, then) => {
+    this.setState({ invitation: invitation }, () => {
+      API
+        .updateInvitation(this.state.inviteCode, invitation)
+        .then(then)
+      ;
+    })
   }
 
   componentDidMount() {
@@ -120,7 +126,7 @@ class App extends React.Component {
               component={(props) => (
                 <Rsvp
                   invitation={this.state.invitation}
-                  onUpdate={this.onUpdate}
+                  saveInvitation={this.saveInvitation}
                   {...props}
                 />
               )}
@@ -128,6 +134,15 @@ class App extends React.Component {
             <PrivateRoute loggedIn={!!this.state.invitation} path="/about/location" component={Location}/>
             <PrivateRoute loggedIn={!!this.state.invitation} path="/about/accommodation" component={Accommodation}/>
             <PrivateRoute loggedIn={!!this.state.invitation} path="/about/site" component={Site}/>
+            <PrivateRoute
+              loggedIn={!!this.state.invitation}
+              path="/spotify"
+              component={(props) => (
+                <Spotify
+                  invitation={this.state.invitation}
+                />
+              )}
+            />
             <Route component={NoMatch}/>
           </Switch>
         </div>
