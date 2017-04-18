@@ -65,6 +65,7 @@ exports.update = function(req, res) {
 
 function processRsvp(invitation, data) {
     invitation.attending = data.attending;
+    invitation.message = data.message;
     invitation.accommodation = data.accommodation;
     invitation.attendees.forEach(attendee => {
       const attendeeData = _.find(data.attendees, att => att.id == attendee._id);

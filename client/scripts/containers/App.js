@@ -103,7 +103,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
+        <Container fluid>
           <Header
             invitation={this.state.invitation}
             error={this.state.error}
@@ -145,7 +145,7 @@ class App extends React.Component {
             />
             <Route component={NoMatch}/>
           </Switch>
-        </div>
+        </Container>
       </Router>
     );
   }

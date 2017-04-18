@@ -13,6 +13,14 @@ class Accommodation extends React.Component {
 		      </Header.Content>
 		    </Header>
 				<AccommodationGrid />
+				  <Button
+            onClick={this.next}
+            size="large"
+            floated="right"
+            icon='right chevron'
+            content="Next"
+            primary
+          />
 			</Container>
 		);
 	}

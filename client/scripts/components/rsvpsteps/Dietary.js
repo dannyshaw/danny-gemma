@@ -61,28 +61,27 @@ class Dietary extends React.Component {
       return <Redirect to="/rsvp/dietary/0" />;
     }
 
-    console.log(activeIndex, attendee)
     return (
       <Container>
         <Grid>
-          <Grid.Column width={4}>
-            <Menu fluid vertical tabular>
-              {
-                this.props.attendees.map((attendee, index) => {
-                  return (
-                    <Menu.Item
-                      key={attendee.id}
-                      name={attendee.name.first}
-                      active={activeIndex === index}
-                      onClick={() => this.props.setActiveIndex(index)}
-                    />
-                  );
-                })
-              }
-            </Menu>
-          </Grid.Column>
-          <Grid.Column stretched width={12}>
-            <Segment>
+          <Grid.Row>
+            <Grid.Column width={4}>
+              <Menu fluid vertical tabular>
+                {
+                  this.props.attendees.map((attendee, index) => {
+                    return (
+                      <Menu.Item
+                        key={attendee.id}
+                        name={attendee.name.first}
+                        active={activeIndex === index}
+                        onClick={() => this.props.setActiveIndex(index)}
+                      />
+                    );
+                  })
+                }
+              </Menu>
+            </Grid.Column>
+            <Grid.Column stretched width={12}>
               <Header>{`${attendee.name.first}'s Preferences`}</Header>
               <Form>
                 <AttendeePreferences
@@ -91,10 +90,18 @@ class Dietary extends React.Component {
                   onChange={(attendee) => this.props.updateAttendee(activeIndex, attendee)}
                 />
               </Form>
-            </Segment>
-          </Grid.Column>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Button
+              onClick={this.props.next}
+              size="large"
+              icon='right chevron'
+              content="Next"
+              primary
+            />
+          </Grid.Row>
         </Grid>
-        <Button onClick={this.props.next}>Next</Button>
       </Container>
     );
   }

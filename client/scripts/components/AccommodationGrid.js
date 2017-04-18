@@ -9,9 +9,9 @@ const AccommodationOption = ({
 	oneLiner,
 	imageSrc,
 	children,
-	onChoose,
+	onChange,
 }) => (
-  <Card centered>
+  <Card centered raised>
     <Image src={imageSrc} />
     <Card.Content>
       <Card.Header>
@@ -26,8 +26,8 @@ const AccommodationOption = ({
         {oneLiner}
       </Card.Description>
     </Card.Content>
-    <Card.Content extra>
-       <Modal trigger={<Button>More Info</Button>} dimmer="blurring" closeIcon='close' basic>
+    <Card.Content extra >
+       <Modal trigger={<Button size="large" basic>More Info</Button>} dimmer="blurring" closeIcon='close' basic>
 		     <Modal.Header>{title}</Modal.Header>
 		     <Modal.Content image>
 		       <Image wrapped size='medium' src={imageSrc} />
@@ -36,12 +36,12 @@ const AccommodationOption = ({
 		       </Modal.Description>
 		     </Modal.Content>
 		   </Modal>
-       {onChoose && (
+       {onChange && (
        		<Button
        			active={active}
        			primary={active}
-       			onClick={() => onChoose(value)}
-       			basic
+       			onClick={() => onChange(value)}
+       			size="large"
        		>{active ? "Selected" : "Select"}</Button>
        )}
     </Card.Content>
@@ -57,7 +57,7 @@ class AccommodationGrid extends React.Component {
 					value="byocamp"
 					active={this.props.selected === "byocamp"}
 					price="$15pn"
-					onChoose={this.props.onChoose}
+					onChange={this.props.onChange}
 					oneLiner="Keeping it real"
 					imageSrc="/images/accommodation/byotent.jpg"
 				>
@@ -69,7 +69,7 @@ class AccommodationGrid extends React.Component {
 					value="dorm"
 					active={this.props.selected === "dorm"}
 					price="$35pn"
-					onChoose={this.props.onChoose}
+					onChange={this.props.onChange}
 					oneLiner="Economy non-camping option"
 					imageSrc="/images/accommodation/dorms.jpg"
 				>
@@ -82,7 +82,7 @@ class AccommodationGrid extends React.Component {
 					value="glamping"
 					active={this.props.selected === "glamping"}
 					price="$420 double (2 nights)"
-					onChoose={this.props.onChoose}
+					onChange={this.props.onChange}
 					oneLiner="Doing it in style"
 					imageSrc="/images/accommodation/glamping.jpg"
 				>
@@ -95,7 +95,7 @@ class AccommodationGrid extends React.Component {
 					value="touristpark"
 					active={this.props.selected === "touristpark"}
 					price="Contact Directly"
-					onChoose={this.props.onChoose}
+					onChange={this.props.onChange}
 					oneLiner="Offsite comforts"
 					imageSrc="/images/accommodation/cabins.jpg"
 				>
@@ -108,7 +108,7 @@ class AccommodationGrid extends React.Component {
 					value="notstaying"
 					active={this.props.selected === "notstaying"}
 					price="NA"
-					onChoose={this.props.onChoose}
+					onChange={this.props.onChange}
 					oneLiner="Sadness"
 					imageSrc="http://react.semantic-ui.com/assets/images/avatar/large/elliot.jpg"
 				>

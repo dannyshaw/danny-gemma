@@ -58,11 +58,6 @@ class Rsvp extends React.Component {
   };
 
   selectAccommodation = (option) => {
-    this.setField(
-      'accommodation',
-      option,
-      () => this.redirectToStep('dietary')
-    );
   };
 
   setField = (field, value, then) => {
@@ -94,7 +89,14 @@ class Rsvp extends React.Component {
             (props) => (
               <Attending
                 invitation={invitation}
-                onChange={(value, callback) => this.setField('attending', value, callback)}
+                onChangeField={this.setField}
+                next={() => {
+                  if (invitation.attending === false) {
+                    history.push('/rsvp/thankyou');
+                  } else if (invitation.attending === true) {
+                    history.push('/rsvp/accommodation');
+                  }
+                }}
               />
             )}
           />
@@ -103,7 +105,8 @@ class Rsvp extends React.Component {
               <AccommodationChoice
                 {...props}
                 selected={invitation.accommodation}
-                onChoose={this.selectAccommodation}
+                onChange={option => this.setField('accommodation', option)}
+                next={() => this.redirectToStep('dietary')}
               />
             )
           }/>

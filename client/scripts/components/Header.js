@@ -2,19 +2,6 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Dropdown, Container, Message, Menu, Button, Form, Input, Image } from 'semantic-ui-react';
 
-const MenuItem = withRouter(({  history, location, to, children, ...rest }) => {
-	return (
-		<Menu.Item
-			name={to}
-			active={location.pathname === to}
-			onClick={() => history.push(to)}
-      {...rest}
-		>
-			{children}
-		</Menu.Item>
-	);
-});
-
 class Header extends React.Component {
 
   renderLoginForm() {
@@ -56,16 +43,17 @@ class Header extends React.Component {
 
   render() {
     const loggedIn = !!this.props.invitation;
+    const { location } = this.props;
     return (
       <div>
-        <Menu fluid>
-          <Menu.Item as={Link} to="/" >Home</Menu.Item>
-          <Menu.Item as={Link} disabled={!loggedIn} to="/rsvp" >RSVP</Menu.Item>
-          <Dropdown item text='About' disabled={!loggedIn} >
+        <Menu fluid size="massive">
+          <Menu.Item as={Link} to="/" active={location.pathname === '/'}>Home</Menu.Item>
+          <Menu.Item as={Link} disabled={!loggedIn} to="/rsvp" active={location.pathname.startsWith('/rsvp')}>RSVP</Menu.Item>
+          <Dropdown item text='About' disabled={!loggedIn} className={location.pathname.startsWith('/about') ? "active" : ""}>
             <Dropdown.Menu>
-              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/location" >Location</Dropdown.Item>
-              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/accommodation" >Accommodation</Dropdown.Item>
-              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/site" >This Site</Dropdown.Item>
+              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/location" active={location.pathname === '/about/location'} >Location</Dropdown.Item>
+              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/accommodation" active={location.pathname === '/about/accommodation'} >Accommodation</Dropdown.Item>
+              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/site" active={location.pathname === '/about/site'}>This Site</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Menu.Menu position='right'>
@@ -82,16 +70,4 @@ class Header extends React.Component {
     );
   }
 }
-/*
-<div className="panel header">
-<p className="text">danny &amp; gemma's wedding</p>
-<ul>
-<li><MenuItem to="/">Home</MenuItem></li>
-<li><MenuItem to="/location">Location</MenuItem></li>
-<li><MenuItem to="/accommodation">Accommodation</MenuItem></li>
-<li><MenuItem to="/rsvp">RSVP</MenuItem></li>
-<li><button onClick={} >Test</button></li>
-</ul>
-</div>
-*/
-export default Header;
+export default withRouter(Header);

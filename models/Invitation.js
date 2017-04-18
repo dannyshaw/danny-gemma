@@ -10,6 +10,7 @@ Invitation.add({
   code: { type: String, required: true, index: true, initial: true },
   attendees: { type: Types.Relationship, ref: 'Attendee', many: true },
   attending: { type: Boolean },
+  message: { type: Types.Textarea },
   accommodation: { type: Types.Select, options: [
     { value: 'dorm', label: 'Dorm Bunk' },
     { value: 'byocamp', label: 'BYO Camping' },
