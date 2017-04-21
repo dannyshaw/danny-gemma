@@ -18,17 +18,20 @@ import {
   Header as SemanticHeader
 } from 'semantic-ui-react';
 
-import Invitation from '../Invitation';
+import Invitation from '../models/Invitation';
 import * as API from '../api';
 
 import Rsvp from './Rsvp';
 
-import Content from '../components/Content';
-import Header from '../components/Header';
+import Content from '../components/layout/Content';
+import Header from '../components/layout/Header';
 import Home from '../components/Home';
-import Location from '../components/Location';
-import Accommodation from '../components/Accommodation';
-import Site from '../components/Site';
+
+import Basics from '../components/about/Basics';
+import Location from '../components/about/Location';
+import Accommodation from '../components/about/Accommodation';
+import Site from '../components/about/Site';
+
 import Spotify from '../components/Spotify';
 
 
@@ -131,6 +134,7 @@ class App extends React.Component {
                 />
               )}
             />
+            <PrivateRoute loggedIn={!!this.state.invitation} path="/about/basics" component={Basics}/>
             <PrivateRoute loggedIn={!!this.state.invitation} path="/about/location" component={Location}/>
             <PrivateRoute loggedIn={!!this.state.invitation} path="/about/accommodation" component={Accommodation}/>
             <PrivateRoute loggedIn={!!this.state.invitation} path="/about/site" component={Site}/>

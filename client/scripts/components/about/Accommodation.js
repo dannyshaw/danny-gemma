@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Modal, Card, Icon, Image, Button, Header } from 'semantic-ui-react'
-import AccommodationGrid from './AccommodationGrid';
+import AccommodationGrid from '../AccommodationGrid';
 
 class Accommodation extends React.Component {
 	render() {
@@ -13,14 +13,6 @@ class Accommodation extends React.Component {
 		      </Header.Content>
 		    </Header>
 				<AccommodationGrid />
-				  <Button
-            onClick={this.next}
-            size="large"
-            floated="right"
-            icon='right chevron'
-            content="Next"
-            primary
-          />
 			</Container>
 		);
 	}

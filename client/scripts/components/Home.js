@@ -4,9 +4,9 @@ import { Image, Container, Button } from 'semantic-ui-react';
 
 const Home = () => {
 	return (
-		<Container>
-			<Image src="images/savethedate.jpg" fluid />
-			<Button as={Link} to="/rsvp" primary size="massive">RSVP</Button>
+		<Container textAlign="center">
+			<Image src="images/gemma_and_danny_cropped.jpg" centered size="huge" />
+			<Button as={Link} to="/rsvp" style={{ color: "#656b51" }} size="massive" >RSVP</Button>
 		</Container>
 	);
 };

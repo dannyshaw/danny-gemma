@@ -1,6 +1,9 @@
 import React from 'react';
-import { Container, Grid, Menu, Select, Segment, Form, Input, Icon, Image, Button, Header } from 'semantic-ui-react'
+import { Container, Grid, Modal, Menu, Select, Segment, Form, Input, Icon, Image, Button, Header } from 'semantic-ui-react'
 import { Redirect } from 'react-router-dom';
+import Spotify, { TrackList } from '../Spotify';
+import SpotifyTrack from '../../models/SpotifyTrack';
+
 
 const OPTIONS = [
   { key: 'whatever', text: 'Whatever' },
@@ -10,6 +13,7 @@ const OPTIONS = [
 ];
 
 class AttendeePreferences extends React.Component {
+  state = { showTrackSelector: false };
 
   onChangeField(field, value) {
     this.props.onChange({
@@ -28,29 +32,75 @@ class AttendeePreferences extends React.Component {
           checked={this.props.attendee.dietaryprefs === option.key}
           onChange={(e, data) => this.onChangeField('dietaryprefs', option.key)}
         />
-      );
+       );
     })
   }
+
+  showTrackSelector = (e) => {
+    e.preventDefault();
+    this.setState({ showTrackSelector: true })
+  };
+  closeTrackSelector = () => {
+    debugger
+    this.setState({ showTrackSelector: false })
+  };
+
+  addTrackSuggestion = (track) => {
+    const currentTracks = this.props.attendee.tracks || [];
+    this.onChangeField('tracks', [...currentTracks, track]);
+  };
 
       // <Form.Group widths='equal'>
       // </Form.Group>
   render() {
     const { attendee } = this.props;
     return (
-      <Form.Group grouped>
-        <label>Dietary Option</label>
-        {this.getDietaryFields()}
-        {attendee.dietaryprefs === 'other' && (
-          <Form.Input
-            label="Please Specify"
-            defaultValue={attendee.dietaryother}
-            onBlur={e => this.onChangeField('dietaryother', e.target.value)}
-          />
-        )}
-      </Form.Group>
+      <div>
+        <Form.Group grouped>
+          <label>Dietary Option</label>
+          {this.getDietaryFields()}
+          {attendee.dietaryprefs === 'other' && (
+            <Form.Input
+              label="Please Specify"
+              defaultValue={attendee.dietaryother}
+              onBlur={e => this.onChangeField('dietaryother', e.target.value)}
+            />
+          )}
+        </Form.Group>
+        <Form.Group grouped>
+          <label>Playlist Suggestions</label>
+          <TrackList tracks={attendee.tracks || []} onClick={console.log} />
+          <Modal
+            trigger={<Button onClick={this.showTrackSelector}>Add Track Suggestion</Button>}
+            open={this.state.showTrackSelector}
+            onClose={this.closeTrackSelector}
+            closeOnEscape={false}
+            closeOnRootNodeClick={false}
+            size='large'
+            style={{ minHeight: '60vh' }}
+          >
+            <Header icon='spotify' content='Find your jam!' />
+            <Modal.Content>
+              <p>Just remember, it's a wedding aye. We're totes vetoing...</p>
+              <Spotify
+                onSelect={this.addTrackSuggestion}
+                selectText="Suggest This Track"
+              />
+            </Modal.Content>
+          </Modal>
+        </Form.Group>
+      </div>
     );
   }
-};
+}
+            // <Modal.Actions>
+            //   <Button basic color='red' inverted>
+            //     <Icon name='remove' /> No
+            //   </Button>
+            //   <Button color='green' inverted>
+            //     <Icon name='checkmark' /> Yes
+            //   </Button>
+            // </Modal.Actions>
 
 
 class Dietary extends React.Component {

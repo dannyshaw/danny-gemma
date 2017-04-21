@@ -67,7 +67,6 @@ class Rsvp extends React.Component {
   };
 
   updateAttendee = (index, newAttendeeData) => {
-    debugger;
     const attendees = [...this.props.invitation.attendees];
     attendees[index] = newAttendeeData
     this.setField('attendees', attendees);
