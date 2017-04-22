@@ -100,17 +100,24 @@ class Rsvp extends React.Component {
             )}
           />
           <Route exact path="/rsvp/accommodation" component={
-            (props) => (
-              <AccommodationChoice
+            (props) => {
+              if (!invitation.attending) {
+                return <Redirect to="/rsvp/attending" />;
+              }
+              return <AccommodationChoice
                 {...props}
                 selected={invitation.accommodation}
                 onChange={option => this.setField('accommodation', option)}
                 next={() => this.redirectToStep('dietary')}
               />
-            )
+            }
           }/>
+
           <Route exact path="/rsvp/dietary/:index?" component={
             (props) => {
+              if (!invitation.attending) {
+                return <Redirect to="/rsvp/attending" />;
+              }
               return (
                 <Dietary
                   attendees={invitation.attendees}

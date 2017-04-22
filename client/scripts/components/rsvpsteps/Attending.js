@@ -44,8 +44,8 @@ class Attending extends React.Component {
           {(typeof attending !== 'undefined' || message) && (
           	<TextArea
           		placeholder="Send us a note!"
-          		value={message}
-          		onChange={e => this.props.onChangeField('message', e.target.value)}
+          		defaultValue={message}
+          		onBlur={e => this.props.onChangeField('message', e.target.value)}
           	/>
           )}
 	        </Form.Group>

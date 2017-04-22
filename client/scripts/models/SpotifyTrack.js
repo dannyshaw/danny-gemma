@@ -14,7 +14,7 @@ SpotifyTrack.prototype = {
 SpotifyTrack.fromTrack = (track) => {
 	return new SpotifyTrack({
 		spotifyId: track.id,
-		uri: track.uri,
+		spotifyUri: track.uri,
 		artist: nameConcat(track.artists.map(artist => artist.name)),
 		title: track.name,
 	});

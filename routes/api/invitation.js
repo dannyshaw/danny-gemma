@@ -2,6 +2,7 @@ var keystone = require('keystone');
 var Invitation = keystone.list('Invitation');
 var SpotifyTrack = keystone.list('SpotifyTrack');
 var _ = require('underscore');
+var async = require('async');
 
 exports.get = function(req, res) {
   Invitation.model
@@ -15,34 +16,28 @@ exports.get = function(req, res) {
         return res.apiError('not found');
       }
 
-      res.apiResponse({
-        invitation: invitation
-      });
+      const attendees = [];
+      async.eachOf(invitation.attendees, (attendee, index, callback) => {
+        SpotifyTrack.model.find().where('attendee', attendee.id).exec((err, tracks) => {
+          const att = attendee.toObject();
+          att.tracks = tracks;
+          attendees.push(att);
+          callback()
+        })
+      }, (err) => {
+        if (err) {
+          return res.apiError('not found');
+        }
+        // such hack
+        const invite = invitation.toObject();
+        invite.attendees = attendees;
+        res.apiResponse({
+          invitation: invite
+        });
+      })
 
     });
 }
-
-/**
- * Update Invitation with RSVP data
-
- {
-    attending: true,
-    accommodation: 'glamping',
-    allsame: true,
-    attendees: [
-      '12gh1g2f4jh1gf24': {
-        dietaryprefs: 'other'
-        dietaryother: 'ojnkjnw'
-      },
-      'kjhfkjwhefkwejhf': {
-        dietaryprefs: 'vegan'
-      }
-    ]
- }
-
- */
-
-
 
 exports.update = function(req, res) {
   Invitation.model
@@ -69,7 +64,7 @@ function processRsvp(invitation, data) {
     invitation.message = data.message;
     invitation.accommodation = data.accommodation;
     invitation.attendees.forEach(attendee => {
-      const attendeeData = _.find(data.attendees, att => att.id == attendee._id);
+      const attendeeData = _.find(data.attendees, att => att._id == attendee._id);
       processAttendee(attendee, attendeeData);
     })
     invitation.save();
@@ -100,7 +95,7 @@ function saveTrack(track, attendee) {
     }
 
     if(!invitation) {
-      const newTrack = Spotify.model(track)
+      const newTrack = SpotifyTrack.model(track)
       newTrack.attendee = attendee;
       newTrack.save();
     }

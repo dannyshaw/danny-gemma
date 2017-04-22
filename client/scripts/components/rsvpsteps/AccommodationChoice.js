@@ -5,11 +5,15 @@ import AccommodationGrid from '../AccommodationGrid';
 class AccommodationChoice extends React.Component {
 
 	render() {
-		const { next, ...rest} = this.props;
+		const { next, invitation, ...rest} = this.props;
+
 		return (
 			<Container>
 			  <Grid.Row>
-					<AccommodationGrid {...rest}  />
+					<AccommodationGrid
+						invitation={invitation}
+						{...rest}
+					/>
 			  </Grid.Row>
 			  <Grid.Row>
           <Button

@@ -16,5 +16,5 @@ SpotifyTrack.add({
 
 transform.toJSON(SpotifyTrack);
 
-SpotifyTrack.defaultColumns = 'name, email, savethedatesent, dietaryprefs';
+SpotifyTrack.defaultColumns = 'title, artist, attendee, spotifyUri';
 SpotifyTrack.register();

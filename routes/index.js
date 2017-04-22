@@ -31,6 +31,7 @@ exports = module.exports = function(app) {
 
   app.post('/api/invitation/:code', keystone.middleware.api, routes.api.invitation.update);
   app.get('/api/invitation/:code', keystone.middleware.api, routes.api.invitation.get);
+  // app.get('/api/tracks', keystone.middleware.api, routes.api.invitation.getTracks);
 
   // Index and
   app.get('/t/:id', middleware.trackAttendeePageView, routes.views.index);

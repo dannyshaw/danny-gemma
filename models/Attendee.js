@@ -23,6 +23,9 @@ Attendee.add({
   createdAt: { type: Date, default: Date.now, noedit: true }
 });
 
+
+Attendee.relationship({ path: 'tracks', ref: 'SpotifyTrack', refPath: 'attendee' });
+
 transform.toJSON(Attendee);
 
 Attendee.defaultColumns = 'name, email, savethedatesent, dietaryprefs';
