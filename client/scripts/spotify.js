@@ -9,8 +9,6 @@ client.settings = {
   redirect_uri: window.location.href
 };
 
-
-
 /*
  * TrackHandler Examples
  *
@@ -25,20 +23,30 @@ var user = new UserHandler();
  */
 
 export const searchTracks = (str, limit=10) => {
-	return new Promise((resolve) => {
-		track.search(str, { limit }).then((trackCollection) => {
-			console.log(trackCollection);
-			resolve(trackCollection);
-		});
-	})
+	return new Promise((resolve, reject) => {
+    track.search(str, { limit })
+      .then((trackCollection) => {
+  			console.log(trackCollection);
+  			resolve(trackCollection);
+  		})
+      .catch(() => {
+        reject('Could not perform track search')
+      })
+    ;
+  });
 };
 
 export const getTracks = (ids) => {
   return new Promise((resolve) => {
-    track.get(ids).then((trackCollection) => {
-      console.log(trackCollection);
-      resolve(trackCollection);
-    });
+    track.get(ids)
+      .then((trackCollection) => {
+        console.log(trackCollection);
+        resolve(trackCollection);
+      })
+      .catch(() => {
+        reject('Could not perform track retrieval')
+      })
+    ;
   })
 };
 
@@ -53,9 +61,11 @@ export function session() {
 }
 
 export const login = () => {
-    client.login().then(url => {
-    	window.location.href = url;
-    });
+    client.login()
+      .then(url => {
+      	 window.location.href = url;
+      })
+    ;
 }
 
 

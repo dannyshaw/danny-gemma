@@ -10,6 +10,7 @@ import Cookies from 'js-cookie';
 import ls from 'local-storage';
 import {
   Container,
+  Grid,
   Modal,
   Button,
   Icon,
@@ -55,9 +56,10 @@ class App extends React.Component {
       this.setState({ error: "Code must be 5 characters." })
     } else {
       API.getInvitation(this.state.inviteCode)
-        .then((data, error) => {
+        .then(({data, error}) => {
           if (error) {
-            this.setState({ error })
+            const errorMessage = error === 'not found' ? "Could not find code, Try again." : error;
+            this.setState({ error: errorMessage })
           } else {
             this.setState({
               invitation: new Invitation(data),

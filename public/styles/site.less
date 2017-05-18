@@ -1,2 +1,30 @@
 @background-color: #fff;
 @panel-color: rgba(255,255,255,0.75);
+
+@font-face {
+  font-family: 'Brusher';
+  src:
+    local('Brusher'),
+    url('/fonts/Brusher-Regular.otf')
+    format('opentype');
+}
+
+.ui.header.dannygemmaTitle {
+  font-family: 'Brusher';
+  font-size: 50px;
+  font-weight: 100;
+  margin: 0px auto;
+  line-height: 1.8;
+}
+
+.gemdannyHeader {
+	height: 100px;
+}
+
+.column {
+	padding: 0;
+}
+
+.ui.steps .step.active:after {
+	z-index: 1;
+}

@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"error",
+				"errorMessage"
+			],
+			[
+				"atten",
+				"attendees"
+			],
+			[
+				"attend",
+				"attendee"
+			],
+			[
+				"attende",
+				"attendees"
+			],
+			[
 				"sele",
 				"selectedIndex"
 			],
@@ -68,20 +84,12 @@
 				"activeIndex"
 			],
 			[
-				"atten",
-				"attendee"
-			],
-			[
 				"atte",
 				"attendee"
 			],
 			[
 				"active",
 				"activeAttendee"
-			],
-			[
-				"attend",
-				"attendees"
 			],
 			[
 				"die",
@@ -270,10 +278,6 @@
 			[
 				"onDe",
 				"onDeleteProp"
-			],
-			[
-				"error",
-				"errorLi"
 			],
 			[
 				"mod",
@@ -510,257 +514,11 @@
 			[
 				"curre",
 				"currentExamId"
-			],
-			[
-				"selected",
-				"selectedTopic"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "models/Attendee.js",
-			"settings":
-			{
-				"buffer_size": 1082,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/SpotifyTrack.js",
-			"settings":
-			{
-				"buffer_size": 553,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/spotify.js",
-			"settings":
-			{
-				"buffer_size": 1647,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "require('babel-register');\nvar Client = require('./spotify.babel')\nmodule.exports = Client;\n",
-			"file": "routes/api/spotify.js",
-			"file_size": 92,
-			"file_write_time": 131368023783821311,
-			"settings":
-			{
-				"buffer_size": 92,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "node_modules/spotify-sdk/lib/dist.js",
-			"settings":
-			{
-				"buffer_size": 271155,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".env",
-			"settings":
-			{
-				"buffer_size": 488,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/Invitation.js",
-			"settings":
-			{
-				"buffer_size": 911,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "node_modules/keystone/HISTORY.md",
-			"settings":
-			{
-				"buffer_size": 57366,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "node_modules/keystone/lib/updateHandler.js",
-			"settings":
-			{
-				"buffer_size": 3646,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "node_modules/keystone/lib/list/register.js",
-			"settings":
-			{
-				"buffer_size": 3501,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/index.js",
-			"settings":
-			{
-				"buffer_size": 1265,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/api/invitation.js",
-			"settings":
-			{
-				"buffer_size": 2425,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/application.js",
-			"settings":
-			{
-				"buffer_size": 241,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/MailIcon.js",
-			"settings":
-			{
-				"buffer_size": 583,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/layout/Footer.js",
-			"settings":
-			{
-				"buffer_size": 318,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/savethedate.js",
-			"settings":
-			{
-				"buffer_size": 2294,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/layout/Header.js",
-			"settings":
-			{
-				"buffer_size": 2702,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/api/attendees.js",
-			"settings":
-			{
-				"buffer_size": 1757,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/styles/site.less",
-			"settings":
-			{
-				"buffer_size": 63,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".babelrc",
-			"settings":
-			{
-				"buffer_size": 48,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "\nSearching 297 files for \"center\" (case sensitive)\n\n/home/danny/dev/repos/danny-gemma/client/scripts/components/pages/Accommodation.js:\n   11:   <Card centered>\n   42: \t\t\t\t <Header as='h2' icon textAlign='center'>\n   48: \t\t\t\t<Card.Group center>\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.less:\n   30:   background-position: left center;\n   48:   align-items: center;\n   49:   justify-content: center;\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.min.css:\n    1: html,body,#app{height:100%}div,body,#app{margin:0;padding:0}#app{background-color:#fff}.background{direction:rtl;background-image:url(/images/savethedate.jpg);background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#fff;background-position:left center;height:100%;width:100%;position:absolute}.wrapper{direction:ltr}.panel{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;height:75px;display:flex;align-items:center;justify-content:center;position:fixed;background-color:rgba(255,255,255,0.75);color:#303030}.header{top:0;justify-content:flex-start}.footer{bottom:0;justify-content:flex-end}.content{color:#fff;position:absolute;width:100vw;height:calc(100% - 150px);margin:75px 0;display:flex;flex-direction:column-reverse}.opaque{background-color:rgba(0,0,0,0.5)}.envelope{fill:#303030}.mail{width:20px;margin:auto;margin-left:20px;align-self:flex-start}.text{font-family:'Brusher';font-size:50px;font-weight:100;padding:10px 20px}.note{font-family:Arial,\"Helvetica Neue\",Helvetica,sans-serif;font-size:18px;font-style:'light';letter-spacing:2px;font-weight:100;padding:20px;margin-left:auto}@media (max-width:769px){.panel{height:50px}.background{background-position:13% 0}.text{font-size:22px;padding:5px}.mail{margin-left:5px}.note{font-size:11px;padding:5px;letter-spacing:1px}.content{height:calc(100% - 100px);margin:50px 0}}@font-face{font-family:'Brusher';src:local('Brusher'),url('/fonts/Brusher-Regular.otf') format('opentype')}@font-face{font-family:'AmaticSC';src:local('AmaticSC'),url('/fonts/AmaticSC-Regular.ttf') format('truetype')}@font-face{font-family:'MawnsHandwriting';src:local('MawnsHandwriting'),url('/fonts/Mawns_Handwriting.ttf') format('truetype')}\n\n9 matches across 3 files\n\n\nSearching 412 files for \"debugg\" (case sensitive)\n\n/home/danny/dev/repos/danny-gemma/client/scripts/api.js:\n   20:   debugger;\n\n/home/danny/dev/repos/danny-gemma/client/scripts/containers/Rsvp.js:\n   49:       debugger;\n\n/home/danny/dev/repos/danny-gemma/public/js/bundle.js:\n 4127:  * Create a debugger with the given `namespace`.\n\n3 matches across 3 files\n",
-			"settings":
-			{
-				"buffer_size": 2626,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "client/scripts/models/Invitation.js",
-			"settings":
-			{
-				"buffer_size": 363,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/models/SpotifyTrack.js",
-			"settings":
-			{
-				"buffer_size": 437,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/utils.js",
-			"settings":
-			{
-				"buffer_size": 218,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "{\n  \"invitation\": {\n    \"_id\": \"58df48fb91cc0a19dd50386b\",\n    \"code\": \"ADHJS\",\n    \"__v\": 4,\n    \"accommodation\": \"glamping\",\n    \"createdAt\": \"2017-04-01T06:30:19.952Z\",\n    \"attending\": true,\n    \"attendees\": [\n      {\n        \"email\": \"technix@gmail.com\",\n        \"dietaryother\": \"ojnkjnw\",\n        \"dietaryprefs\": \"other\",\n        \"createdAt\": \"2017-03-05T04:39:43.059Z\",\n        \"pagevisits\": 1,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Shaw\",\n          \"first\": \"Danny\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf38648\"\n      },\n      {\n        \"email\": \"gemma.neylon.84@gmail.com\",\n        \"dietaryother\": \"ojnkjnw\",\n        \"dietaryprefs\": \"other\",\n        \"createdAt\": \"2017-03-05T04:39:43.061Z\",\n        \"pagevisits\": 0,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Neylon\",\n          \"first\": \"Gemma\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf38649\"\n      },\n      {\n        \"email\": \"michaelneylon@hotmail.co.uk\",\n        \"createdAt\": \"2017-03-05T04:39:43.063Z\",\n        \"pagevisits\": 0,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Neylon\",\n          \"first\": \"Mick\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf3864a\"\n      },\n      {\n        \"email\": \"alexneylon@hotmail.com\",\n        \"createdAt\": \"2017-03-05T04:39:43.066Z\",\n        \"pagevisits\": 0,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Neylon\",\n          \"first\": \"Alex\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf3864c\"\n      },\n      {\n        \"email\": \"claire_thorogood@hotmail.co.uk\",\n        \"createdAt\": \"2017-03-05T04:39:43.067Z\",\n        \"pagevisits\": 0,\n        \"savethedateopens\": 0,\n        \"savethedatesent\": false,\n        \"name\": {\n          \"last\": \"Neylon\",\n          \"first\": \"Claire\"\n        },\n        \"id\": \"58bb968fd3b6371b5bf3864d\"\n      }\n    ]\n  }\n}",
-			"settings":
-			{
-				"buffer_size": 1988,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/containers/App.js",
-			"settings":
-			{
-				"buffer_size": 4931,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/Spotify.js",
-			"settings":
-			{
-				"buffer_size": 3470,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
 		{
 			"file": "templates/views/index.pug",
 			"settings":
@@ -771,194 +529,57 @@
 			}
 		},
 		{
-			"file": "client/scripts/components/Home.js",
+			"file": "updates/0.0.1-admins.js",
 			"settings":
 			{
-				"buffer_size": 405,
+				"buffer_size": 268,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/about/Accommodation.js",
+			"file": "models/Attendee.js",
 			"settings":
 			{
-				"buffer_size": 521,
+				"buffer_size": 1027,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/AccommodationGrid.js",
+			"file": "models/Invitation.js",
 			"settings":
 			{
-				"buffer_size": 3741,
+				"buffer_size": 1119,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
+			"file": "client/scripts/components/Spotify.js",
 			"settings":
 			{
-				"buffer_size": 666,
+				"buffer_size": 3871,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/rsvpsteps/Thankyou.js",
+			"contents": "import { Client, TrackHandler, UserHandler, PlaylistHandler, ArtistHandler } from 'spotify-sdk';\n\nlet client = Client.instance;\n\nclient.settings = {\n\tclientId: process.env.SPOTIFY_CLIENT_ID || '268d754b13d94238972f47cccedf6422',\n  secretId: process.env.SPOTIFY_SECRET_KEY ||  '917dc1911cd2429ab5a44000ee4a5ef0',\n  scopes: ['user-follow-modify user-follow-read user-library-read user-top-read'],\n  redirect_uri: window.location.href\n};\n\n\n\n/*\n * TrackHandler Examples\n *\n */\nvar track = new TrackHandler();\nvar user = new UserHandler();\n\n\n/*\n * #1 example\n * Get tracks with the name 'R U mine?', should return a Collection of tracks.\n */\n\nexport const searchTracks = (str, limit=10) => {\n\treturn new Promise((resolve, reject) => {\n    track.search(str, { limit })\n      .then((trackCollection) => {\n  \t\t\tconsole.log(trackCollection);\n  \t\t\tresolve(trackCollection);\n  \t\t})\n      .error(() => {\n        reject('Could not perform track search')\n      });\n    }\n\t})\n};\n\nexport const getTracks = (ids) => {\n  return new Promise((resolve) => {\n    track.get(ids)\n      .then((trackCollection) => {\n        console.log(trackCollection);\n        resolve(trackCollection);\n      })\n      .error(() => {\n        reject('Could not perform track search')\n      });;\n  })\n};\n\n\nexport function session() {\n    if (sessionStorage.token) {\n        client.token = sessionStorage.token;\n    } else if (window.location.hash.split('&')[0].split('=')[1]) {\n        sessionStorage.token = window.location.hash.split('&')[0].split('=')[1];\n        client.token = sessionStorage.token;\n    }\n}\n\nexport const login = () => {\n    client.login().then(url => {\n    \twindow.location.href = url;\n    });\n}\n\n\n\n\nexport const getMe = () => {\n\treturn new Promise((resolve) => {\n\t\tuser.me().then((userEntity) => {\n     console.log(userEntity);\n     resolve(userEntity);\n \t\t});\n\t})\n};\n",
+			"file": "client/scripts/spotify.js",
+			"file_size": 1755,
+			"file_write_time": 131395333060014829,
 			"settings":
 			{
-				"buffer_size": 658,
-				"encoding": "UTF-8",
+				"buffer_size": 1848,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/scripts/components/rsvpsteps/Dietary.js",
+			"file": "models/User.js",
 			"settings":
 			{
-				"buffer_size": 4961,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "",
-			"file": "client/scripts/components/AttendeeDietaryOptions.js",
-			"file_size": 268,
-			"file_write_time": 131366138682242199,
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/rsvpsteps/Attending.js",
-			"settings":
-			{
-				"buffer_size": 2335,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/containers/Rsvp.js",
-			"settings":
-			{
-				"buffer_size": 3873,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/Location.js",
-			"settings":
-			{
-				"buffer_size": 4499,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "vagrant-bootstrap.sh",
-			"settings":
-			{
-				"buffer_size": 1405,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "TODO",
-			"settings":
-			{
-				"buffer_size": 325,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "info - friday evening/sat morning arrival,"
-			}
-		},
-		{
-			"file": "Vagrantflie",
-			"settings":
-			{
-				"buffer_size": 480,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "Vagrant.configure(\"2\") do |config|"
-			}
-		},
-		{
-			"file": "webpack.config.js",
-			"settings":
-			{
-				"buffer_size": 395,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "var path = require('path');"
-			}
-		},
-		{
-			"file": "keystone.js",
-			"settings":
-			{
-				"buffer_size": 742,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/Site.js",
-			"settings":
-			{
-				"buffer_size": 158,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/Basics.js",
-			"settings":
-			{
-				"buffer_size": 3106,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/api.js",
-			"settings":
-			{
-				"buffer_size": 713,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/layout/Content.js",
-			"settings":
-			{
-				"buffer_size": 168,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/danny/dev/repos/our-school-liberia/models/Gallery.js",
-			"settings":
-			{
-				"buffer_size": 436,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "readme.md",
-			"settings":
-			{
-				"buffer_size": 325,
+				"buffer_size": 669,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -1181,38 +802,70 @@
 		"/home/danny/dev/repos/danny-gemma/client/scripts/containers",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/models",
 		"/home/danny/dev/repos/danny-gemma/models",
-		"/home/danny/dev/repos/danny-gemma/public",
-		"/home/danny/dev/repos/danny-gemma/public/images",
-		"/home/danny/dev/repos/danny-gemma/routes",
-		"/home/danny/dev/repos/danny-gemma/routes/api",
-		"/home/danny/dev/repos/danny-gemma/templates",
-		"/home/danny/dev/repos/danny-gemma/templates/views",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/fields",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/fields/types",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/fields/types/select",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/fields/types/text",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/fields/types/textarea",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/lib",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/lib/list"
+		"/home/danny/dev/repos/danny-gemma/public"
 	],
 	"file_history":
 	[
+		"/home/danny/dev/repos/danny-gemma/models/Attendee.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Spotify.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Attending.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/Rsvp.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/OurMenu.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Home.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Header.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Dietary.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/App.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/api.js",
+		"/home/danny/dev/repos/danny-gemma/public/styles/site.less",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Basics.js",
+		"/home/danny/dev/repos/danny-gemma/TODO",
+		"/home/danny/dev/repos/danny-gemma/node_modules/react-burger-menu/example/src/example.less",
+		"/home/danny/dev/repos/danny-gemma/readme.md",
+		"/home/danny/dev/repos/our-school-liberia/models/Gallery.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Content.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Site.js",
+		"/home/danny/dev/repos/danny-gemma/keystone.js",
+		"/home/danny/dev/repos/danny-gemma/webpack.config.js",
+		"/home/danny/dev/repos/danny-gemma/Vagrantflie",
+		"/home/danny/dev/repos/danny-gemma/vagrant-bootstrap.sh",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Location.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/AttendeeDietaryOptions.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Thankyou.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/AccommodationChoice.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/AccommodationGrid.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Accommodation.js",
+		"/home/danny/dev/repos/danny-gemma/templates/views/index.pug",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/utils.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/models/SpotifyTrack.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/models/Invitation.js",
+		"/home/danny/dev/repos/danny-gemma/models/SpotifyTrack.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/spotify.js",
+		"/home/danny/dev/repos/danny-gemma/routes/api/spotify.js",
+		"/home/danny/dev/repos/danny-gemma/node_modules/spotify-sdk/lib/dist.js",
+		"/home/danny/dev/repos/danny-gemma/.env",
+		"/home/danny/dev/repos/danny-gemma/models/Invitation.js",
+		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/HISTORY.md",
+		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/lib/updateHandler.js",
+		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/lib/list/register.js",
+		"/home/danny/dev/repos/danny-gemma/routes/index.js",
+		"/home/danny/dev/repos/danny-gemma/routes/api/invitation.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/application.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/MailIcon.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Footer.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/savethedate.js",
+		"/home/danny/dev/repos/danny-gemma/routes/api/attendees.js",
+		"/home/danny/dev/repos/danny-gemma/.babelrc",
 		"/home/danny/Downloads/001-168.1.75.41-datebook.dba-1492395186.ical",
 		"/home/danny/Downloads/001-168.1.75.41-datebook.dba-1492395186.csv",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/spotify-demo.js",
 		"/home/danny/dev/repos/danny-gemma/package.json",
 		"/home/danny/dev/repos/danny-gemma/node_modules/spotify-sdk/package.json",
-		"/home/danny/dev/repos/danny-gemma/node_modules/spotify-sdk/lib/dist.js",
 		"/home/danny/dev/repos/danny-gemma/public/styles/old.less",
 		"/home/danny/dev/repos/danny-gemma/public/styles/site.min.css",
-		"/home/danny/dev/repos/danny-gemma/templates/views/index.pug",
 		"/home/danny/dev/repos/danny-gemma/node_modules/react-router-dom/Link.js",
 		"/home/danny/dev/repos/danny-gemma/models/Accommodation.js",
-		"/home/danny/dev/repos/danny-gemma/routes/index.js",
 		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/fields/types/Type.js",
 		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/admin/server/api/list/update.js",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone/lib/list/register.js",
 		"/home/danny/dev/repos/danny-gemma/routes/api/accommodation.js",
 		"/home/danny/dev/repos/danny-gemma/models/AttendeePreferences.js",
 		"/home/danny/dev/repos/danny-gemma/models/Rsvp.js",
@@ -1280,52 +933,7 @@
 		"/home/danny/dev/repos/our-school-liberia/templates/views/gallery.pug",
 		"/home/danny/dev/repos/our-school-liberia/templates/views/get-involved-fundraise.pug",
 		"/home/danny/dev/repos/our-school-liberia/templates/views/get-involved.pug",
-		"/home/danny/dev/repos/our-school-liberia/templates/views/getinvolved.pug",
-		"/home/danny/dev/repos/our-school-liberia/templates/views/about-supporters.pug",
-		"/home/danny/dev/repos/our-school-liberia/public/js/init-gallery.js",
-		"/home/danny/dev/repos/our-school-liberia/templates/views/about-en.pug",
-		"/home/danny/dev/repos/our-school-liberia/templates/emails/volunteer-submission.pug",
-		"/home/danny/dev/repos/our-school-liberia/keystone.js",
-		"/home/danny/dev/repos/our-school-liberia/templates/views/get-involved-events.pug",
-		"/home/danny/dev/repos/our-school-liberia/updates/0.0.4-testdata.js",
-		"/home/danny/dev/repos/our-school-liberia/models/TeamMember.js",
-		"/home/danny/dev/repos/danny-gemma/emails/savethedate.pug",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone-email/lib/util/requireOptional.js",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone-email/lib/transports/nodemailer/index.js",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone-email/lib/util/getTransport.js",
-		"/home/danny/dev/repos/danny-gemma/.env",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/.babelrc",
-		"/home/danny/dev/repos/danny-gemma/.babelrc",
-		"/home/danny/dev/repos/danny-gemma/scripts/emailer.js",
-		"/home/danny/dev/repos/danny-gemma/keystone.js",
-		"/home/danny/dev/repos/danny-gemma/routes/api/attendees.js",
-		"/home/danny/dev/repos/danny-gemma/emails/lib/sendSaveTheDate.js",
-		"/home/danny/dev/repos/danny-gemma/updates/0.0.2-attendees.js",
-		"/home/danny/dev/repos/danny-gemma/start.js",
-		"/home/danny/dev/repos/danny-gemma/models/User.js",
-		"/home/danny/dev/repos/danny-gemma/models/Attendee.js",
-		"/home/danny/dev/repos/dannyandgem/emailer/sendmail.js",
-		"/home/danny/dev/repos/dannyandgem/index.html",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/application.js",
-		"/home/danny/dev/repos/dannyandgem/src/scss/_variables.scss",
-		"/home/danny/dev/repos/danny-gemma/public/styles/site.less",
-		"/home/danny/dev/repos/danny-gemma/.editorconfig",
-		"/home/danny/dev/repos/danny-gemma/updates/0.0.1-admins.js",
-		"/home/danny/dev/repos/danny-gemma/.gitignore",
-		"/home/danny/dev/repos/danny-gemma/routes/views/index.js",
-		"/home/danny/dev/repos/danny-gemma/routes/middleware.js",
-		"/home/danny/dev/repos/0.0.2-attendees.js",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone-email/index.js",
-		"/home/danny/dev/repos/danny-gemma/node_modules/keystone-email/lib/Email.js",
-		"/home/danny/dev/repos/dannyandgem/src/scss/main.scss",
-		"/home/danny/dev/opensource/keystone/fields/types/relationship/RelationshipType.js",
-		"/home/danny/dev/repos/our-school-liberia/models/Event.js",
-		"/home/danny/.dotfiles/shell/dannyrc.link",
-		"/home/danny/dev/repos/dannyandgem/src/js/main.js",
-		"/home/danny/dev/repos/dannyandgemma/app/components/Backgrounder/Backgrounder.css",
-		"/home/danny/dev/repos/dannyandgemma/app/components/Backgrounder/Backgrounder.js",
-		"/home/danny/dev/repos/dannyandgemma/app/layouts/Savethedate.js",
-		"/home/danny/dev/repos/dannyandgem/package.json"
+		"/home/danny/dev/repos/our-school-liberia/templates/views/getinvolved.pug"
 	],
 	"find":
 	{
@@ -1468,9 +1076,22 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"Header",
+			"as={Link}",
+			"Menu",
+			"Dropdown.Item",
+			"Menu",
+			"as={Link}",
+			"Dropdown.Item",
+			"enu.Item",
+			"Menu.Item",
+			"Header",
+			"uri",
+			"spotify",
+			"invitation",
 			"selectedTrack",
 			"trackSelector",
 			"trackSearch",
@@ -1585,20 +1206,7 @@
 			"getUpdateHandler",
 			"item",
 			"Invitation",
-			"Attendee",
-			"Accommodation",
-			"Rsvp",
-			"Invitation",
-			"attendee",
-			"Invitation",
-			"foreign",
-			"foriegn",
-			"unique",
-			".index",
-			"\"index\"",
-			"'index'",
-			"index",
-			"Types.Relationship"
+			"Attendee"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1744,563 +1352,16 @@
 	"groups":
 	[
 		{
-			"selected": 26,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "models/Attendee.js",
+					"file": "templates/views/index.pug",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1082,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								211,
-								211
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 24,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "models/SpotifyTrack.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 553,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								249,
-								249
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/scripts/spotify.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1647,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1037,
-								1037
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 592.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "routes/api/spotify.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 92,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								26
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 28,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "node_modules/spotify-sdk/lib/dist.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 271155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14,
-								14
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 29,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": ".env",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 488,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								484,
-								484
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 22,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "models/Invitation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 911,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								357,
-								357
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "node_modules/keystone/HISTORY.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 57366,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								56611,
-								56611
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 30691.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 47,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "node_modules/keystone/lib/updateHandler.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3646,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								243,
-								243
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 44,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "node_modules/keystone/lib/list/register.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3501,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								701,
-								701
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 46,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "routes/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1265,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								556,
-								556
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 45,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "routes/api/invitation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2425,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2088,
-								2088
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2112.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "client/scripts/application.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 241,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								130,
-								130
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "client/scripts/components/MailIcon.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 583,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								583,
-								583
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 42,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "client/scripts/components/layout/Footer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 318,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								318,
-								318
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "client/scripts/savethedate.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2294,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1294,
-								1294
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 992.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 43,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "client/scripts/components/layout/Header.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2702,
+						"buffer_size": 1695,
 						"regions":
 						{
 						},
@@ -2315,511 +1376,8 @@
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "routes/api/attendees.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1757,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								959,
-								959
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 858.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "public/styles/site.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 63,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								63,
-								63
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 66.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 34,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": ".babelrc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 48,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								45,
-								45
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 30,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2626,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										151,
-										157
-									],
-									[
-										205,
-										211
-									],
-									[
-										237,
-										243
-									],
-									[
-										340,
-										346
-									],
-									[
-										370,
-										376
-									],
-									[
-										404,
-										410
-									],
-									[
-										766,
-										772
-									],
-									[
-										971,
-										977
-									],
-									[
-										994,
-										1000
-									],
-									[
-										2385,
-										2391
-									],
-									[
-										2478,
-										2484
-									],
-									[
-										2563,
-										2569
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								2481,
-								2481
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/home/danny/dev/repos/danny-gemma",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 924.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 32,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "client/scripts/models/Invitation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 363,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								303,
-								303
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "client/scripts/models/SpotifyTrack.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 437,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								314,
-								314
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 33.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "client/scripts/utils.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 218,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								202,
-								202
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								182,
-								182
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/home/danny/dev/repos/danny-gemma",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 41,
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "client/scripts/containers/App.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4931,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								350,
-								350
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 26,
-					"file": "client/scripts/components/Spotify.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3470,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2043,
-								2043
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2376.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 27,
-					"file": "templates/views/index.pug",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1695,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								598,
-								598
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 35,
-					"type": "text"
-				},
-				{
-					"buffer": 28,
-					"file": "client/scripts/components/Home.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 405,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								302,
-								302
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 29,
-					"file": "client/scripts/components/about/Accommodation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 521,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								436,
-								436
-							],
-							[
-								490,
-								490
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": false,
 							"trim_trailing_white_space_on_save": true
@@ -2832,393 +1390,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
-					"file": "client/scripts/components/AccommodationGrid.js",
+					"buffer": 1,
+					"file": "updates/0.0.1-admins.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3741,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2800,
-								2800
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 25,
-					"type": "text"
-				},
-				{
-					"buffer": 31,
-					"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 666,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								323,
-								323
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 21,
-					"type": "text"
-				},
-				{
-					"buffer": 32,
-					"file": "client/scripts/components/rsvpsteps/Thankyou.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 658,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								259,
-								259
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 31,
-					"type": "text"
-				},
-				{
-					"buffer": 33,
-					"file": "client/scripts/components/rsvpsteps/Dietary.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4961,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2445,
-								2445
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1881.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 34,
-					"file": "client/scripts/components/AttendeeDietaryOptions.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": false,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 33,
-					"type": "text"
-				},
-				{
-					"buffer": 35,
-					"file": "client/scripts/components/rsvpsteps/Attending.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2335,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1804,
-								1804
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 297.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 26,
-					"type": "text"
-				},
-				{
-					"buffer": 36,
-					"file": "client/scripts/containers/Rsvp.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1584,
-								1584
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3172.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 37,
-					"file": "client/scripts/components/about/Location.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4499,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4012,
-								4012
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4387.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 38,
-					"file": "vagrant-bootstrap.sh",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1405,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								914,
-								914
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 37,
-					"type": "text"
-				},
-				{
-					"buffer": 39,
-					"file": "TODO",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								156,
-								156
-							]
-						],
-						"settings":
-						{
-							"auto_name": "info - friday evening/sat morning arrival,",
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 40,
-					"file": "Vagrantflie",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 480,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								480,
-								480
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Vagrant.configure(\"2\") do |config|",
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 38,
-					"type": "text"
-				},
-				{
-					"buffer": 41,
-					"file": "webpack.config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 395,
+						"buffer_size": 268,
 						"regions":
 						{
 						},
@@ -3231,10 +1408,43 @@
 						],
 						"settings":
 						{
-							"auto_name": "var path = require('path');",
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "models/Attendee.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								330,
+								330
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
@@ -3244,170 +1454,133 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 39,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 42,
-					"file": "keystone.js",
+					"buffer": 3,
+					"file": "models/Invitation.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 742,
+						"buffer_size": 1119,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								156,
-								156
+								607,
+								607
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/scripts/components/Spotify.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1637,
+								1637
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": false,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 897.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 40,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 43,
-					"file": "client/scripts/components/about/Site.js",
+					"buffer": 5,
+					"file": "client/scripts/spotify.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 158,
+						"buffer_size": 1848,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								158,
-								158
+								1248,
+								1248
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 44,
-					"file": "client/scripts/components/about/Basics.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3106,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1522,
-								1522
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 295.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 45,
-					"file": "client/scripts/api.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 713,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								442,
-								442
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 538.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 46,
-					"file": "client/scripts/components/layout/Content.js",
+					"buffer": 6,
+					"file": "models/User.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 168,
+						"buffer_size": 669,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27,
-								27
+								387,
+								387
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"trim_trailing_white_space_on_save": true
@@ -3416,75 +1589,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 47,
-					"file": "/home/danny/dev/repos/our-school-liberia/models/Gallery.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 436,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								324,
-								324
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 48,
-					"type": "text"
-				},
-				{
-					"buffer": 48,
-					"file": "readme.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								312,
-								312
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 36,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

@@ -9,17 +9,15 @@ var Attendee = new keystone.List('Attendee',{
 Attendee.add({
   name: { type: Types.Name, required: true, index: true },
   email: { type: Types.Email, initial: true, index: true },
-  password: { type: Types.Password, initial: true },
-  savethedatesent: { type: Boolean, label: 'Save The Date Sent' },
-  savethedateopens: { type: Types.Number, label: 'Save The Date Opens', default: 0 },
-  pagevisits: { type: Types.Number, label: 'Page Visits', default: 0 },
   dietaryprefs: { type: Types.Select, options: [
     { value: 'whatever', label: 'Whatever' },
     { value: 'vegan', label: 'Vegan' },
     { value: 'glutenfree', label: 'Gluten Free' },
+    { value: 'vegan-glutenfree', label: 'Vegan & Gluten Free' },
     { value: 'other', label: 'Other' }
   ], default: 'whatever'},
   dietaryother: { type: String },
+  stitchin: { type: Boolean, label: 'Up for knitting some yarn bomb'},
   createdAt: { type: Date, default: Date.now, noedit: true }
 });
 

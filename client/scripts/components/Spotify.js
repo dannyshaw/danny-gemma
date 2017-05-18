@@ -1,9 +1,9 @@
 import React from 'react';
 import SpotifyPlayer from 'react-spotify-player';
-import { Header, Container, Dimmer, Loader, Grid, Form, Input, Button, List } from 'semantic-ui-react';
+import { Header, Container, Dimmer, Loader, Grid, Form, Input, Icon, Button, List } from 'semantic-ui-react';
 import { searchTracks } from '../spotify';
 import SpotifyTrack from '../models/SpotifyTrack';
-export const TrackList = ({ tracks, selectedIndex, onClick = x => x, inverted }) => (
+export const TrackList = ({ tracks, selectedIndex, onClick = x => x, onRemove=null, inverted }) => (
 	<div style={{
 		overflowY: tracks.length > 10 ? 'scroll' : 'inherit',
 		maxHeight: '70vh'
@@ -16,11 +16,22 @@ export const TrackList = ({ tracks, selectedIndex, onClick = x => x, inverted })
 		     		onClick={() => onClick(index)}
 		     		active={index === selectedIndex}
 		     	>
-		     		<List.Icon name='music' />
-		       	<List.Content>
-		         <List.Header inverted={inverted}>{track.title}</List.Header>
-		         {track.artist}
-		       </List.Content>
+		       	<List.Content floated="left">
+		          <List.Header inverted={inverted}>{track.title}</List.Header>
+		          {track.artist}
+		        </List.Content>
+					  	{onRemove && (
+		       		<List.Content floated="right">
+				        <List.Icon
+				        	name="remove"
+				        	floated="right"
+				        	onClick={(e) => {
+				        		e.stopPropagation();
+					        	onRemove(index);
+					        }}
+					      />
+		        	</List.Content>
+					 		 )}
 		     </List.Item>
 		   );
 		})}
@@ -49,12 +60,17 @@ class Spotify extends React.Component {
 
 	search = (title) => {
 		this.setState({ loading: true })
-		searchTracks(title, 50).then(tracks => {
-			this.setState({
-				tracks: tracks.map(track => SpotifyTrack.fromTrack(track)),
-				loading: false,
+		searchTracks(title, 50)
+			.then(tracks => {
+				this.setState({
+					tracks: tracks.map(track => SpotifyTrack.fromTrack(track)),
+					loading: false,
+				})
 			})
-		})
+			.catch(error => {
+				this.setState({'searchString': error })
+			})
+
 	};
 
 	// componentDidMount() {
@@ -115,7 +131,7 @@ class Spotify extends React.Component {
 						{selectedTrack && (
 							 <div className="spotify-embed" style={{ display: playerLoading ? 'none' : 'block' }}>
 							 		<iframe
-							 			src={`https://embed.spotify.com/?uri=${selectedTrack.uri}`}
+							 			src={`https://embed.spotify.com/?uri=${selectedTrack.spotifyUri}`}
 							 			width={400}
 							 			height={600}
 							 			frameBorder={0}

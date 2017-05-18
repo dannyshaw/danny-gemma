@@ -9,6 +9,7 @@ const OPTIONS = [
   { key: 'whatever', text: 'Whatever' },
   { key: 'vegan', text: 'Vegan' },
   { key: 'glutenfree', text: 'Gluten Free' },
+  { key: 'vegan-glutenfree', text: 'Vegan & Gluten Free' },
   { key: 'other', text: 'Other' }
 ];
 
@@ -23,15 +24,26 @@ class AttendeePreferences extends React.Component {
   }
 
   getDietaryFields() {
+    const { attendee } = this.props;
     return OPTIONS.map(option => {
       return (
-        <Form.Radio
-          key={option.key}
-          value={option.key}
-          label={option.text}
-          checked={this.props.attendee.dietaryprefs === option.key}
-          onChange={(e, data) => this.onChangeField('dietaryprefs', option.key)}
-        />
+        <Form.Group inline>
+          <Form.Radio
+            key={option.key}
+            value={option.key}
+            label={option.text}
+            checked={attendee.dietaryprefs === option.key}
+            onChange={(e, data) => this.onChangeField('dietaryprefs', option.key)}
+          />
+           {attendee.dietaryprefs === 'other' && option.key === 'other' && (
+              <Form.Input
+                required
+                plcaeholder="Please Specify"
+                defaultValue={attendee.dietaryother}
+                onBlur={e => this.onChangeField('dietaryother', e.target.value)}
+              />
+            )}
+        </Form.Group>
        );
     })
   }
@@ -41,7 +53,6 @@ class AttendeePreferences extends React.Component {
     this.setState({ showTrackSelector: true })
   };
   closeTrackSelector = () => {
-    debugger
     this.setState({ showTrackSelector: false })
   };
 
@@ -50,38 +61,46 @@ class AttendeePreferences extends React.Component {
     this.onChangeField('tracks', [...currentTracks, track]);
   };
 
+  removeTrackSuggestion = (index) => {
+    const currentTracks = this.props.attendee.tracks || [];
+    this.onChangeField(
+      'tracks',
+      [...currentTracks.slice(0,index), ...currentTracks.slice(index + 1)]
+    );
+  };
+
       // <Form.Group widths='equal'>
       // </Form.Group>
   render() {
     const { attendee } = this.props;
     return (
-      <div>
+      <Grid columns={2}>
+        <Grid.Column>
         <Form.Group grouped>
-          <label>Dietary Option</label>
+          <Header>Dietary Requirements</Header>
           {this.getDietaryFields()}
-          {attendee.dietaryprefs === 'other' && (
-            <Form.Input
-              label="Please Specify"
-              defaultValue={attendee.dietaryother}
-              onBlur={e => this.onChangeField('dietaryother', e.target.value)}
-            />
-          )}
         </Form.Group>
+        </Grid.Column>
+        <Grid.Column>
         <Form.Group grouped>
-          <label>Playlist Suggestions</label>
-          <TrackList tracks={attendee.tracks || []} onClick={console.log} />
+          <Header>Playlist Suggestions</Header>
+          <TrackList
+            tracks={attendee.tracks || []}
+            onClick={console.log}
+            onRemove={this.removeTrackSuggestion}
+          />
           <Modal
             trigger={<Button onClick={this.showTrackSelector}>Add Track Suggestion</Button>}
             open={this.state.showTrackSelector}
             onClose={this.closeTrackSelector}
-            closeOnEscape={false}
-            closeOnRootNodeClick={false}
+            closeOnEscape={true}
+            closeOnRootNodeClick={true}
             size='large'
             style={{ minHeight: '60vh' }}
           >
             <Header icon='spotify' content='Find your jam!' />
             <Modal.Content>
-              <p>Just remember, it's a wedding aye. We're totes vetoing...</p>
+              <p>We're totes vetoing stuff, but give us ideas!...</p>
               <Spotify
                 onSelect={this.addTrackSuggestion}
                 selectText="Suggest This Track"
@@ -89,19 +108,11 @@ class AttendeePreferences extends React.Component {
             </Modal.Content>
           </Modal>
         </Form.Group>
-      </div>
+        </Grid.Column>
+      </Grid>
     );
   }
 }
-            // <Modal.Actions>
-            //   <Button basic color='red' inverted>
-            //     <Icon name='remove' /> No
-            //   </Button>
-            //   <Button color='green' inverted>
-            //     <Icon name='checkmark' /> Yes
-            //   </Button>
-            // </Modal.Actions>
-
 
 class Dietary extends React.Component {
   render() {
@@ -132,7 +143,7 @@ class Dietary extends React.Component {
               </Menu>
             </Grid.Column>
             <Grid.Column stretched width={12}>
-              <Header>{`${attendee.name.first}'s Preferences`}</Header>
+              <Header as="h1">{`${attendee.name.first}'s Preferences`}</Header>
               <Form>
                 <AttendeePreferences
                   key={attendee.id}

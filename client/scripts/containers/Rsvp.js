@@ -27,8 +27,8 @@ const steps = [
   },
   {
     id: 'dietary',
-    icon: 'food',
-    title: 'Guest Details',
+    icon: 'options',
+    title: 'Guest Preferences',
     dependent: true
   },
   {
@@ -82,7 +82,7 @@ class Rsvp extends React.Component {
     const { location, history, route, invitation } = this.props;
     return (
       <div>
-        <Step.Group items={this.getSteps()} fluid size="small" />
+        <Step.Group items={this.getSteps()} fluid size="tiny" />
         <Switch>
           <Route exact path="/rsvp/attending" component={
             (props) => (

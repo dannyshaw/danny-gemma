@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import { Dropdown, Container, Message, Menu, Button, Form, Input, Image } from 'semantic-ui-react';
+import { Dropdown, Container, Header as SemanticHeader, Message, Menu, Button, Form, Input, Image } from 'semantic-ui-react';
 
 class Header extends React.Component {
 
@@ -9,7 +9,7 @@ class Header extends React.Component {
 
     if (invitation) {
       return [
-          <Menu.Item key="greeting">{this.props.invitation.getGreeting()}</Menu.Item>,
+          <Menu.Item key="greeting">{`Hey ${this.props.invitation.getGreeting()}!`}</Menu.Item>,
           <Menu.Item
             key={1}
             name='logout'
@@ -19,25 +19,23 @@ class Header extends React.Component {
       ];
     } else {
       return (
-        <Form>
-          <Form.Field inline>
-            <label>Invite Code:</label>
-            <Input
-              value={this.props.inviteCode}
-              placeholder='Invite Code'
-              onChange={e => this.props.onInviteCodeChange(e.target.value)}
-            />
-            <Button
-              onClick={(e) => {
+        <Menu.Item position='right'>
+          <Input
+            action={{
+              type: 'submit',
+              icon: 'sign in',
+              onClick: (e) => {
                 e.preventDefault();
                 this.props.login()
-              }}
-              disabled={!this.props.isValid}
-              basic
-            >Login</Button>
-          </Form.Field>
-        </Form>
-       );
+              },
+              disabled: !this.props.isValid,
+            }}
+            placeholder='Enter invite code'
+            value={this.props.inviteCode}
+            onChange={e => this.props.onInviteCodeChange(e.target.value)}
+          />
+        </Menu.Item>
+      );
     }
   }
 
@@ -46,7 +44,8 @@ class Header extends React.Component {
     const { location } = this.props;
     return (
       <div>
-        <Menu fluid size="massive">
+        <SemanticHeader as="span" className="dannygemmaTitle">Danny & Gemma</SemanticHeader>
+        <Menu fluid size="massive" borderless>
           <Menu.Item as={Link} to="/" active={location.pathname === '/'}>Home</Menu.Item>
           <Menu.Item as={Link} disabled={!loggedIn} to="/rsvp" active={location.pathname.startsWith('/rsvp')}>RSVP</Menu.Item>
           <Dropdown item text='About' disabled={!loggedIn} className={location.pathname.startsWith('/about') ? "active" : ""}>
@@ -57,7 +56,7 @@ class Header extends React.Component {
               <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/site" active={location.pathname === '/about/site'}>This Site</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Menu.Menu position='right'>
+          <Menu.Menu position='right' >
             {this.renderLoginForm()}
           </Menu.Menu>
         </Menu>

@@ -7,9 +7,9 @@ export const getInvitation = (code) => {
       .get(`/api/invitation/${code}`)
       .end((err, result) => {
         if (err) {
-          resolve(false, result.body.error);
+          resolve({ data: false, error: result.body.error });
         } else {
-          resolve(result.body.invitation, false);
+          resolve({ data: result.body.invitation, error: false });
         }
       })
     ;

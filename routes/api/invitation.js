@@ -63,15 +63,18 @@ function processRsvp(invitation, data) {
     invitation.attending = data.attending;
     invitation.message = data.message;
     invitation.accommodation = data.accommodation;
-    invitation.attendees.forEach(attendee => {
+
+    async.eachOf(invitation.attendees, (attendee, index, callback) => {
       const attendeeData = _.find(data.attendees, att => att._id == attendee._id);
-      processAttendee(attendee, attendeeData);
+      SpotifyTrack.model.find().where('attendee', attendee.id).exec((err, existingTracks) => {
+        processAttendee(attendee, attendeeData, existingTracks);
+      })
     })
     invitation.save();
     return true;
 }
 
-function processAttendee(attendee, data) {
+function processAttendee(attendee, data, existingTracks) {
   attendee.dietaryprefs = data.dietaryprefs
   attendee.dietaryother = attendee.dietaryprefs === 'other'
     ? data.dietaryother
@@ -79,6 +82,16 @@ function processAttendee(attendee, data) {
   ;
   attendee.save();
 
+  // delete tracks not in the incoming list
+  const newIds = data.tracks.map(track => track.id);
+  async.eachOf(existingTracks, (track, index, callback) => {
+    if (newIds.indexOf(track.id) < 0)
+      track.remove((err) => {
+        callback();
+      });
+  });
+
+  //save the rest (no dups will be created)
   if (data.tracks && data.tracks.length) {
     data.tracks.forEach(track => {
       saveTrack(track, attendee);
