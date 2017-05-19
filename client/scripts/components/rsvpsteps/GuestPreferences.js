@@ -5,7 +5,7 @@ import Spotify, { TrackList } from '../Spotify';
 import SpotifyTrack from '../../models/SpotifyTrack';
 
 
-const OPTIONS = [
+const DIETARY_OPTIONS = [
   { key: 'whatever', text: 'Whatever' },
   { key: 'vegan', text: 'Vegan' },
   { key: 'glutenfree', text: 'Gluten Free' },
@@ -25,7 +25,7 @@ class AttendeePreferences extends React.Component {
 
   getDietaryFields() {
     const { attendee } = this.props;
-    return OPTIONS.map(option => {
+    return DIETARY_OPTIONS.map(option => {
       return (
         <Form.Group inline>
           <Form.Radio
@@ -127,23 +127,45 @@ class AttendeePreferences extends React.Component {
 
 class GuestPreferences extends React.Component {
   render() {
-    const { attendees, activeIndex } = this.props;
-    const attendee = attendees[activeIndex];
+    const { invitation, activeIndex } = this.props;
+    const attendee = invitation.attendees[activeIndex];
     if(!attendee) {
       return <Redirect to="/rsvp/guestpreferences/0" />;
     }
+
+    const EtaOption = ({ value, label }) =>(
+      <Form.Radio
+        value={value}
+        label={label}
+        checked={invitation.eta === value}
+        onChange={(e, data) => this.props.updateETA(value)}
+      />
+    )
 
     return (
       <Container>
         <Grid>
           <Grid.Row>
-
+            <Header>Arrival / Departure</Header>
+            <p>Doesn't matter if you're not sure, we;re just trying to get a general idea</p>
+            <Form.Group inline>
+              <label>When do you think you'll arrive?</label>
+              <EtaOption value="friday-eve" label="Friday Evening" />
+              <EtaOption value="saturday-morning" label="Saturday Morning" />
+            </Form.Group>
+            <Form.Group inline>
+              <label>Do you think you'll be there for a breakfast/brunch Sunday morning?</label>
+              <Form.Checkbox
+                checked={invitation.sunday}
+                onChange={(e, data) => this.props.updateSunday(!invitation.sunday)}
+              />
+            </Form.Group>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column width={4}>
               <Menu fluid vertical tabular>
                 {
-                  this.props.attendees.map((attendee, index) => {
+                  invitation.attendees.map((attendee, index) => {
                     return (
                       <Menu.Item
                         key={attendee.id}

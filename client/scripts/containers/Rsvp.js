@@ -120,8 +120,9 @@ class Rsvp extends React.Component {
               }
               return (
                 <GuestPreferences
-                  attendees={invitation.attendees}
-                  setField={this.setField}
+                  invitation={invitation}
+                  updateETA={(eta) => this.setField('eta', eta)}
+                  updateSunday={(sunday) => this.setField('sunday', sunday)}
                   updateAttendee={this.updateAttendee}
                   activeIndex={parseInt(props.match.params.index, 10)}
                   setActiveIndex={(index) => props.history.push(`/rsvp/guestpreferences/${index}`)}
@@ -139,12 +140,6 @@ class Rsvp extends React.Component {
     );
   }
 }
-/*
-              <YourDetails
-                {...props}
-                onFieldChange={this.setField}
-                invitation={invitation}
-               />
-*/
+
 export default Rsvp;
 

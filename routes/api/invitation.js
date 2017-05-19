@@ -63,6 +63,9 @@ function processRsvp(invitation, data) {
     invitation.attending = data.attending;
     invitation.message = data.message;
     invitation.accommodation = data.accommodation;
+    invitation.eta = data.eta;
+    invitation.sunday = data.sunday;
+
 
     async.eachOf(invitation.attendees, (attendee, index, callback) => {
       const attendeeData = _.find(data.attendees, att => att._id == attendee._id);
