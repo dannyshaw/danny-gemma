@@ -80,6 +80,17 @@ class AttendeePreferences extends React.Component {
           <Header>Dietary Requirements</Header>
           {this.getDietaryFields()}
         </Form.Group>
+        <Form.Group grouped>
+          <Header>Help Out!</Header>
+          <Form.Group>
+            <Form.Checkbox
+              value={attendee.stitchin}
+              label="Are you a knitter?? Would you be interested in helping yarn bomb a tree?"
+              checked={attendee.stitchin}
+              onChange={(e, data) => this.onChangeField('stitchin', !attendee.stitchin)}
+            />
+          </Form.Group>
+        </Form.Group>
         </Grid.Column>
         <Grid.Column>
         <Form.Group grouped>
@@ -114,17 +125,20 @@ class AttendeePreferences extends React.Component {
   }
 }
 
-class Dietary extends React.Component {
+class GuestPreferences extends React.Component {
   render() {
     const { attendees, activeIndex } = this.props;
     const attendee = attendees[activeIndex];
     if(!attendee) {
-      return <Redirect to="/rsvp/dietary/0" />;
+      return <Redirect to="/rsvp/guestpreferences/0" />;
     }
 
     return (
       <Container>
         <Grid>
+          <Grid.Row>
+
+          </Grid.Row>
           <Grid.Row>
             <Grid.Column width={4}>
               <Menu fluid vertical tabular>
@@ -175,4 +189,4 @@ class Dietary extends React.Component {
         //   })
         // }
         // </Form>
-export default Dietary;
+export default GuestPreferences;

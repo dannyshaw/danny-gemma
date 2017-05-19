@@ -80,6 +80,7 @@ function processAttendee(attendee, data, existingTracks) {
     ? data.dietaryother
     : null
   ;
+  attendee.stitchin = data.stitchin;
   attendee.save();
 
   // delete tracks not in the incoming list

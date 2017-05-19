@@ -10,7 +10,7 @@ import {
 
 import Attending from '../components/rsvpsteps/Attending';
 import AccommodationChoice from '../components/rsvpsteps/AccommodationChoice';
-import Dietary from '../components/rsvpsteps/Dietary';
+import GuestPreferences from '../components/rsvpsteps/GuestPreferences';
 import Thankyou from '../components/rsvpsteps/Thankyou';
 
 const steps = [
@@ -26,7 +26,7 @@ const steps = [
     dependent: true
   },
   {
-    id: 'dietary',
+    id: 'guestpreferences',
     icon: 'options',
     title: 'Guest Preferences',
     dependent: true
@@ -108,22 +108,23 @@ class Rsvp extends React.Component {
                 {...props}
                 selected={invitation.accommodation}
                 onChange={option => this.setField('accommodation', option)}
-                next={() => this.redirectToStep('dietary')}
+                next={() => this.redirectToStep('guestpreferences')}
               />
             }
           }/>
 
-          <Route exact path="/rsvp/dietary/:index?" component={
+          <Route exact path="/rsvp/guestpreferences/:index?" component={
             (props) => {
               if (!invitation.attending) {
                 return <Redirect to="/rsvp/attending" />;
               }
               return (
-                <Dietary
+                <GuestPreferences
                   attendees={invitation.attendees}
+                  setField={this.setField}
                   updateAttendee={this.updateAttendee}
                   activeIndex={parseInt(props.match.params.index, 10)}
-                  setActiveIndex={(index) => props.history.push(`/rsvp/dietary/${index}`)}
+                  setActiveIndex={(index) => props.history.push(`/rsvp/guestpreferences/${index}`)}
                   next={() => props.history.push(`/rsvp/thankyou`)}
                 />
               );

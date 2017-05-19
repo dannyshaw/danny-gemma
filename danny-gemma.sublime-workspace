@@ -565,13 +565,38 @@
 			}
 		},
 		{
-			"contents": "import { Client, TrackHandler, UserHandler, PlaylistHandler, ArtistHandler } from 'spotify-sdk';\n\nlet client = Client.instance;\n\nclient.settings = {\n\tclientId: process.env.SPOTIFY_CLIENT_ID || '268d754b13d94238972f47cccedf6422',\n  secretId: process.env.SPOTIFY_SECRET_KEY ||  '917dc1911cd2429ab5a44000ee4a5ef0',\n  scopes: ['user-follow-modify user-follow-read user-library-read user-top-read'],\n  redirect_uri: window.location.href\n};\n\n\n\n/*\n * TrackHandler Examples\n *\n */\nvar track = new TrackHandler();\nvar user = new UserHandler();\n\n\n/*\n * #1 example\n * Get tracks with the name 'R U mine?', should return a Collection of tracks.\n */\n\nexport const searchTracks = (str, limit=10) => {\n\treturn new Promise((resolve, reject) => {\n    track.search(str, { limit })\n      .then((trackCollection) => {\n  \t\t\tconsole.log(trackCollection);\n  \t\t\tresolve(trackCollection);\n  \t\t})\n      .error(() => {\n        reject('Could not perform track search')\n      });\n    }\n\t})\n};\n\nexport const getTracks = (ids) => {\n  return new Promise((resolve) => {\n    track.get(ids)\n      .then((trackCollection) => {\n        console.log(trackCollection);\n        resolve(trackCollection);\n      })\n      .error(() => {\n        reject('Could not perform track search')\n      });;\n  })\n};\n\n\nexport function session() {\n    if (sessionStorage.token) {\n        client.token = sessionStorage.token;\n    } else if (window.location.hash.split('&')[0].split('=')[1]) {\n        sessionStorage.token = window.location.hash.split('&')[0].split('=')[1];\n        client.token = sessionStorage.token;\n    }\n}\n\nexport const login = () => {\n    client.login().then(url => {\n    \twindow.location.href = url;\n    });\n}\n\n\n\n\nexport const getMe = () => {\n\treturn new Promise((resolve) => {\n\t\tuser.me().then((userEntity) => {\n     console.log(userEntity);\n     resolve(userEntity);\n \t\t});\n\t})\n};\n",
 			"file": "client/scripts/spotify.js",
-			"file_size": 1755,
-			"file_write_time": 131395333060014829,
 			"settings":
 			{
-				"buffer_size": 1848,
+				"buffer_size": 1871,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/api/invitation.js",
+			"settings":
+			{
+				"buffer_size": 3155,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 528 files for \"debugger\"\n\n/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Dietary.js:\n   56:     debugger\n\n/home/danny/dev/repos/danny-gemma/public/js/bundle.js:\n 4127:  * Create a debugger with the given `namespace`.\n\n/home/danny/dev/repos/danny-gemma/routes/api/invitation.js:\n   88:     debugger\n\n3 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 357,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "TODO",
+			"settings":
+			{
+				"buffer_size": 560,
 				"line_ending": "Unix"
 			}
 		},
@@ -798,14 +823,20 @@
 		"/home/danny/dev/repos/danny-gemma/client",
 		"/home/danny/dev/repos/danny-gemma/client/scripts",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/containers",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/models",
 		"/home/danny/dev/repos/danny-gemma/models",
-		"/home/danny/dev/repos/danny-gemma/public"
+		"/home/danny/dev/repos/danny-gemma/public",
+		"/home/danny/dev/repos/danny-gemma/routes",
+		"/home/danny/dev/repos/danny-gemma/routes/api",
+		"/home/danny/dev/repos/danny-gemma/routes/views"
 	],
 	"file_history":
 	[
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Dietary.js",
 		"/home/danny/dev/repos/danny-gemma/models/Attendee.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Spotify.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Attending.js",
@@ -813,7 +844,6 @@
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/OurMenu.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Home.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Header.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Dietary.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/App.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/api.js",
 		"/home/danny/dev/repos/danny-gemma/public/styles/site.less",
@@ -937,7 +967,7 @@
 	],
 	"find":
 	{
-		"height": 107.0
+		"height": 101.0
 	},
 	"find_in_files":
 	{
@@ -1079,6 +1109,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"debugger",
+			"invert",
 			"Header",
 			"as={Link}",
 			"Menu",
@@ -1204,9 +1236,7 @@
 			"item",
 			"updateItem",
 			"getUpdateHandler",
-			"item",
-			"Invitation",
-			"Attendee"
+			"item"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1352,7 +1382,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -1386,7 +1416,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1420,7 +1450,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1454,7 +1484,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1488,7 +1518,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1519,10 +1549,10 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 897.0,
+						"translation.y": 2043.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1531,15 +1561,19 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1848,
+						"buffer_size": 1871,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1248,
-								1248
+								881,
+								881
+							],
+							[
+								1183,
+								1183
 							]
 						],
 						"settings":
@@ -1553,14 +1587,136 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 538.0,
+						"translation.y": 635.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "routes/api/invitation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2565,
+								2565
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2426.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 357,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										129,
+										137
+									],
+									[
+										213,
+										221
+									],
+									[
+										322,
+										330
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								328,
+								328
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/home/danny/dev/repos/danny-gemma",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "TODO",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								358,
+								358
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "models/User.js",
 					"semi_transient": false,
 					"settings":
@@ -1589,7 +1745,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1597,7 +1753,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 40.0
+		"height": 33.0
 	},
 	"input":
 	{
@@ -1646,7 +1802,7 @@
 	"project": "danny-gemma.sublime-project",
 	"replace":
 	{
-		"height": 86.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1655,6 +1811,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"to",
+				"danny-gemma/TODO"
+			],
+			[
+				"dietar",
+				"danny-gemma/client/scripts/components/rsvpsteps/Dietary.js"
+			],
 			[
 				"diet",
 				"danny-gemma/client/scripts/components/rsvpsteps/Dietary.js"
@@ -2158,21 +2322,13 @@
 			[
 				"apirout",
 				"react/src/core/apiRoutes.js"
-			],
-			[
-				"create",
-				"react/src/edrolo/selectors/bound/createClassCourseSelectors.js"
-			],
-			[
-				"class.",
-				"react/src/edrolo/reducers/class.js"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 855.0,
+		"height": 900.0,
 		"last_filter": "",
 		"selected_items":
 		[
@@ -2204,7 +2360,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 699.0,
+	"side_bar_width": 365.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
