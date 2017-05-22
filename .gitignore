@@ -34,3 +34,4 @@ node_modules
 *.min.css
 
 updates
+public/js/bundle*

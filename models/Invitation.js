@@ -8,6 +8,7 @@ var Invitation = new keystone.List('Invitation',{
 
 Invitation.add({
   code: { type: String, required: true, index: true, initial: true },
+  address: { type: String },
   attendees: { type: Types.Relationship, ref: 'Attendee', many: true },
   attending: { type: Boolean },
   eta: { type: Types.Select, options: [

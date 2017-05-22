@@ -152,7 +152,14 @@ class App extends React.Component {
             />
             <Route component={NoMatch}/>
           </Switch>
-          <Image src="/images/gemma_and_danny_cropped.jpg" size="small" style={{ position: 'fixed', bottom: 0, left: 0, zIndex: -1}} />
+          <Route path="/(rsvp|about)" render={() => (
+            <Image src="/images/gemma_and_danny_cropped.jpg" size="small" style={{
+              position: 'fixed',
+              bottom: '20px',
+              left: '10px',
+              zIndex: -1
+            }} />
+          )} />
         </Container>
       </Router>
     );
