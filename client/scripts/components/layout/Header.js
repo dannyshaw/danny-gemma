@@ -45,7 +45,7 @@ class Header extends React.Component {
     return (
       <div>
         <SemanticHeader as="span" className="dannygemmaTitle">Danny & Gemma</SemanticHeader>
-        <Menu fluid size="massive" borderless>
+        <Menu fluid borderless>
           <Menu.Item as={Link} to="/" active={location.pathname === '/'}>Home</Menu.Item>
           <Menu.Item as={Link} disabled={!loggedIn} to="/rsvp" active={location.pathname.startsWith('/rsvp')}>RSVP</Menu.Item>
           <Dropdown item text='About' disabled={!loggedIn} className={location.pathname.startsWith('/about') ? "active" : ""}>

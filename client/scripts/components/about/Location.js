@@ -12,7 +12,7 @@ const Location = withGoogleMap(props => {
   return (
     <GoogleMap
       defaultZoom={10}
-      defaultCenter={new google.maps.LatLng(-37.7415182,144.7289539)}
+      defaultCenter={new google.maps.LatLng(-37.7015182,144.7289539)}
     >
       <Marker
         position={new google.maps.LatLng(-37.6567638,144.4886283)}

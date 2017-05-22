@@ -15,6 +15,7 @@ import {
   Button,
   Icon,
   Input,
+  Image,
   Label,
   Header as SemanticHeader
 } from 'semantic-ui-react';
@@ -151,6 +152,7 @@ class App extends React.Component {
             />
             <Route component={NoMatch}/>
           </Switch>
+          <Image src="/images/gemma_and_danny_cropped.jpg" size="small" style={{ position: 'fixed', bottom: 0, left: 0, zIndex: -1}} />
         </Container>
       </Router>
     );
