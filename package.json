@@ -47,7 +47,7 @@
   },
   "scripts": {
     "start": "node keystone.js",
-    "resetdb": "mongo danny-gemma --eval 'db.dropDatabase()'",
+    "resetdb": "mongo danny-and-amp-gemma --eval 'db.dropDatabase()'",
     "dev": "WEBPACK_HOT=1 webpack-dev-server --hot --inline --progress",
     "build": "webpack"
   },

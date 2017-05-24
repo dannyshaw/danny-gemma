@@ -520,67 +520,59 @@
 	"buffers":
 	[
 		{
-			"file": "client/scripts/components/about/Location.js",
-			"settings":
-			{
-				"buffer_size": 1416,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
+			"contents": "import React from 'react';\nimport {\n  BrowserRouter as Router,\n  Route,\n  Redirect,\n  Link,\n  Switch,\n} from 'react-router-dom';\nimport Cookies from 'js-cookie';\nimport ls from 'local-storage';\nimport {\n  Container,\n  Grid,\n  Modal,\n  Button,\n  Icon,\n  Input,\n  Image,\n  Label,\n  Header as SemanticHeader\n} from 'semantic-ui-react';\n\nimport Invitation from '../models/Invitation';\nimport * as API from '../api';\n\nimport Rsvp from './Rsvp';\n\nimport Content from '../components/layout/Content';\nimport Header from '../components/layout/Header';\nimport Home from '../components/Home';\n\nimport Basics from '../components/about/Basics';\nimport Location from '../components/about/Location';\nimport Accommodation from '../components/about/Accommodation';\nimport Site from '../components/about/Site';\n\nimport Spotify from '../components/Spotify';\n\n\nclass App extends React.Component {\n  constructor (props) {\n    super(props);\n    const inviteCode = Cookies.get('inviteCode');\n    const data = ls(inviteCode);\n    const invitation = (data && new Invitation(data)) || null;\n\n    this.state = {\n      inviteCode: inviteCode,\n      error: null,\n      invitation,\n      rsvpStep: 0,\n    };\n  }\n\n  login = () => {\n    if (!this.isCodeValid()) {\n      this.setState({ error: \"Code must be 5 characters.\" })\n    } else {\n      API.getInvitation(this.state.inviteCode)\n        .then(({data, error}) => {\n          if (error) {\n            const errorMessage = error === 'not found' ? \"Could not find code, Try again.\" : error;\n            this.setState({ error: errorMessage })\n          } else {\n            this.setState({\n              invitation: new Invitation(data),\n              error: null\n            }, () => {\n              Cookies.set('inviteCode', this.state.inviteCode);\n              ls(this.state.inviteCode, data);\n            });\n          }\n        })\n      ;\n    }\n  };\n\n  isCodeValid = () => {\n    if (this.state.inviteCode && /^[A-Z]{5}$/.test(this.state.inviteCode)) {\n      return true;\n    }\n    return false\n  };\n\n  logout = () => {\n    this.setState({\n      invitation: null,\n      error: null,\n    }, () => {\n      Cookies.remove('inviteCode');\n    });\n  };\n\n  saveInvitation = (invitation, then) => {\n    this.setState({ invitation: invitation }, () => {\n      API\n        .updateInvitation(this.state.inviteCode, invitation)\n        .then(then)\n      ;\n    })\n  }\n\n  componentDidMount() {\n    if (this.state.inviteCode) {\n      this.login(this.state.inviteCode)\n    }\n  }\n\n  render() {\n    return (\n      <Router>\n        <Container fluid>\n          <Header\n            invitation={this.state.invitation}\n            error={this.state.error}\n            inviteCode={this.state.inviteCode}\n            onInviteCodeChange={code => {\n              this.setState({\n                inviteCode: code.toUpperCase(),\n                error: null\n              });\n            }}\n            isValid={this.isCodeValid()}\n            login={this.login}\n            logout={this.logout}\n          />\n          <Switch>\n            <Route exact path=\"/\" component={Home}/>\n            <PrivateRoute\n              loggedIn={!!this.state.invitation}\n              path=\"/rsvp/:step?\"\n              component={(props) => (\n                <Rsvp\n                  invitation={this.state.invitation}\n                  saveInvitation={this.saveInvitation}\n                  {...props}\n                />\n              )}\n            />\n            <PrivateRoute loggedIn={!!this.state.invitation} path=\"/about/basics\" component={Basics}/>\n            <PrivateRoute loggedIn={!!this.state.invitation} path=\"/about/location\" component={Location}/>\n            <PrivateRoute loggedIn={!!this.state.invitation} path=\"/about/accommodation\" component={Accommodation}/>\n            <PrivateRoute loggedIn={!!this.state.invitation} path=\"/about/site\" component={Site}/>\n            <PrivateRoute\n              loggedIn={!!this.state.invitation}\n              path=\"/spotify\"\n              component={(props) => (\n                <Spotify\n                  invitation={this.state.invitation}\n                />\n              )}\n            />\n            <Route component={NoMatch}/>\n          </Switch>\n          <Route path=\"/(rsvp|about)\" render={() => (\n            <Image src=\"/images/gemma_and_danny_cropped.jpg\" size=\"small\" style={{\n              position: 'fixed',\n              bottom: '20px',\n              left: '10px',\n              zIndex: -1\n            }} />\n          )} />\n        </Container>\n      </Router>\n    );\n  }\n}\n\nconst NoMatch = ({}) => {\n  return (\n    <Container textAlign=\"center\" height={500} style={{ paddingTop: '200px'}}>\n      <Icon name=\"heart\" size=\"massive\" />\n      <SemanticHeader>There's nothing here for you sorry...<br/>Come home</SemanticHeader>\n      <Link to=\"/\"><Icon name=\"home\" size=\"massive\" /></Link>\n    </Container>\n  );\n\n}\n\nconst PrivateRoute = ({ component, loggedIn, ...rest }) => (\n  <Route {...rest} render={props => (\n    loggedIn ? (\n      React.createElement(component, props)\n    ) : (\n      <Redirect to={{\n        pathname: '/',\n        state: { from: props.location }\n      }}/>\n    )\n  )}/>\n);\n      // <div className=\"background\" >\n      //   <div className=\"wrapper\">\n      //     <Content>\n      //       <Note />\n      //     </Content>\n      //   </div>\n      // </div>\n\nexport default App;\n",
 			"file": "client/scripts/containers/App.js",
+			"file_size": 5351,
+			"file_write_time": 131399295607339452,
 			"settings":
 			{
-				"buffer_size": 5200,
+				"buffer_size": 5351,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 600 files for \"dannyGemmaTitle\" (case sensitive)\n\n0 matches\n\nSearching 600 files for \"dannyGemmaTitle\"\n\n/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Header.js:\n   47:         <SemanticHeader as=\"span\" className=\"dannygemmaTitle\">Danny & Gemma</SemanticHeader>\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.less:\n   12: .ui.header.dannygemmaTitle {\n\n/home/danny/dev/repos/danny-gemma/public/styles/site.min.css:\n    1: @font-face{font-family:'Brusher';src:local('Brusher'),url('/fonts/Brusher-Regular.otf') format('opentype')}.ui.header.dannygemmaTitle{font-family:'Brusher';font-size:50px;font-weight:100;margin:0 auto;line-height:1.8}.gemdannyHeader{height:100px}.column{padding:0}.ui.steps .step.active:after{z-index:1}\n\n3 matches across 3 files\n",
+			"contents": "exports.create = {\n\tAttendee: [\n\t\t{\"name.first\":\"Danny\",\"name.last\":\"Shaw\",\"email\":\"technix@gmail.com\" , __ref: \"DannyShaw\" },\n\t\t{\"name.first\":\"Gemma\",\"name.last\":\"Neylon\",\"email\":\"gemma.neylon.84@gmail.com\" , __ref: \"GemmaNeylon\" },\n\t\t{\"name.first\":\"Mick\",\"name.last\":\"Neylon\",\"email\":\"michaelneylon@hotmail.co.uk\", __ref: \"MickNeylon\" },\n\t\t{\"name.first\":\"Marion\",\"name.last\":\"Neylon\",\"email\":\"marionneylon@hotmail.co.uk\", __ref: \"MarionNeylon\" },\n\t\t{\"name.first\":\"Alex\",\"name.last\":\"Neylon\",\"email\":\"alexneylon@hotmail.com\", __ref: \"AlexNeylon\" },\n\t\t{\"name.first\":\"Claire\",\"name.last\":\"Neylon\",\"email\":\"claire_thorogood@hotmail.co.uk\", __ref: \"ClaireNeylon\" },\n\t\t{\"name.first\":\"Steve\",\"name.last\":\"Shaw\",\"email\":\"stephen.john.shaw@gmail.com\", __ref: \"SteveShaw\" },\n\t\t{\"name.first\":\"Cheryl\",\"name.last\":\"Shaw\",\"email\":\"cherylsteve.shaw@gmail.com\", __ref: \"CherylShaw\" },\n\t\t{\"name.first\":\"Mick \",\"name.last\":\"Shaw\",\"email\":\"michael.shaw82@gmail.com\", __ref: \"MickShaw\" },\n\t\t{\"name.first\":\"Teresa\",\"name.last\":\"Tuffano\",\"email\":\"teresa_tufano@hotmail.com\", __ref: \"TeresaTuffano\" },\n\t\t{\"name.first\":\"Alana\",\"name.last\":\"Shaw\",\"email\":\"alanashaw31@gmail.com\", __ref: \"AlanaShaw\" },\n\t\t{\"name.first\":\"Tom\",\"name.last\":\"Bishoff\",\"email\":\"tom@cvinternational.com.au\", __ref: \"TomBishoff\" },\n\t\t{\"name.first\":\"Chantelle\",\"name.last\":\"Hamilton\",\"email\":\"chantelle.hurrion@ntlworld.com\", __ref: \"ChantelleHamilton\" },\n\t\t{\"name.first\":\"Chloe\",\"name.last\":\"Mizumba\",\"email\":\"chloemzimba@gmail.com\", __ref: \"ChloeMizumba\" },\n\t\t{\"name.first\":\"Emily\",\"name.last\":\"Louis\",\"email\":\"leml0909@aol.com\", __ref: \"EmilyLouis\" },\n\t\t{\"name.first\":\"Fiona \",\"name.last\":\"Brehony\",\"email\":\"fiona.brehony@hotmail.co.uk\", __ref: \"FionaBrehony\" },\n\t\t{\"name.first\":\"Amy\",\"name.last\":\"King\",\"email\":\"amyclaireking@hotmail.co.uk\", __ref: \"AmyKing\" },\n\t\t{\"name.first\":\"Kelsie\",\"name.last\":\"Bufton\",\"email\":\"kelsie-jane@hotmail.co.uk\", __ref: \"KelsieBufton\" },\n\t\t{\"name.first\":\"Luke\",\"name.last\":\"\",\"email\":\"kelsie-jane@hotmail.co.uk\", __ref: \"Luke\" },\n\t\t{\"name.first\":\"Gen\",\"name.last\":\"De Villiers\",\"email\":\"vieve.dv@gmail.com\", __ref: \"GenDe\" },\n\t\t{\"name.first\":\"Chloe\",\"name.last\":\"Middleton\",\"email\":\"Chloe.midd@gmail.com\", __ref: \"ChloeMiddleton\" },\n\t\t{\"name.first\":\"Ben\",\"name.last\":\"Young\",\"email\":\"ben_young_2000@yahoo.co.uk\", __ref: \"BenYoung\" },\n\t\t{\"name.first\":\"Becs\",\"name.last\":\"Laesk\",\"email\":\"puawaitanga@gmail.com\", __ref: \"BecsLaesk\" },\n\t\t{\"name.first\":\"Alex\",\"name.last\":\"Baxter\",\"email\":\"alex.j.baxter@gmail.com\", __ref: \"AlexBaxter\" },\n\t\t{\"name.first\":\"Anna\",\"name.last\":\"Benjamin\",\"email\":\"annadjbenjamin@gmail.com\", __ref: \"AnnaBenjamin\" },\n\t\t{\"name.first\":\"Kane\",\"name.last\":\"Jenkins\",\"email\":\"kjen13@gmail.com\" , __ref: \"KaneJenkins\" },\n\t\t{\"name.first\":\"Lock\",\"name.last\":\"Morley\",\"email\":\"lock.morley@gmail.com\", __ref: \"LockMorley\" },\n\t\t{\"name.first\":\"Keza\",\"name.last\":\"\",\"email\":\"diamondsandragons@yahoo.com.au\", __ref: \"Keza\" },\n\t\t{\"name.first\":\"Dara\",\"name.last\":\"Simkin\",\"email\":\"dara.simkin@gmail.com\", __ref: \"DaraSimkin\" },\n\t\t{\"name.first\":\"Will\",\"name.last\":\"Watkins\",\"email\":\"awatkins@microsoft.com\", __ref: \"WillWatkins\" },\n\t\t{\"name.first\":\"Amanda\",\"name.last\":\"Watkins\",\"email\":\"awatkins@microsoft.com\", __ref: \"AmandaWatkins\" },\n\t\t{\"name.first\":\"Simon\",\"name.last\":\"Watkins\",\"email\":\"sjwatkins.co@gmail.com\", __ref: \"SimonWatkins\" },\n\t\t{\"name.first\":\"Marianne\",\"name.last\":\"Watkins\",\"email\":\"sjwatkins.co@gmail.com\", __ref: \"MarianneWatkins\" },\n\t\t{\"name.first\":\"Joe\",\"name.last\":\"Hemmings\",\"email\":\"j.hemmings81@gmail.com\", __ref: \"JoeHemmings\" },\n\t\t{\"name.first\":\"Mel\",\"name.last\":\"\",\"email\":\"melcon81@optusnet.com.au\", __ref: \"Mel\" },\n\t\t{\"name.first\":\"Sean\",\"name.last\":\"Reefman\",\"email\":\"Sean.reefman@gmail.com\", __ref: \"SeanReefman\" },\n\t\t{\"name.first\":\"Rach\",\"name.last\":\"Feldon\",\"email\":\"Rachel.feldon@gmail.com\", __ref: \"RachFeldon\" },\n\t\t{\"name.first\":\"Rhett\",\"name.last\":\"Parkinson\",\"email\":\"rhett.parkinson@gmail.com\", __ref: \"RhettParkinson\" },\n\t\t{\"name.first\":\"Eli\",\"name.last\":\"\",\"email\":\"rhett.parkinson@gmail.com\", __ref: \"Eli\" },\n\t\t{\"name.first\":\"Jono\",\"name.last\":\"Mullins\",\"email\":\"mondojono@gmail.com\", __ref: \"JonoMullins\" },\n\t\t{\"name.first\":\"Christine\",\"name.last\":\"Munroe\",\"email\":\"xinemunro@gmail.com\", __ref: \"ChristineMunroe\" },\n\t\t{\"name.first\":\"Jesse\",\"name.last\":\"Samulenok\",\"email\":\"cubooh@hotmail.com\", __ref: \"JesseSamulenok\" },\n\t\t{\"name.first\":\"Guy\",\"name.last\":\"Brown\",\"email\":\"guy86brown@hotmail.co.uk\", __ref: \"GuyBrown\" },\n\t\t{\"name.first\":\"Ally\",\"name.last\":\"Mortlock\",\"email\":\"ally_mortlock@hotmail.com\", __ref: \"AllyMortlock\" },\n\t\t{\"name.first\":\"Oz\",\"name.last\":\"Alima\",\"email\":\"Ozalima@gmail.com\", __ref: \"OzAlima\" },\n\t\t{\"name.first\":\"Adam\",\"name.last\":\"Ginger\",\"email\":\"adamginga@gmail.com\", __ref: \"AdamGinger\" },\n\t\t{\"name.first\":\"Lauren\",\"name.last\":\"\",\"email\":\"Laurely_13@hotmail.com\", __ref: \"Lauren\" },\n\t\t{\"name.first\":\"Mads\",\"name.last\":\"Bokowa\",\"email\":\"M.bokowa@gmail.com\", __ref: \"MadsBokowa\" },\n\t\t{\"name.first\":\"Chadd\",\"name.last\":\"Tullis\",\"email\":\"M.bokowa@gmail.com\", __ref: \"ChaddTullis\" },\n\t\t{\"name.first\":\"Alex\",\"name.last\":\"Stone\",\"email\":\"ajbstone@gmail.com\", __ref: \"AlexStone\" },\n\t\t{\"name.first\":\"Fullar\",\"name.last\":\"\",\"email\":\"fullar21m@gmail.com\", __ref: \"Fullar\" },\n\t\t{\"name.first\":\"Andrew\",\"name.last\":\"Dunlop\",\"email\":\"dunlopaj1982@gmail.com\" , __ref: \"AndrewDunlop\" },\n\t\t{\"name.first\":\"Fish\",\"name.last\":\"\",\"email\":\"mike@nomadsontheroad.com\", __ref: \"Fish\" },\n\t\t{\"name.first\":\"Netz\",\"name.last\":\"Alima\",\"email\":\"netzeridare@hotmail.com\" , __ref: \"NetzAlima\" },\n\t\t{\"name.first\":\"Cassandra \",\"name.last\":\"\",\"email\":\"cass.ablett@me.com\" , __ref: \"Cassandra\" },\n\t\t{\"name.first\":\"Mike\",\"name.last\":\"James\",\"email\":\"michael_c_james@hotmail.com\", __ref: \"MikeJames\" },\n\t\t{\"name.first\":\"Sarah\",\"name.last\":\"Hankinson\",\"email\":\"sarah@sarahhankinson.com\", __ref: \"SarahHankinson\" },\n\t\t{\"name.first\":\"Sondra\",\"name.last\":\"Davoren\",\"email\":\"sndrdvrn@gmail.com\", __ref: \"SondraDavoren\" },\n\t\t{\"name.first\":\"Adam\",\"name.last\":\"Neylon\",\"email\":\"ads.neylon@gmail.com\", __ref: \"AdamNeylon\" },\n\t\t{\"name.first\":\"Ben\",\"name.last\":\"Allardice\",\"email\":\"ben.allardice@gmail.com\", __ref: \"BenAllardice\" },\n\t\t{\"name.first\":\"Avi\",\"name.last\":\"Azoulay\",\"email\":\"aviazoulay777@hotmail.com\" , __ref: \"AviAzoulay\" },\n\t\t// {\"name.first\":\"Rob\",\"name.last\":\"\",\"email\":\"asked\", __ref: \"Rob\" },\n\t\t// {\"name.first\":\"Rach\",\"name.last\":\"\",\"email\":\"asked\", __ref: \"Rach\" },\n\t\t// {\"name.first\":\"Nat\",\"name.last\":\"\",\"email\":\"asked\", __ref: \"Nat\" },\n\t\t{\"name.first\":\"Issy\",\"name.last\":\"\",\"email\":\"izzyandray@hotmail.co.uk\", __ref: \"Issy\" },\n\t\t{\"name.first\":\"Ray\",\"name.last\":\"\",\"email\":\"izzyandray@hotmail.co.uk\", __ref: \"Ray\" },\n\t\t{\"name.first\":\"Mick\",\"name.last\":\"\",\"email\":\"mick@mylife.uk.net\", __ref: \"Mick\" },\n\t\t{\"name.first\":\"Sue\",\"name.last\":\"\",\"email\":\"mick@mylife.uk.net\", __ref: \"Sue\" },\n\t\t// {\"name.first\":\"Nic\",\"name.last\":\"\",\"email\":\"n/a\", __ref: \"Nic\" },\"\n\t\t// {\"name.first\":\"John\",\"name.last\":\"\",\"email\":\"n/a\", __ref: \"John\" },\"\n\t\t{\"name.first\":\"Jude\",\"name.last\":\"Murphy\",\"email\":\"judkevmurphy@gmail.com\", __ref: \"JudeMurphy\" },\n\t\t{\"name.first\":\"Kev\",\"name.last\":\"Murphy\",\"email\":\"judkevmurphy@gmail.com\", __ref: \"KevMurphy\" },\n\t\t{\"name.first\":\"Lyn\",\"name.last\":\"Hume\",\"email\":\"lyn.hume@outlook.com\", __ref: \"LynHume\" },\n\t\t{\"name.first\":\"Kerry\",\"name.last\":\"Hume\",\"email\":\"lyn.hume@outlook.com\", __ref: \"KerryHume\" },\n\t\t{\"name.first\":\"Nana\",\"name.last\":\"Swindells\",\"email\":\"n/a\", __ref: \"NanaSwindells\" },\n\t\t{\"name.first\":\"Charles\",\"name.last\":\"Shaw\",\"email\":\"travelsales1@optusnet.com.au\", __ref: \"CharlesShaw\" },\n\t\t{\"name.first\":\"Suzie\",\"name.last\":\"Shaw\",\"email\":\"travelsales1@optusnet.com.au\", __ref: \"SuzieShaw\" },\n\t\t{\"name.first\":\"Joc\",\"name.last\":\"Anstey\",\"email\":\"johnjoc@bigpond.com\", __ref: \"JocAnstey\" },\n\t\t{\"name.first\":\"John\",\"name.last\":\"Anstey\",\"email\":\"johnjoc@bigpond.com\",  __ref: \"JohnAnstey\"}\n\t]\n};\n\n\nexports.create = {\n\tInvitation: [\n\t\t{\"name.first\":\"Danny\",\"name.last\":\"Shaw\",\"email\":\"technix@gmail.com\" },\n\t\t{\"name.first\":\"Gemma\",\"name.last\":\"Neylon\",\"email\":\"gemma.neylon.84@gmail.com\" },\n\t\t{\"name.first\":\"Mick\",\"name.last\":\"Neylon\",\"email\":\"michaelneylon@hotmail.co.uk\",\"address\":\"27a Hardwick Road, Meadvale, Redhill, Surrey, RH1 6NH\"},\n\t\t{\"name.first\":\"Marion\",\"name.last\":\"Neylon\",\"email\":\"marionneylon@hotmail.co.uk\",\"address\":\"27a Hardwick Road, Meadvale, Redhill, Surrey, RH1 6NH\"},\n\t\t{\"name.first\":\"Alex\",\"name.last\":\"Neylon\",\"email\":\"alexneylon@hotmail.com\",\"address\":\"8 Robertson Drive, Haywards Heath, West Sussex, RH17 7AA\"},\n\t\t{\"name.first\":\"Claire\",\"name.last\":\"Neylon\",\"email\":\"claire_thorogood@hotmail.co.uk\",\"address\":\"8 Robertson Drive, Haywards Heath, West Sussex, RH17 7AA\"},\n\t\t{\"name.first\":\"Steve\",\"name.last\":\"Shaw\",\"email\":\"stephen.john.shaw@gmail.com\",\"address\":\"5 Agnes Street, Bentleigh East, 3165\"},\n\t\t{\"name.first\":\"Cheryl\",\"name.last\":\"Shaw\",\"email\":\"cherylsteve.shaw@gmail.com\",\"address\":\"5 Agnes Street, Bentleigh East, 3165\"},\n\t\t{\"name.first\":\"Mick \",\"name.last\":\"Shaw\",\"email\":\"michael.shaw82@gmail.com\",\"address\":\"5 Agnes Street, Bentleigh East, 3165\"},\n\t\t{\"name.first\":\"Teresa\",\"name.last\":\"Tuffano\",\"email\":\"teresa_tufano@hotmail.com\",\"address\":\"5 Agnes Street, Bentleigh East, 3165\"},\n\t\t{\"name.first\":\"Alana\",\"name.last\":\"Shaw\",\"email\":\"alanashaw31@gmail.com\",\"address\":\"2/213 dandenong rd, Windsor, VIC 3181\"},\n\t\t{\"name.first\":\"Tom\",\"name.last\":\"Bishoff\",\"email\":\"tom@cvinternational.com.au\",\"address\":\"2/213 dandenong rd, Windsor, VIC 3181\"},\n\t\t{\"name.first\":\"Chantelle\",\"name.last\":\"Hamilton\",\"email\":\"chantelle.hurrion@ntlworld.com\",\"address\":\"Flat A 29 Limesford Road, Nunhead, London, SE15 3BX\"},\n\t\t{\"name.first\":\"Chloe\",\"name.last\":\"Mizumba\",\"email\":\"chloemzimba@gmail.com\",\"address\":\"Flat 24 Britannia Building, 12 Evenezer Street, London, N1 7RP\"},\n\t\t{\"name.first\":\"Emily\",\"name.last\":\"Louis\",\"email\":\"leml0909@aol.com\",\"address\":\"4 Webster Street, Hamilton, NSW, 2303\"},\n\t\t{\"name.first\":\"Fiona \",\"name.last\":\"Brehony\",\"email\":\"fiona.brehony@hotmail.co.uk\",\"address\":\"22 Longstone Road, Tooting, London, SW17 9BN\"},\n\t\t{\"name.first\":\"Amy\",\"name.last\":\"King\",\"email\":\"amyclaireking@hotmail.co.uk\",\"address\":\"11 Bishopgate Street, Newtown, NSW, 2042\"},\n\t\t{\"name.first\":\"Kelsie\",\"name.last\":\"Bufton\",\"email\":\"kelsie-jane@hotmail.co.uk\",\"address\":\"243 Westgarth Street, Northcote, 3070\"},\n\t\t{\"name.first\":\"Luke\",\"name.last\":\"\",\"email\":\"kelsie-jane@hotmail.co.uk\",\"address\":\"243 Westgarth Street, Northcote, 3070\"},\n\t\t{\"name.first\":\"Gen\",\"name.last\":\"De Villiers\",\"email\":\"vieve.dv@gmail.com\",\"address\":\"10a Alfred Street, St Peters, 2044\"},\n\t\t{\"name.first\":\"Chloe\",\"name.last\":\"Middleton\",\"email\":\"Chloe.midd@gmail.com\",\"address\":\"40 waterworks road, Dynnyrne, TAS 7005\"},\n\t\t{\"name.first\":\"Ben\",\"name.last\":\"Young\",\"email\":\"ben_young_2000@yahoo.co.uk\",\"address\":\"38 Rakeiora Grove, Korokoro, Lower Hut, 5012, NZ\"},\n\t\t{\"name.first\":\"Becs\",\"name.last\":\"Laesk\",\"email\":\"puawaitanga@gmail.com\",\"address\":\"38 Rakeiora Grove, Korokoro, Lower Hut, 5012, NZ\"},\n\t\t{\"name.first\":\"Alex\",\"name.last\":\"Baxter\",\"email\":\"alex.j.baxter@gmail.com\",\"address\":\"15 Ross Street, Alphington, 3078\"},\n\t\t{\"name.first\":\"Anna\",\"name.last\":\"Benjamin\",\"email\":\"annadjbenjamin@gmail.com\",\"address\":\"15 Ross Street, Alphington, 3078\"},\n\t\t{\"name.first\":\"Kane\",\"name.last\":\"Jenkins\",\"email\":\"kjen13@gmail.com\" },\n\t\t{\"name.first\":\"Lock\",\"name.last\":\"Morley\",\"email\":\"lock.morley@gmail.com\",\"address\":\"22 Lothair Street, Pascoe Vale South, 3044\"},\n\t\t{\"name.first\":\"Keza\",\"name.last\":\"\",\"email\":\"diamondsandragons@yahoo.com.au\",\"address\":\"22 Lothair Street, Pascoe Vale South, 3044\"},\n\t\t{\"name.first\":\"Dara\",\"name.last\":\"Simkin\",\"email\":\"dara.simkin@gmail.com\",\"address\":\"4 Short Street, Northcote, 3070\"},\n\t\t{\"name.first\":\"Will\",\"name.last\":\"Watkins\",\"email\":\"awatkins@microsoft.com\",\"address\":\"4a Bartlett Street, Hampton East, 3188\"},\n\t\t{\"name.first\":\"Amanda\",\"name.last\":\"Watkins\",\"email\":\"awatkins@microsoft.com\",\"address\":\"4a Bartlett Street, Hampton East, 3188\"},\n\t\t{\"name.first\":\"Simon\",\"name.last\":\"Watkins\",\"email\":\"sjwatkins.co@gmail.com\",\"address\":\"6 Stephanie Court, Carrum Downs, 3201\"},\n\t\t{\"name.first\":\"Marianne\",\"name.last\":\"Watkins\",\"email\":\"sjwatkins.co@gmail.com\",\"address\":\"6 Stephanie Court, Carrum Downs, 3201\"},\n\t\t{\"name.first\":\"Joe\",\"name.last\":\"Hemmings\",\"email\":\"j.hemmings81@gmail.com\",\"address\":\"479 Balcombe Road, Beaumaris, 3193\"},\n\t\t{\"name.first\":\"Mel\",\"name.last\":\"\",\"email\":\"melcon81@optusnet.com.au\",\"address\":\"479 Balcombe Road, Beaumaris, 3193\"},\n\t\t{\"name.first\":\"Sean\",\"name.last\":\"Reefman\",\"email\":\"Sean.reefman@gmail.com\",\"address\":\"62 Scarlet Street, Mordialloc, 3195\"},\n\t\t{\"name.first\":\"Rach\",\"name.last\":\"Feldon\",\"email\":\"Rachel.feldon@gmail.com\",\"address\":\"62 Scarlet Street, Mordialloc, 3195\"},\n\t\t{\"name.first\":\"Rhett\",\"name.last\":\"Parkinson\",\"email\":\"rhett.parkinson@gmail.com\",\"address\":\"15 Oak Street, Bentleigh, 3204\"},\n\t\t{\"name.first\":\"Eli\",\"name.last\":\"\",\"email\":\"rhett.parkinson@gmail.com\",\"address\":\"15 Oak Street, Bentleigh, 3204\"},\n\t\t{\"name.first\":\"Jono\",\"name.last\":\"Mullins\",\"email\":\"mondojono@gmail.com\",\"address\":\"3 Milton St N Ashfield NSW 2131\"},\n\t\t{\"name.first\":\"Christine\",\"name.last\":\"Munroe\",\"email\":\"xinemunro@gmail.com\",\"address\":\"3 Milton St N Ashfield NSW 2131\"},\n\t\t{\"name.first\":\"Jesse\",\"name.last\":\"Samulenok\",\"email\":\"cubooh@hotmail.com\",\"address\":\"19 Leinster st, Ormond VIC, 3204\"},\n\t\t{\"name.first\":\"Guy\",\"name.last\":\"Brown\",\"email\":\"guy86brown@hotmail.co.uk\",\"address\":\"9a Alexander Street, Kingsland, Auckland, 1021, NZ \"},\n\t\t{\"name.first\":\"Ally\",\"name.last\":\"Mortlock\",\"email\":\"ally_mortlock@hotmail.com\",\"address\":\"56 Blyth Street, Brunswick East, 3056\"},\n\t\t{\"name.first\":\"Oz\",\"name.last\":\"Alima\",\"email\":\"Ozalima@gmail.com\",\"address\":\"63 One Tree Hill Road, Ferny Creek, 3786\"},\n\t\t{\"name.first\":\"Adam\",\"name.last\":\"Ginger\",\"email\":\"adamginga@gmail.com\",\"address\":\"3 Nathan Grove, South Caulfield, 3162\"},\n\t\t{\"name.first\":\"Lauren\",\"name.last\":\"\",\"email\":\"Laurely_13@hotmail.com\",\"address\":\"17 Effingham Road, Reigate, Surrey, RH2 7JN \"},\n\t\t{\"name.first\":\"Mads\",\"name.last\":\"Bokowa\",\"email\":\"M.bokowa@gmail.com\",\"address\":\"608 Ne Norton Avenue, Bend, Oregon, 97701\"},\n\t\t{\"name.first\":\"Chadd\",\"name.last\":\"Tullis\",\"email\":\"M.bokowa@gmail.com\",\"address\":\"608 Ne Norton Avenue, Bend, Oregon, 97701\"},\n\t\t{\"name.first\":\"Alex\",\"name.last\":\"Stone\",\"email\":\"ajbstone@gmail.com\",\"address\":\"24 West Street, Pascoe Vale, 3044\"},\n\t\t{\"name.first\":\"Fullar\",\"name.last\":\"\",\"email\":\"fullar21m@gmail.com\",\"address\":\"24 West Street, Pascoe Vale, 3044\"},\n\t\t{\"name.first\":\"Andrew\",\"name.last\":\"Dunlop\",\"email\":\"dunlopaj1982@gmail.com\" },\n\t\t{\"name.first\":\"Fish\",\"name.last\":\"\",\"email\":\"mike@nomadsontheroad.com\",\"address\":\"TBC\"},\n\t\t{\"name.first\":\"Netz\",\"name.last\":\"Alima\",\"email\":\"netzeridare@hotmail.com\" },\n\t\t{\"name.first\":\"Cassandra \",\"name.last\":\"\",\"email\":\"cass.ablett@me.com\" },\n\t\t{\"name.first\":\"Mike\",\"name.last\":\"James\",\"email\":\"michael_c_james@hotmail.com\",\"address\":\"368a Danks St, Middle Park\"},\n\t\t{\"name.first\":\"Sarah\",\"name.last\":\"Hankinson\",\"email\":\"sarah@sarahhankinson.com\",\"address\":\"368a Danks St, Middle Park\"},\n\t\t{\"name.first\":\"Sondra\",\"name.last\":\"Davoren\",\"email\":\"sndrdvrn@gmail.com\",\"address\":\"13 Arthur St, Preston\"},\n\t\t{\"name.first\":\"Adam\",\"name.last\":\"Neylon\",\"email\":\"ads.neylon@gmail.com\",\"address\":\"13 Arthur St, Preston\"},\n\t\t{\"name.first\":\"Ben\",\"name.last\":\"Allardice\",\"email\":\"ben.allardice@gmail.com\",\"address\":\"東京都世田谷区太子堂３-３８-１\\nアパートメンツ三軒茶屋ブラッサムテラス１０１号室 154-0004\"},\n\t\t{\"name.first\":\"Avi\",\"name.last\":\"Azoulay\",\"email\":\"aviazoulay777@hotmail.com\" },\n\t\t// {\"name.first\":\"Rob\",\"name.last\":\"\",\"email\":\"asked\",\"address\":\"Grove Park, Mottigham, London, se9 4qb \"},\n\t\t// {\"name.first\":\"Rach\",\"name.last\":\"\",\"email\":\"asked\",\"address\":\"Grove Park, Mottigham, London, se9 4qb \"},\n\t\t// {\"name.first\":\"Nat\",\"name.last\":\"\",\"email\":\"asked\",\"address\":\"Grove Park, Mottigham, London, se9 4qb \"},\n\t\t{\"name.first\":\"Issy\",\"name.last\":\"\",\"email\":\"izzyandray@hotmail.co.uk\",\"address\":\"25 Luddenham Close, Maidstone, Kent, ME1 45RH\"},\n\t\t{\"name.first\":\"Ray\",\"name.last\":\"\",\"email\":\"izzyandray@hotmail.co.uk\",\"address\":\"25 Luddenham Close, Maidstone, Kent, ME1 45RH\"},\n\t\t{\"name.first\":\"Mick\",\"name.last\":\"\",\"email\":\"mick@mylife.uk.net\",\"address\":\"24 Tovey Square, Gillingham, Kent, me7 2qu\"},\n\t\t{\"name.first\":\"Sue\",\"name.last\":\"\",\"email\":\"mick@mylife.uk.net\",\"address\":\"24 Tovey Square, Gillingham, Kent, me7 2qu\"},\n\t\t// {\"name.first\":\"Nic\",\"name.last\":\"\",\"email\":\"n/a\",\"address\":\"71 Pannell Road, Isle of Grain, Rochester, me3 0ef\"},\n\t\t// {\"name.first\":\"John\",\"name.last\":\"\",\"email\":\"n/a\",\"address\":\"71 Pannell Road, Isle of Grain, Rochester, me3 0ef\"},\n\t\t{\"name.first\":\"Jude\",\"name.last\":\"Murphy\",\"email\":\"judkevmurphy@gmail.com\",\"address\":\"PO Box 1025, Echuca 3564\"},\n\t\t{\"name.first\":\"Kev\",\"name.last\":\"Murphy\",\"email\":\"judkevmurphy@gmail.com\",\"address\":\"PO Box 1025, Echuca 3564\"},\n\t\t{\"name.first\":\"Lyn\",\"name.last\":\"Hume\",\"email\":\"lyn.hume@outlook.com\",\"address\":\"6 Williams Rd, Mornington VIC 3931\"},\n\t\t{\"name.first\":\"Kerry\",\"name.last\":\"Hume\",\"email\":\"lyn.hume@outlook.com\",\"address\":\"6 Williams Rd, Mornington VIC 3931\"},\n\t\t{\"name.first\":\"Nana\",\"name.last\":\"Swindells\",\"email\":\"n/a\",\"address\":\"70 Allen Crt, Moama, NSW 2731\"},\n\t\t{\"name.first\":\"Charles\",\"name.last\":\"Shaw\",\"email\":\"travelsales1@optusnet.com.au\",\"address\":\"PO Box 3073, Tamarama NSW 2026\"},\n\t\t{\"name.first\":\"Suzie\",\"name.last\":\"Shaw\",\"email\":\"travelsales1@optusnet.com.au\",\"address\":\"PO Box 3073, Tamarama NSW 2026\"},\n\t\t{\"name.first\":\"Joc\",\"name.last\":\"Anstey\",\"email\":\"johnjoc@bigpond.com\",\"address\":\"107A Ludstone St, Hampton VIC 3188\"},\n\t\t{\"name.first\":\"John\",\"name.last\":\"Anstey\",\"email\":\"johnjoc@bigpond.com\",\"address\":\"107A Ludstone St, Hampton VIC 3188\"}\n\t]\n};\n",
+			"file": "updates/0.0.2-attendees.js",
+			"file_size": 9892,
+			"file_write_time": 131399618728613404,
 			"settings":
 			{
-				"buffer_size": 788,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
+				"buffer_size": 17680,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/Invitation.js",
+			"settings":
+			{
+				"buffer_size": 1148,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/Attendee.js",
+			"settings":
+			{
+				"buffer_size": 1027,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/User.js",
+			"settings":
+			{
+				"buffer_size": 669,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "public/styles/site.less",
 			"settings":
 			{
-				"buffer_size": 474,
-				"encoding": "UTF-8",
+				"buffer_size": 476,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/layout/Header.js",
-			"settings":
-			{
-				"buffer_size": 2786,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/Home.js",
-			"settings":
-			{
-				"buffer_size": 315,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "https://goo.gl/kJcX50",
-			"settings":
-			{
-				"buffer_size": 21,
-				"line_ending": "Unix",
-				"name": "https://goo.gl/kJcX50"
 			}
 		}
 	],
@@ -796,10 +788,6 @@
 		"/home/danny/dev/repos/danny-gemma",
 		"/home/danny/dev/repos/danny-gemma/client",
 		"/home/danny/dev/repos/danny-gemma/client/scripts",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/containers",
 		"/home/danny/dev/repos/danny-gemma/models",
 		"/home/danny/dev/repos/danny-gemma/public",
 		"/home/danny/dev/repos/danny-gemma/public/styles",
@@ -811,8 +799,12 @@
 	],
 	"file_history":
 	[
-		"/home/danny/dev/repos/danny-gemma/templates/views/index.pug",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Home.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Header.js",
 		"/home/danny/dev/repos/danny-gemma/public/styles/site.less",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Location.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/App.js",
+		"/home/danny/dev/repos/danny-gemma/templates/views/index.pug",
 		"/home/danny/dev/repos/danny-gemma/models/User.js",
 		"/home/danny/dev/repos/danny-gemma/TODO",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/Rsvp.js",
@@ -826,9 +818,6 @@
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Dietary.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Attending.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/OurMenu.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Home.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Header.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/App.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/api.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Basics.js",
 		"/home/danny/dev/repos/danny-gemma/node_modules/react-burger-menu/example/src/example.less",
@@ -840,7 +829,6 @@
 		"/home/danny/dev/repos/danny-gemma/webpack.config.js",
 		"/home/danny/dev/repos/danny-gemma/Vagrantflie",
 		"/home/danny/dev/repos/danny-gemma/vagrant-bootstrap.sh",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Location.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/AttendeeDietaryOptions.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Thankyou.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/AccommodationChoice.js",
@@ -1084,6 +1072,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"},",
+			"name.last",
+			"name.first",
+			"\"name.first\"",
+			"\"address\"",
 			"dannyGemmaTitle",
 			"mapElement",
 			"containerElement",
@@ -1206,12 +1199,7 @@
 			"Show",
 			"show",
 			"key",
-			"to",
-			"default",
-			".",
-			"Accommodation",
-			"Home",
-			"Rsvp"
+			"to"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1362,19 +1350,87 @@
 			[
 				{
 					"buffer": 0,
-					"file": "client/scripts/components/about/Location.js",
+					"file": "client/scripts/containers/App.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1416,
+						"buffer_size": 5351,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								369,
-								369
+								4416,
+								4416
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3823.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "updates/0.0.2-attendees.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7892,
+								7892
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1944.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "models/Invitation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
 							]
 						],
 						"settings":
@@ -1395,20 +1451,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "client/scripts/containers/App.js",
+					"buffer": 3,
+					"file": "models/Attendee.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5200,
+						"buffer_size": 1027,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4201,
-								4201
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1422,82 +1478,60 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3008.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"semi_transient": false,
+					"buffer": 4,
+					"file": "models/User.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 788,
+						"buffer_size": 669,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										244,
-										259
-									],
-									[
-										370,
-										385
-									],
-									[
-										576,
-										591
-									]
-								],
-								"scope": ""
-							}
 						},
 						"selection":
 						[
 							[
-								380,
-								380
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"default_dir": "/home/danny/dev/repos/danny-gemma",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 67.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "public/styles/site.less",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 474,
+						"buffer_size": 476,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								360,
-								360
+								474,
+								474
 							]
 						],
 						"settings":
@@ -1511,106 +1545,10 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/scripts/components/layout/Header.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2786,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1396,
-								1396
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 619.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/scripts/components/Home.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 315,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								198,
-								198
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 21,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								21,
-								21
-							]
-						],
-						"settings":
-						{
-							"auto_name": "https://goo.gl/kJcX50",
-							"default_dir": "/home/danny/dev/repos/danny-gemma",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1618,7 +1556,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 33.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -1667,7 +1605,7 @@
 	"project": "danny-gemma.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1676,6 +1614,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"update",
+				"danny-gemma/updates/0.0.2-attendees.js"
+			],
 			[
 				"loca",
 				"danny-gemma/client/scripts/components/about/Location.js"
@@ -1751,10 +1693,6 @@
 			[
 				"invitation",
 				"danny-gemma/models/Invitation.js"
-			],
-			[
-				"update",
-				"keystone/lib/updateHandler.js"
 			],
 			[
 				"updatehand",
