@@ -19,7 +19,7 @@ class Attending extends React.Component {
 				 <Header as='h2' icon textAlign="center">
 		      <Icon name='question' circular />
 		      <Header.Content>
-		        Can you make it to our special day on 16th Decmber 2017?
+		        Can you make it to our special day on 16th December 2017?
 		      </Header.Content>
 		    </Header>
 	      <Form>
@@ -50,16 +50,6 @@ class Attending extends React.Component {
           )}
 	        </Form.Group>
 			  </Form>
-			  <Grid.Row>
-            <Button
-              onClick={this.props.next}
-              size="large"
-              floated="right"
-              icon='right chevron'
-              content="Next"
-              primary
-            />
-          </Grid.Row>
 		  </Container>
 		);
 	}

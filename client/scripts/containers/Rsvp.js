@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Step } from 'semantic-ui-react'
+import { Icon, Step, Segment, Button, Divider } from 'semantic-ui-react'
 import {
   BrowserRouter as Router,
   Route,
@@ -7,6 +7,7 @@ import {
   Link,
   Switch,
 } from 'react-router-dom';
+import _ from 'lodash';
 
 import Attending from '../components/rsvpsteps/Attending';
 import AccommodationChoice from '../components/rsvpsteps/AccommodationChoice';
@@ -52,12 +53,29 @@ class Rsvp extends React.Component {
     })
   }
 
+  getNavHandlers = (getPrev = false) => {
+    const { invitation, match } = this.props;
+    const step = match.params.step;
+    const currentIndex = _.findIndex(steps, step=> step.id == this.props.match.params.step);
+    const skipTo = invitation.attending === false && (step === 'attending' || step === 'thankyou')
+    const nextIndex = skipTo ? steps.length - 1 : currentIndex + 1
+    const prevIndex = skipTo ? 0 : currentIndex - 1;
+
+    return {
+      next: currentIndex < steps.length - 1
+        ? () => this.redirectToStep(steps[nextIndex].id)
+        : null
+      ,
+      prev: currentIndex > 0
+        ? () => this.redirectToStep(steps[prevIndex].id)
+        : null
+      ,
+    }
+  };
+
   redirectToStep = (step) => {
     const to = step ? `/rsvp/${step}` : '/';
     this.props.history.push(to);
-  };
-
-  selectAccommodation = (option) => {
   };
 
   setField = (field, value, then) => {
@@ -79,64 +97,61 @@ class Rsvp extends React.Component {
   }
 
   render() {
+    const { prev, next } = this.getNavHandlers();
     const { location, history, route, invitation } = this.props;
     return (
-      <div>
-        <Step.Group items={this.getSteps()} fluid size="tiny" />
-        <Switch>
-          <Route exact path="/rsvp/attending" component={
-            (props) => (
-              <Attending
-                invitation={invitation}
-                onChangeField={this.setField}
-                next={() => {
-                  if (invitation.attending === false) {
-                    history.push('/rsvp/thankyou');
-                  } else if (invitation.attending === true) {
-                    history.push('/rsvp/accommodation');
-                  }
-                }}
-              />
-            )}
-          />
-          <Route exact path="/rsvp/accommodation" component={
-            (props) => {
-              if (!invitation.attending) {
-                return <Redirect to="/rsvp/attending" />;
-              }
-              return <AccommodationChoice
-                {...props}
-                selected={invitation.accommodation}
-                onChange={option => this.setField('accommodation', option)}
-                next={() => this.redirectToStep('guestpreferences')}
-              />
-            }
-          }/>
-
-          <Route exact path="/rsvp/guestpreferences/:index?" component={
-            (props) => {
-              if (!invitation.attending) {
-                return <Redirect to="/rsvp/attending" />;
-              }
-              return (
-                <GuestPreferences
+      <Segment className="aboutPage">
+        <Step.Group items={this.getSteps()} fluid size="mini" />
+          <Switch>
+            <Route exact path="/rsvp/attending" component={
+              (props) => (
+                <Attending
                   invitation={invitation}
-                  updateETA={(eta) => this.setField('eta', eta)}
-                  updateSunday={(sunday) => this.setField('sunday', sunday)}
-                  updateAttendee={this.updateAttendee}
-                  activeIndex={parseInt(props.match.params.index, 10)}
-                  setActiveIndex={(index) => props.history.push(`/rsvp/guestpreferences/${index}`)}
-                  next={() => props.history.push(`/rsvp/thankyou`)}
+                  onChangeField={this.setField}
                 />
-              );
-            }
-          }/>
-          <Route exact path="/rsvp/thankyou" component={
-            (props) => <Thankyou invitation={invitation} />
-          }/>
-          <Redirect to="/rsvp/attending" />
-        </Switch>
-      </div>
+              )}
+            />
+            <Route exact path="/rsvp/accommodation" component={
+              (props) => {
+                if (!invitation.attending) {
+                  return <Redirect to="/rsvp/attending" />;
+                }
+                return <AccommodationChoice
+                  {...props}
+                  selected={invitation.accommodation}
+                  onChange={option => this.setField('accommodation', option)}
+                />
+              }
+            }/>
+
+            <Route exact path="/rsvp/guestpreferences/:index?" component={
+              (props) => {
+                if (!invitation.attending) {
+                  return <Redirect to="/rsvp/attending" />;
+                }
+                return (
+                  <GuestPreferences
+                    invitation={invitation}
+                    updateETA={(eta) => this.setField('eta', eta)}
+                    updateSunday={(sunday) => this.setField('sunday', sunday)}
+                    updateKids={(kids) => this.setField('kids', kids)}
+                    updateAttendee={this.updateAttendee}
+                    activeIndex={parseInt(props.match.params.index, 10)}
+                    setActiveIndex={(index) => props.history.push(`/rsvp/guestpreferences/${index}`)}
+                  />
+                );
+              }
+            }/>
+            <Route exact path="/rsvp/thankyou" component={
+              (props) => <Thankyou invitation={invitation} />
+            }/>
+            <Redirect to="/rsvp/attending" />
+          </Switch>
+        <Button.Group className="rsvpNavButtons">
+          <Button content='Previous' icon='left arrow' labelPosition='left' onClick={prev} disabled={!prev} />
+          <Button content='Next' icon='right arrow' labelPosition='right' onClick={next} disabled={!next} active={!!next} />
+        </Button.Group>
+      </Segment>
     );
   }
 }

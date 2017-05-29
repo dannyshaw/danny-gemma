@@ -5,7 +5,7 @@ import {
   Marker,
   InfoWindow,
 } from "react-google-maps";
-import { Container, Header, Card, Image } from "semantic-ui-react";
+import { Container, Header, Card, Image, Segment } from "semantic-ui-react";
 
 
 const Location = withGoogleMap(props => {
@@ -42,13 +42,13 @@ const Location = withGoogleMap(props => {
 
 const LocationContainer = () => {
   const styles = {
-    height: '100vh',
-    width: "100vw",
+    height: '60vh',
+    width: "60vw",
   };
   return (
     <Location
       containerElement={
-        <Container fluid style={styles} />
+        <div style={styles} />
       }
       mapElement={
         <div style={{ height: `100%` }} />
@@ -58,5 +58,9 @@ const LocationContainer = () => {
 };
 
 
-export default LocationContainer
+export default () => (
+    <Segment className='aboutPage'>
+      <LocationContainer />
+    </Segment>
+);
 // export default ClosureListenersExample;

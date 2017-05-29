@@ -1,3 +1,4 @@
+& { @import "semantic-ui/semantic"; }
 @background-color: #fff;
 @panel-color: rgba(255,255,255,0.75);
 
@@ -33,4 +34,39 @@
 	z-index: 1;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0
+}
 
+#homeflex {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.ui.segment.aboutPage {
+  margin: 50px auto;
+  width: 70%;
+}
+
+.ui.items>.item .extra {
+  width: auto;
+}
+
+.homewrapper {
+  flex: 1 0 auto;
+  height: 85vh;
+  background-image: url('/images/gemma_and_danny_cropped.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ui.segment.greetingText {
+  width: 70%;
+  margin: 300px auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}

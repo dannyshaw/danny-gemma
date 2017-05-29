@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid, Modal, Menu, Select, Segment, Form, Input, Icon, Image, Button, Header } from 'semantic-ui-react'
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Spotify, { TrackList } from '../Spotify';
 import SpotifyTrack from '../../models/SpotifyTrack';
 
@@ -85,7 +85,7 @@ class AttendeePreferences extends React.Component {
           <Form.Group>
             <Form.Checkbox
               value={attendee.stitchin}
-              label="Are you a knitter?? Would you be interested in helping yarn bomb a tree?"
+              label="Are you a knitter? Would you be interested in helping yarn-bomb our wishing tree?"
               checked={attendee.stitchin}
               onChange={(e, data) => this.onChangeField('stitchin', !attendee.stitchin)}
             />
@@ -148,16 +148,24 @@ class GuestPreferences extends React.Component {
           <Grid.Row>
             <Header>Arrival / Departure</Header>
             <p>Doesn't matter if you're not sure, we;re just trying to get a general idea</p>
-            <Form.Group inline>
+            <Form.Group>
               <label>When do you think you'll arrive?</label>
               <EtaOption value="friday-eve" label="Friday Evening" />
               <EtaOption value="saturday-morning" label="Saturday Morning" />
             </Form.Group>
-            <Form.Group inline>
+            <Form.Group >
               <label>Do you think you'll be there for a breakfast/brunch Sunday morning?</label>
               <Form.Checkbox
                 checked={invitation.sunday}
                 onChange={(e, data) => this.props.updateSunday(!invitation.sunday)}
+              />
+            </Form.Group>
+            <Form.Group >
+              <label>Will you be bringing children? (See <Link to="/about/basics/#kids">About</Link></label>
+              <Form.Input
+                type='number'
+                value={invitation.kids}
+                onChange={(e, data) => this.props.updateKids(!invitation.kids)}
               />
             </Form.Group>
           </Grid.Row>
@@ -188,15 +196,6 @@ class GuestPreferences extends React.Component {
                 />
               </Form>
             </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Button
-              onClick={this.props.next}
-              size="large"
-              icon='right chevron'
-              content="Next"
-              primary
-            />
           </Grid.Row>
         </Grid>
       </Container>

@@ -56,7 +56,7 @@ class Header extends React.Component {
               <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/site" active={location.pathname === '/about/site'}>This Site</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Menu.Menu position='right' >
+          <Menu.Menu position='right' borderless>
             {this.renderLoginForm()}
           </Menu.Menu>
         </Menu>

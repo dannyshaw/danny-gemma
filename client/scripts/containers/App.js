@@ -30,6 +30,7 @@ import Header from '../components/layout/Header';
 import Home from '../components/Home';
 
 import Basics from '../components/about/Basics';
+import PaymentDetails from '../components/about/PaymentDetails';
 import Location from '../components/about/Location';
 import Accommodation from '../components/about/Accommodation';
 import Site from '../components/about/Site';
@@ -124,34 +125,46 @@ class App extends React.Component {
             login={this.login}
             logout={this.logout}
           />
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <PrivateRoute
-              loggedIn={!!this.state.invitation}
-              path="/rsvp/:step?"
-              component={(props) => (
-                <Rsvp
+          <Container>
+            <Switch>
+              <Route exact path="/" component={() => (
+                <Home
+                  loggedIn={!!this.state.invitation}
                   invitation={this.state.invitation}
-                  saveInvitation={this.saveInvitation}
-                  {...props}
+                />)}
+              />
+              <PrivateRoute
+                loggedIn={!!this.state.invitation}
+                path="/rsvp/:step?"
+                component={(props) => (
+                  <Rsvp
+                    invitation={this.state.invitation}
+                    saveInvitation={this.saveInvitation}
+                    {...props}
+                  />
+                )}
+              />
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/basics" component={Basics} />
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/paymentdetails" component={() => (
+                <PaymentDetails
+                  accommodation={this.state.invitation.accommodation}
                 />
-              )}
-            />
-            <PrivateRoute loggedIn={!!this.state.invitation} path="/about/basics" component={Basics}/>
-            <PrivateRoute loggedIn={!!this.state.invitation} path="/about/location" component={Location}/>
-            <PrivateRoute loggedIn={!!this.state.invitation} path="/about/accommodation" component={Accommodation}/>
-            <PrivateRoute loggedIn={!!this.state.invitation} path="/about/site" component={Site}/>
-            <PrivateRoute
-              loggedIn={!!this.state.invitation}
-              path="/spotify"
-              component={(props) => (
-                <Spotify
-                  invitation={this.state.invitation}
-                />
-              )}
-            />
-            <Route component={NoMatch}/>
-          </Switch>
+              )} />
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/location" component={Location}/>
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/accommodation" component={Accommodation}/>
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/site" component={Site}/>
+              <PrivateRoute
+                loggedIn={!!this.state.invitation}
+                path="/spotify"
+                component={(props) => (
+                  <Spotify
+                    invitation={this.state.invitation}
+                  />
+                )}
+              />
+              <Route component={NoMatch}/>
+            </Switch>
+          </Container>
           <Route path="/(rsvp|about)" render={() => (
             <Image src="/images/gemma_and_danny_cropped.jpg" size="small" style={{
               position: 'fixed',

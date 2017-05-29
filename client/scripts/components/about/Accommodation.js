@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Modal, Card, Icon, Image, Button, Header } from 'semantic-ui-react'
-import AccommodationGrid from '../AccommodationGrid';
+import { Segment, Modal, Card, Icon, Image, Button, Header } from 'semantic-ui-react'
+import AccommodationGrid from '../AccommodationItems';
 
 class Accommodation extends React.Component {
 	render() {
 		return (
-			<Container>
+			<Segment className='aboutPage'>
 				 <Header as='h2' icon textAlign='center'>
 		      <Icon name='home' circular />
 		      <Header.Content>
@@ -13,7 +13,7 @@ class Accommodation extends React.Component {
 		      </Header.Content>
 		    </Header>
 				<AccommodationGrid />
-			</Container>
+			</Segment>
 		);
 	}
 };

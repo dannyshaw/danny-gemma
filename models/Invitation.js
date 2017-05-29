@@ -17,6 +17,7 @@ Invitation.add({
   ]},
   sunday: { type: Boolean },
   message: { type: Types.Textarea },
+  kids: { type: Number, default: 0 },
   accommodation: { type: Types.Select, options: [
     { value: 'dorm', label: 'Dorm Bunk' },
     { value: 'byocamp', label: 'BYO Camping' },
