@@ -4,8 +4,8 @@ import { Dropdown, Container, Header as SemanticHeader, Message, Menu, Button, F
 
 class Header extends React.Component {
 
-  renderLoginForm() {
-    const { invitation, login, logout } = this.props;
+  renderLoggedIn() {
+    const { invitation, logout } = this.props;
 
     if (invitation) {
       return [
@@ -17,25 +17,6 @@ class Header extends React.Component {
             onClick={logout}
           />
       ];
-    } else {
-      return (
-        <Menu.Item position='right'>
-          <Input
-            action={{
-              type: 'submit',
-              icon: 'sign in',
-              onClick: (e) => {
-                e.preventDefault();
-                this.props.login()
-              },
-              disabled: !this.props.isValid,
-            }}
-            placeholder='Enter invite code'
-            value={this.props.inviteCode}
-            onChange={e => this.props.onInviteCodeChange(e.target.value)}
-          />
-        </Menu.Item>
-      );
     }
   }
 
@@ -57,7 +38,7 @@ class Header extends React.Component {
             </Dropdown.Menu>
           </Dropdown>
           <Menu.Menu position='right'>
-            {this.renderLoginForm()}
+            {this.renderLoggedIn()}
           </Menu.Menu>
         </Menu>
         {this.props.error && (

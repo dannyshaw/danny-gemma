@@ -113,30 +113,31 @@ class App extends React.Component {
         <Container fluid>
           <Header
             invitation={this.state.invitation}
-            error={this.state.error}
-            inviteCode={this.state.inviteCode}
-            onInviteCodeChange={code => {
-              this.setState({
-                inviteCode: code.toUpperCase(),
-                error: null
-              });
-            }}
-            isValid={this.isCodeValid()}
-            login={this.login}
             logout={this.logout}
           />
           <Container>
             <Switch>
-              <Route exact path="/" component={() => (
+              <Route exact path="/" render={() => (
                 <Home
+                  key="home_page"
                   loggedIn={!!this.state.invitation}
                   invitation={this.state.invitation}
+                  inviteCode={this.state.inviteCode}
+                  error={this.state.error}
+                  onInviteCodeChange={code => {
+                    this.setState({
+                      inviteCode: code.toUpperCase(),
+                      error: null
+                    });
+                  }}
+                  isValid={this.isCodeValid()}
+                  login={this.login}
                 />)}
               />
               <PrivateRoute
                 loggedIn={!!this.state.invitation}
                 path="/rsvp/:step?"
-                component={(props) => (
+                render={(props) => (
                   <Rsvp
                     invitation={this.state.invitation}
                     saveInvitation={this.saveInvitation}
@@ -145,7 +146,7 @@ class App extends React.Component {
                 )}
               />
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/basics" component={Basics} />
-              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/paymentdetails" component={() => (
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/paymentdetails" render={() => (
                 <PaymentDetails
                   accommodation={this.state.invitation.accommodation}
                 />
