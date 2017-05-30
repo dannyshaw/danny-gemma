@@ -7,7 +7,7 @@ import {
   Link,
   Switch,
 } from 'react-router-dom';
-import _ from 'lodash';
+import _ from 'underscore';
 
 import Attending from '../components/rsvpsteps/Attending';
 import AccommodationChoice from '../components/rsvpsteps/AccommodationChoice';
@@ -147,10 +147,12 @@ class Rsvp extends React.Component {
             }/>
             <Redirect to="/rsvp/attending" />
           </Switch>
-        <Button.Group className="rsvpNavButtons">
-          <Button content='Previous' icon='left arrow' labelPosition='left' onClick={prev} disabled={!prev} />
-          <Button content='Next' icon='right arrow' labelPosition='right' onClick={next} disabled={!next} active={!!next} />
-        </Button.Group>
+        <div className="rsvpNavButtonWrapper">
+          <Button.Group className="rsvpNavButtons">
+            <Button content='Previous' icon='left arrow' labelPosition='left' onClick={prev} disabled={!prev} />
+            <Button content='Next' icon='right arrow' labelPosition='right' onClick={next} disabled={!next} active={!!next} />
+          </Button.Group>
+        </div>
       </Segment>
     );
   }

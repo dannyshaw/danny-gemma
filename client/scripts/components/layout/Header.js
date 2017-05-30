@@ -9,7 +9,7 @@ class Header extends React.Component {
 
     if (invitation) {
       return [
-          <Menu.Item key="greeting">{`Hey ${this.props.invitation.getGreeting()}!`}</Menu.Item>,
+          <Menu.Item key="greeting">{`Logged in as ${this.props.invitation.getGreeting()}`}</Menu.Item>,
           <Menu.Item
             key={1}
             name='logout'
@@ -56,7 +56,7 @@ class Header extends React.Component {
               <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/site" active={location.pathname === '/about/site'}>This Site</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Menu.Menu position='right' borderless>
+          <Menu.Menu position='right'>
             {this.renderLoginForm()}
           </Menu.Menu>
         </Menu>

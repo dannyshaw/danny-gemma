@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Modal, Menu, Select, Segment, Form, Input, Icon, Image, Button, Header } from 'semantic-ui-react'
+import { Container, Grid, Modal, Menu, Select, Segment, Form, Input, Icon, Image, Button, Header, Divider } from 'semantic-ui-react'
 import { Redirect, Link } from 'react-router-dom';
 import Spotify, { TrackList } from '../Spotify';
 import SpotifyTrack from '../../models/SpotifyTrack';
@@ -27,9 +27,8 @@ class AttendeePreferences extends React.Component {
     const { attendee } = this.props;
     return DIETARY_OPTIONS.map(option => {
       return (
-        <Form.Group inline>
+        <Form.Group inline key={option.key}>
           <Form.Radio
-            key={option.key}
             value={option.key}
             label={option.text}
             checked={attendee.dietaryprefs === option.key}
@@ -38,7 +37,7 @@ class AttendeePreferences extends React.Component {
            {attendee.dietaryprefs === 'other' && option.key === 'other' && (
               <Form.Input
                 required
-                plcaeholder="Please Specify"
+                placeholder="Please Specify"
                 defaultValue={attendee.dietaryother}
                 onBlur={e => this.onChangeField('dietaryother', e.target.value)}
               />
@@ -74,25 +73,22 @@ class AttendeePreferences extends React.Component {
   render() {
     const { attendee } = this.props;
     return (
-      <Grid columns={2}>
-        <Grid.Column>
+      <div>
         <Form.Group grouped>
           <Header>Dietary Requirements</Header>
           {this.getDietaryFields()}
         </Form.Group>
         <Form.Group grouped>
           <Header>Help Out!</Header>
-          <Form.Group>
+          <Form.Group grouped>
+            <label>Can you knit?"</label>
             <Form.Checkbox
-              value={attendee.stitchin}
-              label="Are you a knitter? Would you be interested in helping yarn-bomb our wishing tree?"
+              label={<label>I'd like to help yarn-bomb the <Link to="/about/basics">wishing tree</Link>!</label>}
               checked={attendee.stitchin}
               onChange={(e, data) => this.onChangeField('stitchin', !attendee.stitchin)}
             />
           </Form.Group>
         </Form.Group>
-        </Grid.Column>
-        <Grid.Column>
         <Form.Group grouped>
           <Header>Playlist Suggestions</Header>
           <TrackList
@@ -119,8 +115,7 @@ class AttendeePreferences extends React.Component {
             </Modal.Content>
           </Modal>
         </Form.Group>
-        </Grid.Column>
-      </Grid>
+      </div>
     );
   }
 }
@@ -133,42 +128,35 @@ class GuestPreferences extends React.Component {
       return <Redirect to="/rsvp/guestpreferences/0" />;
     }
 
-    const EtaOption = ({ value, label }) =>(
+    const RadioOption = ({ value, label, field, updater }) =>(
       <Form.Radio
-        value={value}
         label={label}
-        checked={invitation.eta === value}
-        onChange={(e, data) => this.props.updateETA(value)}
+        checked={invitation[field] === value}
+        onChange={(e, data) => updater(value)}
       />
     )
 
+    // <pre>Doesn't matter if you're not sure, we;re just trying to get a general idea</pre>
     return (
       <Container>
         <Grid>
-          <Grid.Row>
-            <Header>Arrival / Departure</Header>
-            <p>Doesn't matter if you're not sure, we;re just trying to get a general idea</p>
-            <Form.Group>
-              <label>When do you think you'll arrive?</label>
-              <EtaOption value="friday-eve" label="Friday Evening" />
-              <EtaOption value="saturday-morning" label="Saturday Morning" />
-            </Form.Group>
-            <Form.Group >
-              <label>Do you think you'll be there for a breakfast/brunch Sunday morning?</label>
-              <Form.Checkbox
-                checked={invitation.sunday}
-                onChange={(e, data) => this.props.updateSunday(!invitation.sunday)}
-              />
-            </Form.Group>
-            <Form.Group >
-              <label>Will you be bringing children? (See <Link to="/about/basics/#kids">About</Link></label>
-              <Form.Input
-                type='number'
-                value={invitation.kids}
-                onChange={(e, data) => this.props.updateKids(!invitation.kids)}
-              />
-            </Form.Group>
+          <Grid.Row centered>
+            <Grid.Column width={12}>
+                <Form>
+                  <Form.Group grouped>
+                    <label>When do you think you'll arrive?</label>
+                    <RadioOption value="friday-eve" label="Friday Evening" field="eta" updater={this.props.updateETA} />
+                    <RadioOption value="saturday-morning" label="Saturday Morning" field="eta" updater={this.props.updateETA} />
+                  </Form.Group>
+                  <Form.Group grouped>
+                    <label>We're thinking of an informal breakfast/brunch Sunday morning</label>
+                    <RadioOption value={true} label="I/We'll be there" field="sunday" updater={this.props.updateSunday} />
+                    <RadioOption value={false} label="I wont be there" field="sunday" updater={this.props.updateSunday} />
+                  </Form.Group>
+                </Form>
+              </Grid.Column>
           </Grid.Row>
+          <Divider />
           <Grid.Row>
             <Grid.Column width={4}>
               <Menu fluid vertical tabular>
@@ -176,7 +164,7 @@ class GuestPreferences extends React.Component {
                   invitation.attendees.map((attendee, index) => {
                     return (
                       <Menu.Item
-                        key={attendee.id}
+                        key={attendee._id}
                         name={attendee.name.first}
                         active={activeIndex === index}
                         onClick={() => this.props.setActiveIndex(index)}

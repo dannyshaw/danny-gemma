@@ -32,3 +32,22 @@ export const updateInvitation = (code, data) => {
   });
 }
 
+
+export const fuckingSpotify = (clientId, clientSecret) => {
+  return new Promise((resolve, reject) => {
+    Request
+      .post('https://accounts.spotify.com/api/token')
+      .set('Authorization', btoa(`${clientId}:${clientSecret}`))
+      .send({ grant_type: 'client_credentials'})
+      .end((err, result) => {
+        if (err) {
+          reject(result.body.error);
+        } else {
+          debugger
+          resolve(result);
+        }
+      })
+    ;
+  });
+}
+

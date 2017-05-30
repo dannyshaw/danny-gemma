@@ -132,11 +132,12 @@ class Spotify extends React.Component {
 							 <div className="spotify-embed" style={{ display: playerLoading ? 'none' : 'block' }}>
 							 		<iframe
 							 			src={`https://embed.spotify.com/?uri=${selectedTrack.spotifyUri}`}
-							 			width={400}
-							 			height={600}
+							 			width={300}
+							 			height={400}
 							 			frameBorder={0}
 							 			allowTransparency
 							 			onLoad={() => this.setState({ playerLoading: false })}
+							 			style={{ margin: 'auto'}}
 							 		></iframe>
 							 	</div>
 						)}
