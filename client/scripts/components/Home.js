@@ -5,10 +5,11 @@ import Login from './Login';
 
 const Home = ({ loggedIn, invitation, ...loginProps }) => {
 	return (
-		<Container textAlign="center" id="homeflex">
+		<Container id="homeflex" fluid>
 			<div className="homewrapper">
+				<div className="logingreeting">
 				{loggedIn ? (
-					<Segment className="greetingText">
+					<div className="greetingText">
 	          <p>{`Welcome ${invitation.getGreeting()}!`}</p>
 	          <p>On the weekend of 16th December our Wedding will be held at Camp Sunnystones 1hr west of Melbourne.</p>
 	          <p>
@@ -19,11 +20,13 @@ const Home = ({ loggedIn, invitation, ...loginProps }) => {
 
 	         <p>Please explore the site, <Link to="/rsvp">RSVP</Link> sections where you can select your accommodation intentions and food preferences and recommend us some music for the evening! </p>
 	         <p>All changes are saved, you can come back and update your preferences at any point.<br/><strong>please have everything up to date by August 31st</strong></p>
-        	</Segment>
+	         <Button as={Link} to="/rsvp">RSVP</Button>
+        	</div>
        	) : (
        		<Login {...loginProps} />
        	)
 			}
+     	</div>
      	</div>
 		</Container>
 	);

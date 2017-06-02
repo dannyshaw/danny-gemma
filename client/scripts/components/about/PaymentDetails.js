@@ -7,7 +7,7 @@ const Mail = props => <a href="mailto:rsvp@dannyandgemma.com.au">{props.children
 const PaymentDetails = ({ accommodation }) => {
 	debugger
 	return (
-		<Segment className="aboutPage">
+		<Container>
 			<Header size="large">Payment Details</Header>
 			<p>
 				Please note: Bank transfer is for <em>Dorm Room</em> and <em>BYO camping</em> options.<br/>
@@ -22,7 +22,7 @@ const PaymentDetails = ({ accommodation }) => {
 				acc: 		87206829
 			</pre>
 			Thank you!! Cant wait to party!
-		</Segment>
+		</Container>
 	);
 }
 

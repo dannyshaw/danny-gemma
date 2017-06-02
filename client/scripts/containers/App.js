@@ -16,11 +16,13 @@ import {
   Icon,
   Input,
   Image,
+  Message,
   Label,
   Header as SemanticHeader
 } from 'semantic-ui-react';
 
 import Invitation from '../models/Invitation';
+import Mobile from '../components/Mobile';
 import * as API from '../api';
 
 import Rsvp from './Rsvp';
@@ -111,11 +113,17 @@ class App extends React.Component {
     return (
       <Router>
         <Container fluid>
+          <Mobile>
+            <Message warning>
+                <Message.Header>Budget Constraints</Message.Header>
+                <p>Super sorry, but this site is WAY better with a screen width of at least 1280px</p>
+              </Message>
+          </Mobile>
           <Header
             invitation={this.state.invitation}
             logout={this.logout}
           />
-          <Container>
+          <Container fluid className="mainContainer">
             <Switch>
               <Route exact path="/" render={() => (
                 <Home
@@ -146,7 +154,7 @@ class App extends React.Component {
                 )}
               />
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/basics" component={Basics} />
-              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/paymentdetails" render={() => (
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/paymentdetails" component={() => (
                 <PaymentDetails
                   accommodation={this.state.invitation.accommodation}
                 />
@@ -167,12 +175,7 @@ class App extends React.Component {
             </Switch>
           </Container>
           <Route path="/(rsvp|about)" render={() => (
-            <Image src="/images/gemma_and_danny_cropped.jpg" size="small" style={{
-              position: 'fixed',
-              bottom: '20px',
-              left: '10px',
-              zIndex: -1
-            }} />
+            <Image src="/images/gemma_and_danny_cropped.jpg" size="small" className="minime gone" />
           )} />
         </Container>
       </Router>
@@ -191,8 +194,8 @@ const NoMatch = ({}) => {
 
 }
 
-const PrivateRoute = ({ component, loggedIn, ...rest }) => (
-  <Route {...rest} render={props => (
+const PrivateRoute = ({ component, render, loggedIn, ...rest }) => (
+  <Route {...rest} render={loggedIn && render ? render : props => (
     loggedIn ? (
       React.createElement(component, props)
     ) : (

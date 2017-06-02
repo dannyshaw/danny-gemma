@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Step, Segment, Button, Divider } from 'semantic-ui-react'
+import { Icon, Step, Container, Button, Divider } from 'semantic-ui-react'
 import {
   BrowserRouter as Router,
   Route,
@@ -100,7 +100,7 @@ class Rsvp extends React.Component {
     const { prev, next } = this.getNavHandlers();
     const { location, history, route, invitation } = this.props;
     return (
-      <Segment className="aboutPage">
+      <Container>
         <Step.Group items={this.getSteps()} fluid size="mini" />
           <Switch>
             <Route exact path="/rsvp/attending" component={
@@ -153,7 +153,7 @@ class Rsvp extends React.Component {
             <Button content='Next' icon='right arrow' labelPosition='right' onClick={next} disabled={!next} active={!!next} />
           </Button.Group>
         </div>
-      </Segment>
+      </Container>
     );
   }
 }

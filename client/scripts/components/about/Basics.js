@@ -6,7 +6,7 @@ const Mail = props => <a href="mailto:rsvp@dannyandgemma.com.au">{props.children
 
 const Basics = () => {
 	return (
-		<Segment className="aboutPage">
+		<Container>
 			<Header size="large">Arrival Times</Header>
 			<p>Although the wedding is marked for Saturday 16th December, the weekend starts on Friday.
 			You are more than welcome to come to the site on the Friday evening from 5pm. This is especially
@@ -48,7 +48,7 @@ const Basics = () => {
 				 via Facebook once we get them from the photographer. We'd really appreaciate if you could refrain from posting on Facebook
 				 until after we've done so. </p>
 				<p>You can, however post to instagram using the hashtag <em>#dannyandgemmawed</em></p>
-		</Segment>
+		</Container>
 
 	);
 }

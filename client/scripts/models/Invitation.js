@@ -12,6 +12,9 @@ Invitation.prototype = {
 	getGreeting() {
 		return nameConcat(this.getNames().map(name => name.first));
 	},
+	isGroup() {
+		return this.attendees.length > 1;
+	},
 	clone() {
 		return new Invitation({...this});
 	},

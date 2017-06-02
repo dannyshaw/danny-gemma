@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import AccommodationGrid from '../AccommodationGrid';
 const Thankyou = ({ invitation }) => {
   return (
-    <Container textAlign="center" height={500} style={{ paddingTop: '200px'}}>
+    <Container textAlign="center" height={500} style={{ paddingTop: '100px'}}>
       <Icon name="heart" size="massive" />
       <Header>Thankyou for RSVPing
       	<br/>

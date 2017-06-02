@@ -1,15 +1,17 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Dropdown, Container, Header as SemanticHeader, Message, Menu, Button, Form, Input, Image } from 'semantic-ui-react';
+import { NotMobile } from '../Mobile';
 
 class Header extends React.Component {
 
   renderLoggedIn() {
     const { invitation, logout } = this.props;
-
     if (invitation) {
       return [
-          <Menu.Item key="greeting">{`Logged in as ${this.props.invitation.getGreeting()}`}</Menu.Item>,
+          <NotMobile>
+            <Menu.Item key="greeting">{`Logged in as ${this.props.invitation.getGreeting()}`}</Menu.Item>
+          </NotMobile>,
           <Menu.Item
             key={1}
             name='logout'

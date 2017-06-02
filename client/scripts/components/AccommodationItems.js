@@ -26,8 +26,16 @@ const AccommodationOption = ({
         {oneLiner}
       </Item.Description>
     </Item.Content>
-    <Item.Extra>
-       <Modal trigger={<Button size="large" basic floated="right">More Info</Button>} dimmer="blurring" closeIcon='close' basic>
+    <Item.Extra className='accomButtons' floated="right">
+       {onChange && (
+       		<Button
+       			active={active}
+       			primary={active}
+       			onClick={() => onChange(value)}
+       			size="medium"
+       		>{active ? "Selected" : "Select"}</Button>
+       )}
+       <Modal trigger={<Button size="medium" basic>More Info</Button>} dimmer="blurring" closeIcon='close' basic>
 		     <Modal.Header>{title}</Modal.Header>
 		     <Modal.Content image>
 		       <Image wrapped size='medium' src={imageSrc} />
@@ -36,15 +44,6 @@ const AccommodationOption = ({
 		       </Modal.Description>
 		     </Modal.Content>
 		   </Modal>
-       {onChange && (
-       		<Button
-       			active={active}
-       			primary={active}
-       			onClick={() => onChange(value)}
-       			size="large"
-       			floated="right"
-       		>{active ? "Selected" : "Select"}</Button>
-       )}
     </Item.Extra>
   </Item>
 )
@@ -105,13 +104,12 @@ class AccommodationGrid extends React.Component {
 					<p>Obviously, we'd love if you stay on site!</p>
 				</AccommodationOption>
 				<AccommodationOption
-					title="Can't Stay"
+					title="Something Else"
 					value="notstaying"
 					active={this.props.selected === "notstaying"}
-					price="NA"
 					onChange={this.props.onChange}
-					oneLiner="Sadness"
-					imageSrc="http://react.semantic-ui.com/assets/images/avatar/large/elliot.jpg"
+					oneLiner="Scary"
+					imageSrc="/images/accommodation/haunted_house1.jpg"
 				>
 					<p>Sad.</p>
 				</AccommodationOption>

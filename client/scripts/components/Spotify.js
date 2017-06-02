@@ -96,7 +96,7 @@ class Spotify extends React.Component {
 								inverted={this.props.inverted}
 								iconPosition='left'
 								loading={this.state.loading}
-								placeholder='Search Tunes...'
+								placeholder='Search Artists, Albums, Tracks...'
 								onChange={(e) => this.setState({ searchString: e.target.value })}
 								value={this.state.searchString}
 							/>
@@ -111,10 +111,11 @@ class Spotify extends React.Component {
 				  </Grid.Column>
 				  <Grid.Column width={6}>
 						<Grid.Row>
-						{selectedTrack && this.props.onSelect && (
+						{this.state.tracks.length > 0 && this.props.onSelect && (
 							<Button
 								onClick={() => this.props.onSelect(selectedTrack)}
 								inverted={this.props.inverted}
+								disabled={!selectedTrack}
 								primary
 								basic
 								size="massive"

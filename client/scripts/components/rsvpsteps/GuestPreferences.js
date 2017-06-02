@@ -27,7 +27,7 @@ class AttendeePreferences extends React.Component {
     const { attendee } = this.props;
     return DIETARY_OPTIONS.map(option => {
       return (
-        <Form.Group inline key={option.key}>
+        <div key={option.key}>
           <Form.Radio
             value={option.key}
             label={option.text}
@@ -42,7 +42,7 @@ class AttendeePreferences extends React.Component {
                 onBlur={e => this.onChangeField('dietaryother', e.target.value)}
               />
             )}
-        </Form.Group>
+        </div>
        );
     })
   }
@@ -75,42 +75,37 @@ class AttendeePreferences extends React.Component {
     return (
       <div>
         <Form.Group grouped>
-          <Header>Dietary Requirements</Header>
+          <label>Dietary Requirements</label>
           {this.getDietaryFields()}
         </Form.Group>
         <Form.Group grouped>
-          <Header>Help Out!</Header>
-          <Form.Group grouped>
-            <label>Can you knit?"</label>
-            <Form.Checkbox
-              label={<label>I'd like to help yarn-bomb the <Link to="/about/basics">wishing tree</Link>!</label>}
-              checked={attendee.stitchin}
-              onChange={(e, data) => this.onChangeField('stitchin', !attendee.stitchin)}
-            />
-          </Form.Group>
+          <label>Can you knit?</label>
+          <Form.Checkbox
+            label={<label>I'd like to help yarn-bomb the <Link to="/about/basics">wishing tree</Link>!</label>}
+            checked={attendee.stitchin}
+            onChange={(e, data) => this.onChangeField('stitchin', !attendee.stitchin)}
+          />
         </Form.Group>
         <Form.Group grouped>
-          <Header>Playlist Suggestions</Header>
+          <label>Playlist Suggestions</label>
           <TrackList
             tracks={attendee.tracks || []}
             onClick={console.log}
             onRemove={this.removeTrackSuggestion}
           />
           <Modal
-            trigger={<Button onClick={this.showTrackSelector}>Add Track Suggestion</Button>}
+            trigger={<Button size="tiny" onClick={this.showTrackSelector}>Add Track Suggestion</Button>}
             open={this.state.showTrackSelector}
             onClose={this.closeTrackSelector}
             closeOnEscape={true}
             closeOnRootNodeClick={true}
-            size='large'
-            style={{ minHeight: '60vh' }}
           >
             <Header icon='spotify' content='Find your jam!' />
             <Modal.Content>
-              <p>We're totes vetoing stuff, but give us ideas!...</p>
+              <p>Tell us what you want to hear!</p>
               <Spotify
                 onSelect={this.addTrackSuggestion}
-                selectText="Suggest This Track"
+                selectText="Add to my recommendations"
               />
             </Modal.Content>
           </Modal>
@@ -119,10 +114,13 @@ class AttendeePreferences extends React.Component {
     );
   }
 }
+            // size='large'
+            // style={{ minHeight: '60vh' }}
 
 class GuestPreferences extends React.Component {
   render() {
     const { invitation, activeIndex } = this.props;
+    const isGroup = invitation.isGroup();
     const attendee = invitation.attendees[activeIndex];
     if(!attendee) {
       return <Redirect to="/rsvp/guestpreferences/0" />;
@@ -141,17 +139,18 @@ class GuestPreferences extends React.Component {
       <Container>
         <Grid>
           <Grid.Row centered>
+            <Grid.Column width={4} />
             <Grid.Column width={12}>
                 <Form>
                   <Form.Group grouped>
-                    <label>When do you think you'll arrive?</label>
+                    <label>{`When do you think ${isGroup ? 'your group' : 'you'} will arrive?`}</label>
                     <RadioOption value="friday-eve" label="Friday Evening" field="eta" updater={this.props.updateETA} />
                     <RadioOption value="saturday-morning" label="Saturday Morning" field="eta" updater={this.props.updateETA} />
                   </Form.Group>
                   <Form.Group grouped>
                     <label>We're thinking of an informal breakfast/brunch Sunday morning</label>
-                    <RadioOption value={true} label="I/We'll be there" field="sunday" updater={this.props.updateSunday} />
-                    <RadioOption value={false} label="I wont be there" field="sunday" updater={this.props.updateSunday} />
+                    <RadioOption value={true} label={`${isGroup ? 'We' :'I'} will be there`} field="sunday" updater={this.props.updateSunday} />
+                    <RadioOption value={false} label={`${isGroup ? 'We' :'I'} wont be there`} field="sunday" updater={this.props.updateSunday} />
                   </Form.Group>
                 </Form>
               </Grid.Column>
