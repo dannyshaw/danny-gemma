@@ -60,7 +60,7 @@
     "resetdb": "mongo danny-and-amp-gemma --eval 'db.dropDatabase()'",
     "dev": "WEBPACK_HOT=1 webpack-dev-server --hot --inline --progress",
     "build": "webpack",
-    "postinstall": "node semantic-fix.js"
+    "postinstall": "node .semantic-fix.js"
   },
   "main": "keystone.js",
   "devDependencies": {
