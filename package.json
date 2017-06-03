@@ -64,6 +64,7 @@
     "resetdb": "mongo danny-and-amp-gemma --eval 'db.dropDatabase()'",
     "dev": "WEBPACK_HOT=1 webpack-dev-server --hot --inline --progress --config webpack.config.dev.js",
     "build": "webpack",
+    "build:lowmem": "node --max_old_space_size=8192 ./node_modules/webpack/bin/webpack.js",
     "postinstall": "node .semantic-fix.js"
   },
   "main": "keystone.js",
