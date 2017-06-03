@@ -10,16 +10,17 @@ const PaymentDetails = ({ accommodation }) => {
 		<Container>
 			<Header size="large">Payment Details</Header>
 			<p>
-				Please note: Bank transfer is for <em>Dorm Room</em> and <em>BYO camping</em> options.<br/>
-			 	For Happy Glamper we'll be in touch with you about payment.<br/>
-			 	For something off site, please make arrangements directly<br/>
-			 	If you're going with cabins at Bacchus Marsh Tourist Park, please mention our wedding when booking
+				Please note: Bank transfer is for <em>Dorm Room</em> and <em>BYO camping</em> options only.<br/>
+			 	For Happy Glamper Bell Tents we'll be in touch with you about payment arrangements.<br/>
+			 	Anything off site, please make arrangements directly<br/>
 			</p>
 			<p>{`Your Selected Accommodation: ${accommodation ? accommodation : 'Not Yet Selected'}`}</p>
 			<pre style={{whiteSpace: 'pre' }}>
 				name: 	Daniel M Shaw<br/>
 				bsb: 		923-100<br/>
-				acc: 		87206829
+				acc: 		87206829<br/>
+				<br/>
+				Use your invitation code as a reference for the payment.
 			</pre>
 			Thank you!! Cant wait to party!
 		</Container>

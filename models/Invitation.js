@@ -3,7 +3,9 @@ var transform = require('model-transform');
 var Types = keystone.Field.Types;
 
 var Invitation = new keystone.List('Invitation',{
-    defaultSort: 'createdAt'
+    defaultSort: 'createdAt',
+    track: true,
+    drilldown: 'attendees',
 });
 
 Invitation.add({
@@ -17,15 +19,13 @@ Invitation.add({
   ]},
   sunday: { type: Boolean },
   message: { type: Types.Textarea },
-  kids: { type: Number, default: 0 },
   accommodation: { type: Types.Select, options: [
     { value: 'dorm', label: 'Dorm Bunk' },
     { value: 'byocamp', label: 'BYO Camping' },
     { value: 'glamping', label: 'Glamping Bell Tent' },
     { value: 'caravanpark', label: 'Caravan Park Cabin' },
-    { value: 'notstaying', label: 'Not Staying' },
-  ]},
-  createdAt: { type: Date, default: Date.now, noedit: true },
+    { value: 'other', label: 'Other' },
+  ]}
 });
 
 // transform.toJSON(Invitation);

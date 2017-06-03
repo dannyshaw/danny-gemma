@@ -1,7 +1,7 @@
-const config = require('./webpack.config');
+const config = require('./webpack.config.base');
 
 config.devtool = 'source-map';
-config.output.publicPath = 'http://localhost:8080/';
+config.output.publicPath = 'http://localhost:8080/dist/';
 
 config.devServer = {
   historyApiFallback: true,
@@ -12,3 +12,5 @@ config.devServer = {
     "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
   }
 };
+
+module.exports = config;

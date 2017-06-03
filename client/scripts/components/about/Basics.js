@@ -6,7 +6,7 @@ const Mail = props => <a href="mailto:rsvp@dannyandgemma.com.au">{props.children
 
 const Basics = () => {
 	return (
-		<Container>
+		<Container padded>
 			<Header size="large">Arrival Times</Header>
 			<p>Although the wedding is marked for Saturday 16th December, the weekend starts on Friday.
 			You are more than welcome to come to the site on the Friday evening from 5pm. This is especially
@@ -20,22 +20,25 @@ const Basics = () => {
 				&nbsp;<Mail>get in touch</Mail>!
 			</p>
 			<p>
-				BYO drinks for the friday night, at some point we'll order a bunch of takeaway, there's a big
-				lodge we can all hang out in and put some tunes on etc.
+				BYO drinks for the friday night, at some point we'll order some food, and let the weekend celebrations begin.
 			</p>
 
-			<Header size="large">Opening/Closing Cermony</Header>
+			<Header size="large">Opening/Closing Ceremony</Header>
 			<p>One thing that has always been a part of our relationhip has been the process of ritual.
 			Of course the main ritual we're here to celebrate is our marriage ceremony, however it's important to
 			us that we have an opening and closing for the weekend. We'll be partying it up over the weekend, but we ask
 			that everyone participates in a small ritual to open and close the space. The only thing asked of you is that
-			you be fully present and open. The purpose is to ground everyone, to bring us all together and open up a
-			space to hold us for the duration of the weekend. Here we welcome everone to be a part of our tribe and
-			set the intention of a beautiful gathering for the time we have together.
+			you be fully present and open and hold space for these small moments. The purpose is to ground everyone,
+			to bring us all together and open up a space to hold us for the duration of the weekend. Here we welcome
+			everyone to be a part of our tribe and set the intention of a beautiful gathering for the time we have together.
 			</p>
 
 			<Header size="large">Dress Code</Header>
 			<p>While we were close to just going all out hippy. We're opting for the theme of "Smart Casual with a Twist!".	Interpret as you will!</p>
+
+
+			<Header size="large">Wishing Tree</Header>
+			<p>asldkjaslkjsad</p>
 
 			<Header size="large">Children</Header><a id="kids" />
 				<p>Feel like bringing your kids? Our preference is, of course, that we have the absolute pleasure of your presence and
