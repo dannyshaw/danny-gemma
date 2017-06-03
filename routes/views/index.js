@@ -28,7 +28,8 @@ exports = module.exports = function(req, res) {
 
   function doRender(token) {
   	const locals = res.locals;
-  	locals.spotifyToken = token;
+    locals.spotifyToken = token;
+  	locals.assetUrl = process.env.ASSET_URL;
   	view.render('index');
   }
 };

@@ -3,10 +3,6 @@ import { Client, TrackHandler, UserHandler, PlaylistHandler, ArtistHandler } fro
 let client = Client.instance;
 
 client.settings = {
-	// clientId: process.env.SPOTIFY_CLIENT_ID || '268d754b13d94238972f47cccedf6422',
- //  secretId: process.env.SPOTIFY_SECRET_KEY ||  '917dc1911cd2429ab5a44000ee4a5ef0',
-  // scopes: ['user-follow-modify user-follow-read user-library-read user-top-read'],
-  // redirect_uri: window.location.href,
   token: global.dannygemma.spotifyToken,
 };
 
@@ -27,7 +23,6 @@ export const searchTracks = (str, limit=10) => {
 	return new Promise((resolve, reject) => {
     track.search(str, { limit })
       .then((trackCollection) => {
-  			console.log(trackCollection);
   			resolve(trackCollection);
   		})
       .catch(() => {
@@ -41,7 +36,6 @@ export const getTracks = (ids) => {
   return new Promise((resolve) => {
     track.get(ids)
       .then((trackCollection) => {
-        console.log(trackCollection);
         resolve(trackCollection);
       })
       .catch(() => {
@@ -69,13 +63,9 @@ export const login = () => {
     ;
 }
 
-
-
-
 export const getMe = () => {
 	return new Promise((resolve) => {
 		user.me().then((userEntity) => {
-     console.log(userEntity);
      resolve(userEntity);
  		});
 	})
