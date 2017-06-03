@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header, Container, Segment } from 'semantic-ui-react';
 
-const Mail = props => <a href="mailto:rsvp@dannyandgemma.com.au">{props.children}></a>;
+const Mail = props => <a href="mailto:rsvp@dannyandgemma.com.au">{props.children}</a>;
 
 const Basics = () => {
 	return (
