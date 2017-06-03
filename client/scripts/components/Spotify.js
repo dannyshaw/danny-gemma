@@ -2,11 +2,13 @@ import React from 'react';
 import SpotifyPlayer from 'react-spotify-player';
 import { Header, Container, Dimmer, Loader, Grid, Form, Input, Icon, Button, List } from 'semantic-ui-react';
 import { searchTracks } from '../spotify';
+import { isMobile } from './Mobile';
+
 import SpotifyTrack from '../models/SpotifyTrack';
 export const TrackList = ({ tracks, selectedIndex, onClick = x => x, onRemove=null, inverted }) => (
 	<div style={{
 		overflowY: tracks.length > 10 ? 'scroll' : 'inherit',
-		maxHeight: '70vh'
+		maxHeight: isMobile() ? '40vh' : '70vh',
 	}}>
 	<List divided relaxed selection inverted={inverted}>
 		{tracks.map((track, index) => {
@@ -17,14 +19,13 @@ export const TrackList = ({ tracks, selectedIndex, onClick = x => x, onRemove=nu
 		     		active={index === selectedIndex}
 		     	>
 		       	<List.Content floated="left">
-		          <List.Header inverted={inverted}>{track.title}</List.Header>
+		          <List.Header>{track.title}</List.Header>
 		          {track.artist}
 		        </List.Content>
 					  	{onRemove && (
 		       		<List.Content floated="right">
 				        <List.Icon
 				        	name="remove"
-				        	floated="right"
 				        	onClick={(e) => {
 				        		e.stopPropagation();
 					        	onRemove(index);
@@ -86,7 +87,7 @@ class Spotify extends React.Component {
 		return (
 			<Grid>
 				<Grid.Row>
-				  <Grid.Column width={10}>
+				  <Grid.Column width={!isMobile() ? 10 : 16}>
 						<Form onSubmit={(e) => {
 							e.preventDefault();
 							this.search(this.state.searchString);
@@ -109,7 +110,7 @@ class Spotify extends React.Component {
 
 						/>
 				  </Grid.Column>
-				  <Grid.Column width={6}>
+				  <Grid.Column width={!isMobile() ? 6 : 16}>
 						<Grid.Row>
 						{this.state.tracks.length > 0 && this.props.onSelect && (
 							<Button

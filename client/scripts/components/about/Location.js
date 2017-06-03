@@ -6,24 +6,7 @@ import {
   InfoWindow,
 } from "react-google-maps";
 import { Container, Header, Card, Image, Segment } from "semantic-ui-react";
-/*
-        <InfoWindow>
-          <Card>
-            <Image src='/images/campsunnystones.png' size="small" />
-            <Card.Content>
-              <Card.Header>
-                Camp Sunnystones
-              </Card.Header>
-              <Card.Meta>
-              98 Possum Tail Run, Merimu
-              </Card.Meta>
-              <Card.Description>
-                Click <a href="https://goo.gl/kJcX50">here</a> for directions
-              </Card.Description>
-            </Card.Content>
-          </Card>
-        </InfoWindow>
-*/
+
 const Location = withGoogleMap(props => {
   return (
     <GoogleMap
@@ -39,11 +22,10 @@ const Location = withGoogleMap(props => {
   );
 });
 
-
 const LocationContainer = () => {
   const styles = {
-    height: '60vh',
-    width: "60vw",
+    height: '400px',
+    width: "600px",
   };
   return (
     <Location

@@ -8,17 +8,19 @@ class Header extends React.Component {
   renderLoggedIn() {
     const { invitation, logout } = this.props;
     if (invitation) {
-      return [
+      return (
+        <Menu.Menu position='right'>
           <NotMobile>
             <Menu.Item key="greeting">{`Logged in as ${this.props.invitation.getGreeting()}`}</Menu.Item>
-          </NotMobile>,
+          </NotMobile>
           <Menu.Item
             key={1}
             name='logout'
             active={false}
             onClick={logout}
           />
-      ];
+        </Menu.Menu>
+      );
     }
   }
 
@@ -39,9 +41,7 @@ class Header extends React.Component {
               <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/site" active={location.pathname === '/about/site'}>This Site</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Menu.Menu position='right'>
-            {this.renderLoggedIn()}
-          </Menu.Menu>
+          {this.renderLoggedIn()}
         </Menu>
         {this.props.error && (
           <Message

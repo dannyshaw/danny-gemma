@@ -17,15 +17,6 @@
   line-height: 1.5;
 }
 
-.mobile {
-  text-align: center;
-  font-size: 20px;
-}
-.mobile .ui.header.dannygemmaTitle {
-  line-height: 2em;
-  font-size: 55px;
-}
-
 .ui.menu {
   margin-top: 0;
 }
@@ -35,7 +26,7 @@
 }
 
 .mainContainer {
-  padding-top: 30px;
+  /*padding-top: 30px;*/
 }
 .ui.steps .step.active:after {
 	z-index: 1;
@@ -72,15 +63,8 @@ body {
 }
 
 
-.rsvpNavButtonWrapper {
-  width: 100%;
-  position: relative;
-  height: 50px;
-}
-
 .rsvpNavButtons {
-  position: absolute;
-  right: 0;
+  float: right;
 }
 
 .logingreeting {
@@ -114,9 +98,24 @@ body {
   width: 300px;
 }
 
+.accomButtons {
+  float: right;
+}
+
+.ui.container.screenSizeWarning {
+  margin-top: 15px;
+}
+
 p.attending {
   margin-top: 1000px;
   margin-bottom: 50px;
+}
+
+@media (min-width: 1024px) {
+  .ui.form textarea.attendingMessage {
+    width: 50%;
+    display: block;
+  }
 }
 
 @media (max-width: 1148px) {
@@ -139,5 +138,21 @@ p.attending {
     background-position: center center;
     height: 65vh;
   }
+  .ui.header.dannygemmaTitle {
+    width: 300px;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .ui.header.dannygemmaTitle {
+    line-height: 1.5em;
+    font-size: 40px;
+  }
+
+
 }
 

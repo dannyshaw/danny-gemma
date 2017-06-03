@@ -23,6 +23,7 @@ import {
 
 import Invitation from '../models/Invitation';
 import Mobile from '../components/Mobile';
+import ScrollToTop from '../components/ScrollToTop';
 import * as API from '../api';
 
 import Rsvp from './Rsvp';
@@ -52,6 +53,7 @@ class App extends React.Component {
       error: null,
       invitation,
       rsvpStep: 0,
+      screenSizeWarningDismissed: Cookies.get('screenSizeWarningDismissed'),
     };
   }
 
@@ -109,21 +111,35 @@ class App extends React.Component {
     }
   }
 
+  handleDismissSizeWarning = () => {
+    Cookies.set('screenSizeWarningDismissed', true);
+    this.setState({ screenSizeWarningDismissed: true })
+  }
+
+  renderSizeWarning() {
+    return !this.state.screenSizeWarningDismissed && (
+      <Container className="screenSizeWarning">
+        <Mobile>
+          <Message warning size="small" onDismiss={this.handleDismissSizeWarning}>
+              <Message.Header >Budget Constraints</Message.Header>
+              <p>Sadly, this site is not well designed for screens smaller than 1024px. For a better experience use desktop ♡</p>
+            </Message>
+        </Mobile>
+      </Container>
+    )
+  }
+
   render() {
     return (
-      <Router>
-        <Container fluid>
-          <Mobile>
-            <Message warning>
-                <Message.Header>Budget Constraints</Message.Header>
-                <p>Super sorry, but this site is WAY better with a screen width of at least 1280px</p>
-              </Message>
-          </Mobile>
+      <Router onUpdate={() => window.scrollTo(0, 0)} >
+        <ScrollToTop>
+        <div>
           <Header
             invitation={this.state.invitation}
             logout={this.logout}
           />
-          <Container fluid className="mainContainer">
+          {this.renderSizeWarning()}
+          <div className="mainContainer">
             <Switch>
               <Route exact path="/" render={() => (
                 <Home
@@ -173,11 +189,12 @@ class App extends React.Component {
               />
               <Route component={NoMatch}/>
             </Switch>
-          </Container>
+          </div>
           <Route path="/(rsvp|about)" render={() => (
             <Image src="/images/gemma_and_danny_cropped.jpg" size="small" className="minime gone" />
           )} />
-        </Container>
+        </div>
+        </ScrollToTop>
       </Router>
     );
   }

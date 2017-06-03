@@ -5,7 +5,7 @@ import Login from './Login';
 
 const Home = ({ loggedIn, invitation, ...loginProps }) => {
 	return (
-		<Container id="homeflex" fluid>
+		<div id="homeflex">
 			<div className="homewrapper">
 				<div className="logingreeting">
 				{loggedIn ? (
@@ -28,7 +28,7 @@ const Home = ({ loggedIn, invitation, ...loginProps }) => {
 			}
      	</div>
      	</div>
-		</Container>
+		</div>
 	);
 };
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Step, Container, Button, Divider } from 'semantic-ui-react'
+import { Icon, Step, Grid, Container, Button, Divider } from 'semantic-ui-react'
 import {
   BrowserRouter as Router,
   Route,
@@ -8,7 +8,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import _ from 'underscore';
-
+import { isMobile } from '../components/Mobile';
 import Attending from '../components/rsvpsteps/Attending';
 import AccommodationChoice from '../components/rsvpsteps/AccommodationChoice';
 import GuestPreferences from '../components/rsvpsteps/GuestPreferences';
@@ -99,9 +99,21 @@ class Rsvp extends React.Component {
   render() {
     const { prev, next } = this.getNavHandlers();
     const { location, history, route, invitation } = this.props;
+    const isMobileWidth = isMobile();
+
+    const NavButtons = () => (
+      <Button.Group className={isMobileWidth ? "" : "rsvpNavButtons"} fluid={isMobileWidth} >
+        <Button content='Previous' icon='left arrow' labelPosition='left' onClick={prev} disabled={!prev} />
+        <Button content='Next' icon='right arrow' labelPosition='right' onClick={next} disabled={!next} active={!!next} />
+      </Button.Group>
+    );
+
     return (
-      <Container>
-        <Step.Group items={this.getSteps()} fluid size="mini" />
+      <Grid padded>
+        <Grid.Row>
+          <Step.Group items={this.getSteps()} fluid size="mini" />
+        </Grid.Row>
+        <Grid.Row>
           <Switch>
             <Route exact path="/rsvp/attending" component={
               (props) => (
@@ -147,13 +159,17 @@ class Rsvp extends React.Component {
             }/>
             <Redirect to="/rsvp/attending" />
           </Switch>
-        <div className="rsvpNavButtonWrapper">
-          <Button.Group className="rsvpNavButtons">
-            <Button content='Previous' icon='left arrow' labelPosition='left' onClick={prev} disabled={!prev} />
-            <Button content='Next' icon='right arrow' labelPosition='right' onClick={next} disabled={!next} active={!!next} />
-          </Button.Group>
-        </div>
-      </Container>
+        </Grid.Row>
+        <Grid.Row>
+          {isMobileWidth? (
+            <NavButtons />
+          ) : (
+            <Container>
+              <NavButtons />
+            </Container>
+          )}
+        </Grid.Row>
+      </Grid>
     );
   }
 }

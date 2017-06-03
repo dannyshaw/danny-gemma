@@ -26,7 +26,7 @@ const AccommodationOption = ({
         {oneLiner}
       </Item.Description>
     </Item.Content>
-    <Item.Extra className='accomButtons' floated="right">
+    <Item.Extra className='accomButtons'>
        {onChange && (
        		<Button
        			active={active}

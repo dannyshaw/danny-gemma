@@ -3,7 +3,7 @@ import { Container, Grid, Modal, Menu, Select, Segment, Form, Input, Icon, Image
 import { Redirect, Link } from 'react-router-dom';
 import Spotify, { TrackList } from '../Spotify';
 import SpotifyTrack from '../../models/SpotifyTrack';
-
+import { isMobile } from '../Mobile';
 
 const DIETARY_OPTIONS = [
   { key: 'whatever', text: 'Whatever' },
@@ -105,7 +105,7 @@ class AttendeePreferences extends React.Component {
               <p>Tell us what you want to hear!</p>
               <Spotify
                 onSelect={this.addTrackSuggestion}
-                selectText="Add to my recommendations"
+                selectText="Add Track"
               />
             </Modal.Content>
           </Modal>
@@ -134,58 +134,46 @@ class GuestPreferences extends React.Component {
       />
     )
 
-    // <pre>Doesn't matter if you're not sure, we;re just trying to get a general idea</pre>
     return (
-      <Container>
-        <Grid>
-          <Grid.Row centered>
-            <Grid.Column width={4} />
-            <Grid.Column width={12}>
-                <Form>
-                  <Form.Group grouped>
-                    <label>{`When do you think ${isGroup ? 'your group' : 'you'} will arrive?`}</label>
-                    <RadioOption value="friday-eve" label="Friday Evening" field="eta" updater={this.props.updateETA} />
-                    <RadioOption value="saturday-morning" label="Saturday Morning" field="eta" updater={this.props.updateETA} />
-                  </Form.Group>
-                  <Form.Group grouped>
-                    <label>We're thinking of an informal breakfast/brunch Sunday morning</label>
-                    <RadioOption value={true} label={`${isGroup ? 'We' :'I'} will be there`} field="sunday" updater={this.props.updateSunday} />
-                    <RadioOption value={false} label={`${isGroup ? 'We' :'I'} wont be there`} field="sunday" updater={this.props.updateSunday} />
-                  </Form.Group>
-                </Form>
-              </Grid.Column>
-          </Grid.Row>
-          <Divider />
-          <Grid.Row>
-            <Grid.Column width={4}>
-              <Menu fluid vertical tabular>
-                {
-                  invitation.attendees.map((attendee, index) => {
-                    return (
-                      <Menu.Item
-                        key={attendee._id}
-                        name={attendee.name.first}
-                        active={activeIndex === index}
-                        onClick={() => this.props.setActiveIndex(index)}
-                      />
-                    );
-                  })
-                }
-              </Menu>
-            </Grid.Column>
-            <Grid.Column stretched width={12}>
-              <Header as="h1">{`${attendee.name.first}'s Preferences`}</Header>
-              <Form>
-                <AttendeePreferences
-                  key={attendee.id}
-                  attendee={attendee}
-                  onChange={(attendee) => this.props.updateAttendee(activeIndex, attendee)}
-                />
-              </Form>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
+      <Grid container>
+        <Grid.Row>
+            <Form>
+              <Form.Group grouped>
+                <label>{`When do you think ${isGroup ? 'your group' : 'you'} will arrive?`}</label>
+                <RadioOption value="friday-eve" label="Friday Evening" field="eta" updater={this.props.updateETA} />
+                <RadioOption value="saturday-morning" label="Saturday Morning" field="eta" updater={this.props.updateETA} />
+              </Form.Group>
+              <Form.Group grouped>
+                <label>We're thinking of an informal breakfast/brunch Sunday morning</label>
+                <RadioOption value={true} label={`${isGroup ? 'We' :'I'} will be there`} field="sunday" updater={this.props.updateSunday} />
+                <RadioOption value={false} label={`${isGroup ? 'We' :'I'} wont be there`} field="sunday" updater={this.props.updateSunday} />
+              </Form.Group>
+            </Form>
+        </Grid.Row>
+        <Grid.Row>
+          <Menu fluid tabular>
+              {
+                invitation.attendees.map((attendee, index) => {
+                  return (
+                    <Menu.Item
+                      key={attendee._id}
+                      name={attendee.name.first}
+                      active={activeIndex === index}
+                      onClick={() => this.props.setActiveIndex(index)}
+                    />
+                  );
+                })
+              }
+            </Menu>
+            <Form>
+              <AttendeePreferences
+                key={attendee.id}
+                attendee={attendee}
+                onChange={(attendee) => this.props.updateAttendee(activeIndex, attendee)}
+              />
+            </Form>
+        </Grid.Row>
+      </Grid>
     );
   }
 };

@@ -25,11 +25,13 @@ class Mobile extends React.Component {
 }
 
 Mobile.defaultProps = {
-	breakpoint: 1280,
+	breakpoint: 1024,
 	not: false,
 };
 
 export const NotMobile = props => <Mobile not {...props} />;
+
+export const isMobile = (breakpoint) => window.innerWidth < (breakpoint || Mobile.defaultProps.breakpoint)
 
 export default Mobile;
 
