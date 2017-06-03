@@ -36,6 +36,7 @@ import Basics from '../components/about/Basics';
 import PaymentDetails from '../components/about/PaymentDetails';
 import Location from '../components/about/Location';
 import Accommodation from '../components/about/Accommodation';
+import WishingTree from '../components/about/WishingTree';
 import Site from '../components/about/Site';
 
 import Spotify from '../components/Spotify';
@@ -177,6 +178,7 @@ class App extends React.Component {
               )} />
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/location" component={Location}/>
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/accommodation" component={Accommodation}/>
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/wishingtree" component={WishingTree}/>
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/site" component={Site}/>
               <PrivateRoute
                 loggedIn={!!this.state.invitation}
@@ -193,6 +195,9 @@ class App extends React.Component {
           <Route path="/(rsvp|about)" render={() => (
             <Image src="/images/gemma_and_danny_cropped.jpg" size="small" className="minime gone" />
           )} />
+        <br/>
+        <br/>
+        <br/>
         </div>
         </ScrollToTop>
       </Router>

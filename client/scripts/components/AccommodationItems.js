@@ -36,7 +36,7 @@ const AccommodationOption = ({
        			size="medium"
        		>{active ? "Selected" : "Select"}</Button>
        )}
-       <Modal trigger={<Button size="medium" basic>More Info</Button>} dimmer="blurring" closeIcon='close' basic>
+       <Modal trigger={<Button size="medium" basic>More Info</Button>} basic closeIcon='close'>
 		     <Modal.Header>{title}</Modal.Header>
 		     <Modal.Content image>
 		       <Image wrapped size='medium' src={imageSrc} />
@@ -54,17 +54,18 @@ class AccommodationGrid extends React.Component {
 		return (
 			<div>
 			<p>
-				The accomodation theme is <em>camping</em>! However we totally understand that's not everyone's style. To make things special for us we've
-				decided to provide the option of Bell Tents from Happy Glamper. There are a limited amount available to be booked so get in quick if
-				this appeals to you! They come fully decked out and set up for you! Fun! They're also a wee bit pricy, so there are other options of
-				DIY camping and Dorm rooms available on site too.
+				The accommodation theme is <em>camping</em>! However we totally understand that's not everyone's style. To make things special we are providing
+				the option of Bell Tent hire from Happy Glamper. There are a limited amount available to be booked so get in quick if
+				this appeals to you! They come fully decked out and set up! Fun! They're also a wee bit pricey, so there are other options of
+				BYO Camping and Dorm Rooms available on site too.
 			</p>
 			<p>
-				Of course you are welcome to find your own accomodation nearby. There are cabins available at a local tourist park, or if you'd prefer not
+				Of course, you are welcome to find your own accommodation nearby. There are cabins available at the local tourist park, or if you'd prefer not
 				to stay that's up to you too.
 			</p>
-			<p>We'd love you to join us the following morning for a casual breaky/brunch and closing ceremony!</p>
-			<p>To pay for BYO Camping and Dorm Room options, please see the <Link to="/about/paymentdetails">Payment Details</Link> page.</p>
+			<p>We'd love you to join us the Sunday morning for a casual breaky/brunch and closing ceremony!</p>
+			<p>Payment details for BYO Camping and Dorm Room options can be found <Link to="/about/paymentdetails">here</Link><br/>
+			For Happy Glamper Bell Tent bookings we will confirm with you prior to payment to ensure availability.</p>
 			<Item.Group divided>
 				<AccommodationOption
 					title="BYO Camping"
@@ -76,7 +77,7 @@ class AccommodationGrid extends React.Component {
 					imageSrc="/images/accommodation/byotent.jpg"
 				>
 					 <p>There will be a designated area to set up a camp for the weekend!</p>
-	         <p>Power may be available, higher chance if you bring an extension cable!</p>
+	         <p>Power will be available, higher chance if you bring an extension cable!</p>
 				</AccommodationOption>
 				<AccommodationOption
 					title="Dorm Rooms"
@@ -102,7 +103,7 @@ class AccommodationGrid extends React.Component {
 				>
 					<p>Incredible bell tents decked out with a double bed and decor all set up for you on
 					 arrival from Happy Glamper. Just rock up and sleep in style.</p>
-					 <a href="http://www.happyglamper.com.au/glamping-hire/bell-tents/" target="_blank">Check em out</a>
+					 <a href="http://www.happyglamper.com.au/glamping-hire/bell-tents/" target="_blank">Check em out here</a>
 	        <p>Price from Friday to Sunday, this option is a 2 night minimum.<br/>
 	       Price includes delivery</p>
 				</AccommodationOption>

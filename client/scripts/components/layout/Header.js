@@ -38,6 +38,7 @@ class Header extends React.Component {
               <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/basics" active={location.pathname === '/about/basics'} >Basics</Dropdown.Item>
               <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/location" active={location.pathname === '/about/location'} >Location</Dropdown.Item>
               <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/accommodation" active={location.pathname === '/about/accommodation'} >Accommodation</Dropdown.Item>
+              <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/wishingtree" active={location.pathname === '/about/wishingtree'} >Wishing Tree</Dropdown.Item>
               <Dropdown.Item as={Link} disabled={!loggedIn} to="/about/site" active={location.pathname === '/about/site'}>This Site</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
