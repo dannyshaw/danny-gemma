@@ -6,7 +6,7 @@ const Mail = props => <a href="mailto:rsvp@dannyandgemma.com.au">{props.children
 
 const ImportantInfo = () => {
 	return (
-		<Container padded>
+		<Container className="aboutContainer">
 			<Header size="large">Arrival/Important Times</Header>
 			<List as='ul'>
 		    <List.Item as='li'>Fri 5:00PM  Earliest Arrival</List.Item>
@@ -79,8 +79,6 @@ const ImportantInfo = () => {
 			 or Sunday afternoon on the way home</p>
 			<p>See <a href="http://parkweb.vic.gov.au/explore/parks/werribee-gorge-state-park" target="_blank">http://parkweb.vic.gov.au/explore/parks/werribee-gorge-state-park</a></p>
 		  <br/>
-      <br/>
-      <br/>
 		</Container>
 
 	);

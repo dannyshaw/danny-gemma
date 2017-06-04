@@ -17,7 +17,7 @@ class PaymentDetails extends React.Component {
 
 	render() {
 		return (
-			<Container>
+			<Container className="aboutContainer">
 				{JSON.stringify(this.state.tracks)}
 			</Container>
 		);

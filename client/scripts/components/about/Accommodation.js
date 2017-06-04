@@ -5,7 +5,7 @@ import AccommodationItems from '../AccommodationItems';
 class Accommodation extends React.Component {
 	render() {
 		return (
-			<Container>
+			<Container className="aboutContainer">
 				 <Header as='h2' icon textAlign='center'>
 		      <Icon name='home' circular />
 		      <Header.Content>

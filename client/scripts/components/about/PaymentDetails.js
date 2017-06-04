@@ -6,7 +6,7 @@ const Mail = props => <a href="mailto:rsvp@dannyandgemma.com.au">{props.children
 
 const PaymentDetails = ({ accommodation }) => {
 	return (
-		<Container>
+		<Container className="aboutContainer">
 			<Header size="large">Payment Details</Header>
 			<p>
 				Please note: Bank transfer is for the <em>Dorm Room</em> option only.<br/>

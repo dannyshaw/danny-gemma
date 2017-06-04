@@ -4,7 +4,7 @@ import { Header, Container, Segment } from 'semantic-ui-react';
 
 const WishingTree = () => {
 	return (
-		<Container>
+		<Container className="aboutContainer">
 			<Header size="large">Wishing Tree</Header>
 			<p>It is our hope that the Wishing Tree forms a symbol of our community's coming together to celebrate our marriage.</p>
 			<p>We're planning to get the tree (yes, an actual tree) partially covered in colorful knitting and crocheting

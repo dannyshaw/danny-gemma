@@ -6,9 +6,9 @@ import SpotifyTrack from '../../models/SpotifyTrack';
 import { isMobile } from '../Mobile';
 
 const DIETARY_OPTIONS = [
-  { key: 'whatever', text: 'Whatever' },
+  { key: 'vegetarian', text: 'Vegetarian' },
   { key: 'vegan', text: 'Vegan' },
-  { key: 'glutenfree', text: 'Gluten Free' },
+  { key: 'glutenfree', text: 'Vegetarian & Gluten Free' },
   { key: 'vegan-glutenfree', text: 'Vegan & Gluten Free' },
   { key: 'other', text: 'Other' }
 ];

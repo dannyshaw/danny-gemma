@@ -11,7 +11,7 @@ import { isMobile } from '../Mobile';
 const Location = withGoogleMap(props => {
   return (
     <GoogleMap
-      defaultZoom={10}
+      defaultZoom={isMobile() ? 9 : 10}
       defaultCenter={new google.maps.LatLng(-37.7015182,144.8289539)}
     >
       <Marker
@@ -25,8 +25,8 @@ const Location = withGoogleMap(props => {
 
 const LocationContainer = () => {
   const styles = {
-    height: '600px',
-    width: "800px",
+    height: isMobile() ? '90vh' : '600px',
+    width: isMobile() ? '90vw' : "800px",
   };
   return (
     <Location
@@ -42,7 +42,7 @@ const LocationContainer = () => {
 
 
 export default () => (
-    <Container>
+    <Container className="aboutContainer">
       <Card>
         <Card.Content>
           <Card.Header>
