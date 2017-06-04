@@ -79,9 +79,9 @@ class AttendeePreferences extends React.Component {
           {this.getDietaryFields()}
         </Form.Group>
         <Form.Group grouped>
-          <label>Can you knit?</label>
+          <label>Can you knit or crochet?</label>
           <Form.Checkbox
-            label={<label>I'd like to help yarn-bomb the <Link to="/about/basics">wishing tree</Link>!</label>}
+            label={<label>Yes, I'd like to help yarn-bomb the <Link to="/about/wishingtree">wishing tree</Link>!</label>}
             checked={attendee.stitchin}
             onChange={(e, data) => this.onChangeField('stitchin', !attendee.stitchin)}
           />
