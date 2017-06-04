@@ -16,6 +16,7 @@ import {
   Icon,
   Input,
   Image,
+  Loader,
   Message,
   Label,
   Header as SemanticHeader
@@ -51,6 +52,7 @@ class App extends React.Component {
 
     this.state = {
       inviteCode: inviteCode,
+      saving: false,
       error: null,
       invitation,
       rsvpStep: 0,
@@ -98,9 +100,10 @@ class App extends React.Component {
   };
 
   saveInvitation = (invitation, then) => {
-    this.setState({ invitation: invitation }, () => {
+    this.setState({ invitation: invitation, saving: true }, () => {
       API
         .updateInvitation(this.state.inviteCode, invitation)
+        .then(() => global.setTimeout(() => this.setState({ saving: false }), 300))
         .then(then)
       ;
     })
@@ -135,9 +138,11 @@ class App extends React.Component {
       <Router onUpdate={() => window.scrollTo(0, 0)} >
         <ScrollToTop>
         <div>
+          <Loader size='tiny' inline active={this.state.saving} className="saveIndicator">saving</Loader>
           <Header
             invitation={this.state.invitation}
             logout={this.logout}
+            saving={this.state.saving}
           />
           {this.renderSizeWarning()}
           <div className="mainContainer">

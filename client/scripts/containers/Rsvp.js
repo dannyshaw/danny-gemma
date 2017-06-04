@@ -109,7 +109,7 @@ class Rsvp extends React.Component {
     );
 
     return (
-      <Grid padded>
+      <Grid>
         <Grid.Row>
           <Step.Group items={this.getSteps()} fluid size="mini" />
         </Grid.Row>

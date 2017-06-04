@@ -10,6 +10,7 @@ const ImportantInfo = () => {
 			<Header size="large">Arrival/Important Times</Header>
 			<List as='ul'>
 		    <List.Item as='li'>Fri 5:00PM  Earliest Arrival</List.Item>
+		    <List.Item as='li'>Sat 9:00AM(ish) Optional Women's Yoga and Mens Lawn Bowls</List.Item>
 		    <List.Item as='li'>Sat 2:30PM  Opening Gathering</List.Item>
 		    <List.Item as='li'>Sat 3:00PM  Ceremony</List.Item>
 		    <List.Item as='li'>Sun 11:00AM Closing Gathering</List.Item>
@@ -32,7 +33,7 @@ const ImportantInfo = () => {
 
 
 			<Header size="large">Dress Code</Header>
-			<p>While we were close to just going all out hippy. We're opting for the theme of <strong>Smart Casual with a Twist!</strong> for the big day.<br/>
+			<p>While we were close to just going all out hippy. but we're opting for the theme of <strong>Smart Casual with a Twist!</strong> for the big day.<br/>
 				Interpret as you will!
 			</p>
 

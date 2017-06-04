@@ -76,6 +76,7 @@ class AttendeePreferences extends React.Component {
       <div>
         <Form.Group grouped>
           <label>Dietary Requirements</label>
+          <p>All food served will be delicious vegetarian but let us know of any further restrictions.</p>
           {this.getDietaryFields()}
         </Form.Group>
         <Form.Group grouped>

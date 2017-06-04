@@ -52,7 +52,7 @@ export default () => (
           98 Possum Tail Run, Merimu
           </Card.Meta>
           <Card.Description>
-            Click <a href="https://goo.gl/kJcX50">here</a> for directions
+            Click <a href="https://goo.gl/kJcX50" target="_blank">here</a> for directions
           </Card.Description>
         </Card.Content>
       </Card>
