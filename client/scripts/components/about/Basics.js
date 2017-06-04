@@ -22,7 +22,7 @@ const Basics = () => {
 			<p>BYO drinks for the friday night, at some point we'll order some food around 8:00pm, and let the weekend celebrations begin.</p>
 			<p>For those who do come on the Friday evening or Saturday morning, feel free to bring something for breaky and lunch before the wedding starts at 2.30PM.
 				There is a large Kitchen facilities and fridge storage in the Homestead which everyone is welcome to utlise.<br/>
-			Nearby Bacchus Marsh has plenty of options for convenience, too.
+			Nearby Bacchus Marsh has plenty of options for convenience, too.</p>
 
 
 			<Header size="large">Dress Code</Header>
@@ -69,8 +69,6 @@ const Basics = () => {
 			<p>There is some beautiful scenery in the area. Werribee Gorge is nearby with some lovely short walks to do on perhaps the Saturday morning
 			 or Sunday afternoon on the way home</p>
 			<p>See <a href="http://parkweb.vic.gov.au/explore/parks/werribee-gorge-state-park" target="_blank">http://parkweb.vic.gov.au/explore/parks/werribee-gorge-state-park</a></p>
-
-			<br/>
 		</Container>
 
 	);
