@@ -106,16 +106,34 @@ function processAttendee(attendee, data, existingTracks) {
 function saveTrack(track, attendee) {
   SpotifyTrack.model.findOne({
     'spotifyId': track.spotifyId
-  }).exec((err, invitation) => {
+  }).exec((err, track) => {
     if (err) {
       return res.apiError('database error', err);
     }
 
-    if(!invitation) {
+    if(!track) {
       const newTrack = SpotifyTrack.model(track)
       newTrack.attendee = attendee;
       newTrack.save();
     }
   })
 }
+
+
+exports.getTracks = function(req, res) {
+  SpotifyTrack.model
+    .find()
+    .populate('attendee')
+    .exec((err, tracks) => {
+      if (err) {
+        debugger
+        return res.apiError('database error', err);
+      }
+
+      res.apiResponse({ tunes: tracks });
+
+    })
+}
+
+
 

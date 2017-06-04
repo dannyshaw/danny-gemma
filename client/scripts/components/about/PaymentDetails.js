@@ -5,7 +5,6 @@ import { Header, Container, Segment } from 'semantic-ui-react';
 const Mail = props => <a href="mailto:rsvp@dannyandgemma.com.au">{props.children}></a>;
 
 const PaymentDetails = ({ accommodation }) => {
-	debugger
 	return (
 		<Container>
 			<Header size="large">Payment Details</Header>

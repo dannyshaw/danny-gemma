@@ -29,9 +29,9 @@ exports = module.exports = function(app) {
   app.get('/api/attendees/:id/open.gif', routes.api.attendees.trackSaveTheDateOpened);
   app.get('/api/attendees/:id', keystone.middleware.api, routes.api.attendees.get);
 
+  app.get('/api/invitation/tunes', keystone.middleware.api, routes.api.invitation.getTracks);
   app.post('/api/invitation/:code', keystone.middleware.api, routes.api.invitation.update);
   app.get('/api/invitation/:code', keystone.middleware.api, routes.api.invitation.get);
-  // app.get('/api/tracks', keystone.middleware.api, routes.api.invitation.getTracks);
 
   // Index and
   app.get('/t/:id', middleware.trackAttendeePageView, routes.views.index);

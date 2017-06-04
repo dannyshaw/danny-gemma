@@ -34,6 +34,7 @@ import Home from '../components/Home';
 
 import Basics from '../components/about/Basics';
 import PaymentDetails from '../components/about/PaymentDetails';
+import SuggestedTracks from '../components/about/SuggestedTracks';
 import Location from '../components/about/Location';
 import Accommodation from '../components/about/Accommodation';
 import WishingTree from '../components/about/WishingTree';
@@ -72,7 +73,7 @@ class App extends React.Component {
               invitation: new Invitation(data),
               error: null
             }, () => {
-              Cookies.set('inviteCode', this.state.inviteCode);
+              Cookies.set('inviteCode', this.state.inviteCode, { expires: 7 });
               ls(this.state.inviteCode, data);
             });
           }
@@ -179,6 +180,7 @@ class App extends React.Component {
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/location" component={Location}/>
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/accommodation" component={Accommodation}/>
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/wishingtree" component={WishingTree}/>
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/suggestedtracks" component={SuggestedTracks}/>
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/site" component={Site}/>
               <PrivateRoute
                 loggedIn={!!this.state.invitation}

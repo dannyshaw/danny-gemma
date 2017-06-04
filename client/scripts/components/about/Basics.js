@@ -19,13 +19,14 @@ const Basics = () => {
 				the evening finalising things for the big day. If you feel like raising a hand to help us out,
 				&nbsp;<Mail>get in touch</Mail>!
 			</p>
-			<p>
-				BYO drinks for the friday night, at some point we'll order some food, and let the weekend celebrations begin.
-			</p>
+			<p>BYO drinks for the friday night, at some point we'll order some food around 8:00pm, and let the weekend celebrations begin.</p>
+			<p>For those who do come on the Friday evening or Saturday morning, feel free to bring something for breaky and lunch before the wedding starts at 2.30PM.
+				There is a large Kitchen facilities and fridge storage in the Homestead which everyone is welcome to utlise.<br/>
+			Nearby Bacchus Marsh has plenty of options for convenience, too.
 
 
 			<Header size="large">Dress Code</Header>
-			<p>While we were close to just going all out hippy. We're opting for the theme of <strong>Smart Casual with a Twist!</strong>.<br/>
+			<p>While we were close to just going all out hippy. We're opting for the theme of <strong>Smart Casual with a Twist!</strong> for the ceremony.<br/>
 				Interpret as you will!
 			</p>
 
@@ -35,18 +36,11 @@ const Basics = () => {
 				Here are some things to consider bringing:
 				<ul>
 					<li>Torch to get around in the dark</li>
-					<li>Footwear appropriate to skill levels and terrain</li>
-					<li>Extension leads if available</li>
+					<li>Footwear appropriate to terrain and or skill levels</li>
+					<li>Extension leads if camping and you have one</li>
 					<li>Snake anti-venom</li>
 				</ul>
 			</p>
-
-
-			<Header size="large">Food</Header>
-			<p>
-				Something about food for friday and sat morning and sunday breakfast
-			</p>
-
 
 			<Header size="large">Children</Header>
 			<p>Feel like bringing your kids? Our preference is, of course, that we have the absolute pleasure of your presence and
@@ -70,6 +64,13 @@ const Basics = () => {
 				 until after we've done so. </p>
 				<p>You can, however post to instagram using the hashtag <strong>#dannyandgemmawed</strong></p>
 				<br/>
+
+			<Header size="large">Surrounding Area</Header>
+			<p>There is some beautiful scenery in the area. Werribee Gorge is nearby with some lovely short walks to do on perhaps the Saturday morning
+			 or Sunday afternoon on the way home</p>
+			<p>See <a href="http://parkweb.vic.gov.au/explore/parks/werribee-gorge-state-park" target="_blank">http://parkweb.vic.gov.au/explore/parks/werribee-gorge-state-park</a></p>
+
+			<br/>
 		</Container>
 
 	);

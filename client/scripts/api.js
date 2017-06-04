@@ -16,6 +16,21 @@ export const getInvitation = (code) => {
   });
 }
 
+export const getSuggestedTracks = () => {
+  return new Promise((resolve, reject) => {
+    Request
+      .get(`/api/invitation/tunes`)
+      .end((err, result) => {
+        if (err) {
+          resolve({ data: false, error: result.body.error });
+        } else {
+          resolve({ data: result.body.tunes, error: false });
+        }
+      })
+    ;
+  });
+};
+
 export const updateInvitation = (code, data) => {
   return new Promise((resolve, reject) => {
     Request
