@@ -45,7 +45,7 @@ const Basics = () => {
 			<Header size="large">Children</Header>
 			<p>Feel like bringing your kids? Our preference is, of course, that we have the absolute pleasure of your presence and
 			freedom for the ceremony and ensuing party into the evening.  So if that it is available to you, wonderful!</p>
-			<p>Otherwise, children are welcome and will be accomodated, please note the rooms and camping/glamping areas are a 10 minute walk uphill from the ceremony/reception area.
+			<p>Otherwise, children are welcome and will be accommodated, please note the rooms and camping/glamping areas are a 10 minute walk uphill from the ceremony/reception area.
 			 Please <Mail>reach out to us</Mail> if you have any concerns or questions.</p>
 
 			<Header size="large">Opening/Closing Ceremony</Header>
