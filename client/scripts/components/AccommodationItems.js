@@ -26,26 +26,26 @@ const AccommodationOption = ({
       <Item.Description>
         {oneLiner}
       </Item.Description>
+	    <Item.Extra className='accomButtons'>
+	       {onChange && (
+	       		<Button
+	       			active={active}
+	       			primary={active}
+	       			onClick={() => onChange(value)}
+	       			size="medium"
+	       		>{active ? "Selected" : "Select"}</Button>
+	       )}
+	       <Modal trigger={<Button size="medium" basic>More Info</Button>} basic closeIcon='close'>
+			     <Modal.Header>{title}</Modal.Header>
+			     <Modal.Content image>
+			       <Image wrapped size='medium' src={imageSrc} />
+			       <Modal.Description>
+			         {children}
+			       </Modal.Description>
+			     </Modal.Content>
+			   </Modal>
+	    </Item.Extra>
     </Item.Content>
-    <Item.Extra className='accomButtons'>
-       {onChange && (
-       		<Button
-       			active={active}
-       			primary={active}
-       			onClick={() => onChange(value)}
-       			size="medium"
-       		>{active ? "Selected" : "Select"}</Button>
-       )}
-       <Modal trigger={<Button size="medium" basic>More Info</Button>} basic closeIcon='close'>
-		     <Modal.Header>{title}</Modal.Header>
-		     <Modal.Content image>
-		       <Image wrapped size='medium' src={imageSrc} />
-		       <Modal.Description>
-		         {children}
-		       </Modal.Description>
-		     </Modal.Content>
-		   </Modal>
-    </Item.Extra>
   </Item>
 )
 
