@@ -13,7 +13,7 @@ const WishingTree = () => {
 			<p>
 				We are hoping skilled folk from our tribe will help knit parts of the yarn bombing effort, you may indicate
 				your intentions to help on your <Link to="/rsvp/guestpreferences">Guest Preferences</Link> page.
-				Kelsie, one of Gemma's lovely Bridesmaids will be organising the project and will be in contact with those who
+				Kelsie, one of Gemma's lovely Bride Tribe will be organising the project and will be in contact with those who
 				express interest. She will even run a knitting session if newbies are interested in learning and would like to help!
 			</p>
 			<p>The Wishing Tree will be a place for guests to write notes, and place cards for the Bride and Groom.<br/>
