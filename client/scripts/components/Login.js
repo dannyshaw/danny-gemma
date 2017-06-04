@@ -7,7 +7,7 @@ const Login = ({ isValid, inviteCode, login, onInviteCodeChange }) => {
       <Form>
           <Form.Group grouped>
             <Form.Input
-              label="Enter your unique invitation code"
+              label="Enter your Invitation Code"
               action={{
                 type: 'submit',
                 icon: 'sign in',
