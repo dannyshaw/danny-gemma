@@ -99,6 +99,7 @@ class AttendeePreferences extends React.Component {
             onClose={this.closeTrackSelector}
             closeOnEscape={true}
             closeOnRootNodeClick={true}
+            closeIcon='close'
           >
             <Header icon='spotify' content='Find your jam!' />
             <Modal.Content>
