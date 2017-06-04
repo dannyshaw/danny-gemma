@@ -6,12 +6,13 @@ import {
   InfoWindow,
 } from "react-google-maps";
 import { Container, Header, Card, Image, Segment } from "semantic-ui-react";
+import { isMobile } from '../Mobile';
 
 const Location = withGoogleMap(props => {
   return (
     <GoogleMap
       defaultZoom={10}
-      defaultCenter={new google.maps.LatLng(-37.6015182,144.7289539)}
+      defaultCenter={new google.maps.LatLng(-37.7015182,144.8289539)}
     >
       <Marker
         position={new google.maps.LatLng(-37.6567638,144.4886283)}
@@ -24,8 +25,8 @@ const Location = withGoogleMap(props => {
 
 const LocationContainer = () => {
   const styles = {
-    height: '400px',
-    width: "600px",
+    height: '600px',
+    width: "800px",
   };
   return (
     <Location
@@ -42,7 +43,6 @@ const LocationContainer = () => {
 
 export default () => (
     <Container>
-      <LocationContainer />
       <Card>
         <Card.Content>
           <Card.Header>
@@ -56,6 +56,7 @@ export default () => (
           </Card.Description>
         </Card.Content>
       </Card>
+      <LocationContainer />
     </Container>
 );
 // export default ClosureListenersExample;

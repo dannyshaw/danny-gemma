@@ -32,13 +32,12 @@ import Content from '../components/layout/Content';
 import Header from '../components/layout/Header';
 import Home from '../components/Home';
 
-import Basics from '../components/about/Basics';
+import ImportantInfo from '../components/about/ImportantInfo';
 import PaymentDetails from '../components/about/PaymentDetails';
 import SuggestedTracks from '../components/about/SuggestedTracks';
 import Location from '../components/about/Location';
 import Accommodation from '../components/about/Accommodation';
 import WishingTree from '../components/about/WishingTree';
-import Site from '../components/about/Site';
 
 import Spotify from '../components/Spotify';
 
@@ -171,7 +170,7 @@ class App extends React.Component {
                   />
                 )}
               />
-              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/basics" component={Basics} />
+              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/importantinfo" component={ImportantInfo} />
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/paymentdetails" component={() => (
                 <PaymentDetails
                   accommodation={this.state.invitation.accommodation}
@@ -181,7 +180,6 @@ class App extends React.Component {
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/accommodation" component={Accommodation}/>
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/wishingtree" component={WishingTree}/>
               <PrivateRoute loggedIn={!!this.state.invitation} path="/about/suggestedtracks" component={SuggestedTracks}/>
-              <PrivateRoute loggedIn={!!this.state.invitation} path="/about/site" component={Site}/>
               <PrivateRoute
                 loggedIn={!!this.state.invitation}
                 path="/spotify"
@@ -195,11 +193,8 @@ class App extends React.Component {
             </Switch>
           </div>
           <Route path="/(rsvp|about)" render={() => (
-            <Image src="/images/gemma_and_danny_cropped.jpg" size="small" className="minime gone" />
+            <Image src="/images/gemma_and_danny_smaller.jpg" size="small" className="minime gone" />
           )} />
-        <br/>
-        <br/>
-        <br/>
         </div>
         </ScrollToTop>
       </Router>

@@ -9,7 +9,7 @@ const PaymentDetails = ({ accommodation }) => {
 		<Container>
 			<Header size="large">Payment Details</Header>
 			<p>
-				Please note: Bank transfer is for <em>Dorm Room</em> and <em>BYO camping</em> options only.<br/>
+				Please note: Bank transfer is for the <em>Dorm Room</em> option only.<br/>
 			 	For Happy Glamper Bell Tents we'll be in touch with you about payment arrangements.<br/>
 			 	Anything off site, please make arrangements directly<br/>
 			</p>
@@ -19,7 +19,7 @@ const PaymentDetails = ({ accommodation }) => {
 				bsb: 		923-100<br/>
 				acc: 		87206829<br/>
 				<br/>
-				Use your invitation code as a reference for the payment.
+				Please Use your invitation code as a reference for the payment.
 			</pre>
 			Thank you!! Cant wait to party!
 		</Container>

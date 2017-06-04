@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Modal, Card, Icon, Image, Button, Header } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
-import AccommodationGrid from '../AccommodationGrid';
+
 const Thankyou = ({ invitation }) => {
   return (
     <Grid centered columns={1} >
