@@ -21,6 +21,7 @@ exports.get = function(req, res) {
         SpotifyTrack.model.find().where('attendee', attendee.id).exec((err, tracks) => {
           const att = attendee.toObject();
           att.tracks = tracks;
+          delete att.email;
           attendees.push(att);
           callback()
         })
@@ -30,6 +31,7 @@ exports.get = function(req, res) {
         }
         // such hack
         const invite = invitation.toObject();
+        delete invite.address;
         invite.attendees = attendees;
         res.apiResponse({
           invitation: invite
