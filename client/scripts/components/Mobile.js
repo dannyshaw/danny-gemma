@@ -14,7 +14,6 @@ class Mobile extends React.Component {
         this.setState({width: window.innerWidth });
     };
     render() {
-    	console.log(this.state.width);
     	const isSmall = this.state.width < this.props.breakpoint;
     	const shouldRender = this.props.not ? !isSmall : isSmall;
 			return shouldRender

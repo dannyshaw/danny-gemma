@@ -68,6 +68,7 @@ class App extends React.Component {
         .then(({data, error}) => {
           if (error) {
             const errorMessage = error === 'not found' ? "Could not find code, Try again." : error;
+            // debugger;
             this.setState({ error: errorMessage })
           } else {
             this.setState({
@@ -143,6 +144,7 @@ class App extends React.Component {
             invitation={this.state.invitation}
             logout={this.logout}
             saving={this.state.saving}
+            error={this.state.error}
           />
           {this.renderSizeWarning()}
           <div className="mainContainer">
@@ -153,7 +155,6 @@ class App extends React.Component {
                   loggedIn={!!this.state.invitation}
                   invitation={this.state.invitation}
                   inviteCode={this.state.inviteCode}
-                  error={this.state.error}
                   onInviteCodeChange={code => {
                     this.setState({
                       inviteCode: code.toUpperCase(),

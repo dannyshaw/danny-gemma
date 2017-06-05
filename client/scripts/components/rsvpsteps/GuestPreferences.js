@@ -91,7 +91,7 @@ class AttendeePreferences extends React.Component {
           <label>Playlist Suggestions</label>
           <TrackList
             tracks={attendee.tracks || []}
-            onClick={console.log}
+            onClick={x => x}
             onRemove={this.removeTrackSuggestion}
           />
           <Modal
