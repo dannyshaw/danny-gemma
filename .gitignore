@@ -34,3 +34,5 @@ node_modules
 *.min.css
 
 updates
+public/dist
+updates-bak
