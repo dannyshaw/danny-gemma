@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "node_modules/keystone"
+		},
+		{
+			"path": "node_modules/spotify-sdk"
+		},
+		{
+			"path": "node_modules/semantic-ui-less"
+		}
+	]
+}

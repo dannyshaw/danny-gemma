@@ -1,0 +1,2 @@
+@computerMinimumGutter: (@emSize  * 5.5);
+@largeMonitorMinimumGutter: (@emSize  * 10);

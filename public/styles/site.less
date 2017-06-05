@@ -1,141 +1,5 @@
 @background-color: #fff;
 @panel-color: rgba(255,255,255,0.75);
-@opaque: rgba(0,0,0,0.5);
-@text-color: #303030;
-@feather-color: #292929;
-@panelHeight: 75px;
-
-
-// TODO: Add Styles
-html, body, #app {
-  height: 100%;
-}
-
-div, body, #app{
-  margin: 0;
-  padding: 0;
-}
-
-#app {
-  background-color: @background-color;
-}
-
-.background {
-  direction: rtl;
-  background-image: url(/images/savethedate.jpg) ;
-  background-repeat:  no-repeat;
-  background-attachment: fixed;
-  background-size:  cover;
-  background-color: @background-color;
-  background-position: left center;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-.wrapper {
-  direction: ltr;
-}
-
-
-.panel {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  height: @panelHeight;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  background-color: @panel-color;
-  color: @text-color;
-  /*padding: 0.5em;*/
-}
-
-.header {
-  top: 0;
-  justify-content: flex-start;
-}
-
-.footer {
-  bottom: 0;
-  justify-content: flex-end;
-}
-
-.content {
-  color: #fff;
-  position: absolute;
-  width: 100vw;
-  height: calc(~'100%' - (@panelHeight * 2));
-  margin: @panelHeight 0;
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.opaque {
-  background-color: @opaque;
-}
-
-.envelope {
-  fill: @text-color;
-}
-.mail {
-  width: 20px;
-  margin: auto;
-  margin-left: 20px;
-  align-self: flex-start;
-}
-
-.text {
-  font-family: 'Brusher';
-  font-size: 50px;
-  font-weight: 100;
-  padding: 10px 20px;
-}
-
-.note {
-  font-family:  Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 18px;
-  font-style: 'light';
-  letter-spacing: 2px;
-  font-weight: 100;
-  padding: 20px;
-  margin-left: auto;
-}
-
-
-@media (max-width: 769px) {
-  @panelHeight: 50px;
-  .panel {
-    height: @panelHeight;
-  }
-
-  .background {
-    background-position: 13% 0px;
-  }
-
-  .text {
-    font-size: 22px;
-    padding: 5px;
-  }
-
-  .mail {
-    margin-left: 5px;
-  }
-
-  .note {
-    font-size: 11px;
-    padding: 5px;
-    letter-spacing: 1px;
-  }
-
-  .content {
-    height: calc(~'100%' - (@panelHeight * 2));
-    margin: @panelHeight 0;
-  }
-
-}
 
 @font-face {
   font-family: 'Brusher';
@@ -145,18 +9,151 @@ div, body, #app{
     format('opentype');
 }
 
-@font-face {
-  font-family: 'AmaticSC';
-  src:
-    local('AmaticSC'),
-    url('/fonts/AmaticSC-Regular.ttf')
-    format('truetype');
+.ui.header.dannygemmaTitle {
+  font-family: 'Brusher';
+  font-size: 45px;
+  font-weight: 100;
+  margin: 0px 30px;
+  line-height: 1.8;
 }
 
-@font-face {
-  font-family: 'MawnsHandwriting';
-  src:
-    local('MawnsHandwriting'),
-    url('/fonts/Mawns_Handwriting.ttf')
-    format('truetype');
+.ui.menu {
+  margin-top: 0;
 }
+
+.gemdannyHeader {
+	height: 100px;
+}
+
+.mainContainer {
+  /*padding-top: 30px;*/
+}
+.ui.steps .step.active:after {
+	z-index: 1;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0
+}
+
+#homeflex {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.ui.container.aboutContainer {
+  margin: 20px auto;
+}
+
+.ui.items>.item .extra {
+  width: auto;
+}
+
+.homewrapper {
+  flex: 1 0 auto;
+  height: 80vh;
+  background-image: url('/images/gemma_and_danny_smaller.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 75% center;
+}
+
+
+.rsvpNavButtons {
+  float: right;
+}
+
+.logingreeting {
+  width: 40%;
+  margin-left: 5%;
+}
+
+.greetingText {
+  margin-top: 10%;
+}
+
+.greetingText {
+  font-size: 18px;
+}
+
+.ui.image.minime {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: -1;
+}
+
+.ui.items > .item .extra {
+  width: auto!important;
+}
+
+.loginBox {
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+.ui.container.screenSizeWarning {
+  margin-top: 15px;
+}
+
+.ui.loader.inline.tiny.saveIndicator {
+  position: fixed;
+  top: 0.8125rem;
+  right: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+p.attending {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1024px) {
+  .ui.form textarea.attendingMessage {
+    width: 50%;
+    display: block;
+  }
+}
+
+@media (max-width: 1148px) {
+  .gone { display: none!important; }
+}
+
+@media (max-width: 1024px) {
+  .logingreeting {
+    width: 90%;
+    margin: 300px auto 50px auto;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid;
+  }
+
+  .loginBox {
+    margin-top: auto;
+  }
+  .homewrapper {
+    background-position: center center;
+    height: 75vh;
+  }
+  .ui.header.dannygemmaTitle {
+    width: 300px;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .ui.header.dannygemmaTitle {
+    line-height: 1.5em;
+    font-size: 40px;
+  }
+
+
+}
+

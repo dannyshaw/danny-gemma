@@ -1,0 +1,3429 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"less",
+				"lessLoader"
+			],
+			[
+				"screen",
+				"screensizewarningDismissed"
+			],
+			[
+				"scre",
+				"screensizewarningDismissed"
+			],
+			[
+				"isMob",
+				"isMobileWidth"
+			],
+			[
+				"def",
+				"defaultProps"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"text",
+				"textUpdate"
+			],
+			[
+				"ans",
+				"answerChangeHandler"
+			],
+			[
+				"is",
+				"is_correct"
+			],
+			[
+				"new",
+				"newAnswer"
+			],
+			[
+				"in",
+				"in_grace_period"
+			],
+			[
+				"PAY",
+				"PAYMENT_STATUS_CHOICES"
+			],
+			[
+				"enrol",
+				"enrolment_access_dataprovider"
+			],
+			[
+				"acces",
+				"access_status"
+			],
+			[
+				"can",
+				"can_access_branch_through_accessible_classes"
+			],
+			[
+				"course",
+				"course2"
+			],
+			[
+				"O",
+				"OWING"
+			],
+			[
+				"PA",
+				"PAYMENT_STATUS_CHOICES"
+			],
+			[
+				"pay",
+				"payment_status"
+			],
+			[
+				"acce",
+				"accessible_classes"
+			],
+			[
+				"scho",
+				"schoolclass_id"
+			],
+			[
+				"school",
+				"schoolclass_id"
+			],
+			[
+				"get",
+				"getattr"
+			],
+			[
+				"item",
+				"item_data"
+			],
+			[
+				"attr",
+				"attr_val"
+			],
+			[
+				"at",
+				"attr_name"
+			],
+			[
+				"lesson_data",
+				"lesson_data_items"
+			],
+			[
+				"upda",
+				"updated_course_json"
+			],
+			[
+				"uni",
+				"unittest"
+			],
+			[
+				"temp",
+				"tempdir"
+			],
+			[
+				"deb",
+				"debug_log"
+			],
+			[
+				"own",
+				"owned_branches"
+			],
+			[
+				"related",
+				"related_courses"
+			],
+			[
+				"incl",
+				"includeExpired"
+			],
+			[
+				"include",
+				"include_expired_classes"
+			],
+			[
+				"user",
+				"user_courses"
+			],
+			[
+				"schol",
+				"school_class_qs"
+			],
+			[
+				"clas",
+				"class_ids"
+			],
+			[
+				"cla",
+				"class_ids"
+			],
+			[
+				"class_c",
+				"class_covered_branches_ids"
+			],
+			[
+				"schools",
+				"schools_represented"
+			],
+			[
+				"db_",
+				"db_index"
+			],
+			[
+				"get_accessible_cou",
+				"get_accessible_course_ids"
+			],
+			[
+				"active",
+				"active_classes_only"
+			],
+			[
+				"en",
+				"enrolled_student_names"
+			],
+			[
+				"Enro",
+				"EnrolmentFactory"
+			],
+			[
+				"sch",
+				"school_class_one"
+			],
+			[
+				"School",
+				"SchoolClassFactory"
+			],
+			[
+				"tod",
+				"tod_django"
+			],
+			[
+				"call",
+				"call_args_list"
+			],
+			[
+				"tableL",
+				"table_loader"
+			],
+			[
+				"tablelo",
+				"table_loader"
+			],
+			[
+				"table",
+				"table_data"
+			],
+			[
+				"En",
+				"EntityLoader"
+			],
+			[
+				"enr",
+				"enrolment_profiles_by_class_id"
+			],
+			[
+				"teacher",
+				"teachers_data"
+			],
+			[
+				"school_",
+				"school_class"
+			],
+			[
+				"No",
+				"DoesNotExist"
+			],
+			[
+				"ExamL",
+				"ExamLock"
+			],
+			[
+				"miss",
+				"missing_classes\tstatement"
+			],
+			[
+				"_se",
+				"_set_error\tfunction"
+			],
+			[
+				"lesson",
+				"lesson_instance\tstatement"
+			],
+			[
+				"link",
+				"link_data\tforstmt"
+			],
+			[
+				"Gene",
+				"GenericLink\tclass"
+			],
+			[
+				"update",
+				"updatePlayers"
+			],
+			[
+				"defaul",
+				"defaultValue"
+			],
+			[
+				"PL",
+				"PLAYBACK_VOLUME_COOKIE_NAME"
+			],
+			[
+				"hand",
+				"handleQuestionFieldChange"
+			],
+			[
+				"resource",
+				"resource_name\tforstmt"
+			],
+			[
+				"cur",
+				"curriculum\tstatement"
+			],
+			[
+				"teacher_train",
+				"teacher_training_class_name"
+			],
+			[
+				"train",
+				"training_classes"
+			],
+			[
+				"Mul",
+				"MultipleObjectsReturned"
+			],
+			[
+				"tra",
+				"training_course_slug\tstatement"
+			],
+			[
+				"ass",
+				"assertion_lambda\tparam"
+			],
+			[
+				"dataprovider",
+				"data_provider\tfunction"
+			],
+			[
+				"ex",
+				"expiration_date"
+			],
+			[
+				"exp",
+				"expiration_date_str\tstatement"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"serial",
+				"serialize_report\tfunction"
+			],
+			[
+				"_ob",
+				"_object_serialized\tstatement"
+			],
+			[
+				"add",
+				"addRemovedRenderer"
+			],
+			[
+				"St",
+				"StudentTableLoader\tclass"
+			],
+			[
+				"curr",
+				"current_profiles\tforstmt"
+			],
+			[
+				"ser",
+				"serialize_school_class_profiles\tfunction"
+			],
+			[
+				"schoo",
+				"school_class_modifications\tstatement"
+			],
+			[
+				"inter",
+				"intersection\tstatement"
+			],
+			[
+				"profil",
+				"profiles_before\tforstmt"
+			],
+			[
+				"profiles",
+				"profiles_after\tstatement"
+			],
+			[
+				"prof",
+				"profiles_before\tstatement"
+			],
+			[
+				"profi",
+				"profiles_before\tforstmt"
+			],
+			[
+				"_sch",
+				"_school_class_profiles_after\tstatement"
+			],
+			[
+				"_schol",
+				"_school_class_profiles_before\tstatement"
+			],
+			[
+				"question",
+				"questionPropTypeShape"
+			],
+			[
+				"ref",
+				"refluxConnectpr"
+			],
+			[
+				"reflu",
+				"refluxConnector"
+			],
+			[
+				"mark",
+				"marks_from_student"
+			],
+			[
+				"marks",
+				"marks_final"
+			],
+			[
+				"stud",
+				"StudentLessonProgressMixin"
+			],
+			[
+				"student",
+				"studentLessonProgressLoader"
+			],
+			[
+				"store",
+				"storeConnector"
+			],
+			[
+				"refl",
+				"refluxConnect"
+			],
+			[
+				"que",
+				"questionItem"
+			],
+			[
+				"render",
+				"renderCourses"
+			],
+			[
+				"show",
+				"showYourClasses"
+			],
+			[
+				"Cour",
+				"CourseCreated"
+			],
+			[
+				"Reflux",
+				"RefluxConnector"
+			],
+			[
+				"Ref",
+				"RefluxListener"
+			],
+			[
+				"cours",
+				"course_name\tstatement"
+			],
+			[
+				"seriali",
+				"serialize_object\tfunction"
+			],
+			[
+				"object",
+				"object_serialized"
+			],
+			[
+				"profile_",
+				"profile_qs\tstatement"
+			],
+			[
+				"enit",
+				"entity_data\tparam"
+			],
+			[
+				"Profil",
+				"ProfileLoader\tclass"
+			],
+			[
+				"font-size",
+				"font-size-adjust"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"U",
+				"uppercase"
+			],
+			[
+				"remove",
+				"removedStudents"
+			],
+			[
+				"remov",
+				"removedStudents"
+			],
+			[
+				"removed",
+				"removedStudents"
+			],
+			[
+				"getR",
+				"getRemovedStudents"
+			],
+			[
+				"enro",
+				"enrolments_to_remove\tparam"
+			],
+			[
+				"_find",
+				"_find_school_classes_with_training\tfunction"
+			],
+			[
+				"back",
+				"backgroundOpacity"
+			],
+			[
+				"sele",
+				"selectYellow"
+			],
+			[
+				"gr",
+				"green"
+			],
+			[
+				"ST",
+				"STATUS_ERROR\tstatement"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "client/scripts/components/Home.js",
+			"settings":
+			{
+				"buffer_size": 1505,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/Login.js",
+			"settings":
+			{
+				"buffer_size": 801,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
+			"settings":
+			{
+				"buffer_size": 540,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/AccommodationItems.js",
+			"settings":
+			{
+				"buffer_size": 5346,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/Spotify.js",
+			"settings":
+			{
+				"buffer_size": 4025,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/containers/Rsvp.js",
+			"settings":
+			{
+				"buffer_size": 5398,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/about/ImportantInfo.js",
+			"settings":
+			{
+				"buffer_size": 5163,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/about/Accommodation.js",
+			"settings":
+			{
+				"buffer_size": 551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/about/Location.js",
+			"settings":
+			{
+				"buffer_size": 1492,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".git/index",
+			"settings":
+			{
+				"buffer_size": 53602,
+				"encoding": "Hexadecimal",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/rsvpsteps/Thankyou.js",
+			"settings":
+			{
+				"buffer_size": 650,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "info - friday evening/sat morning arrival,\nclosing ceremony - 11am\nrsvp/accommodation - payment date, bank details\ndress code - big brown\nkids\nbyo for friday night and stash for after bar runs out\nspotify search\nno posting on facebook, there'll be a hashtag for instagram\njuggle with jono\n\nwishing tree\n\nsurvival guide\n\t-heels\n\t-torch\n\t-insect repelant\n\t-suncream\n\nsat/sunday plans\n\t- weribee gorge etc\n\t- sunday morning breakfast\n\n\nshowers, bathrooms facilities\npayment details on accom page\nboys bowling in the morning.\nknitting option on guest attendance\n\n\n\ntime\ncolor not blue\nwishing tree\n",
+			"file": "TODO",
+			"file_size": 595,
+			"file_write_time": 131409556104998667,
+			"settings":
+			{
+				"buffer_size": 594,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/about/WishingTree.js",
+			"settings":
+			{
+				"buffer_size": 1452,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/rsvpsteps/Attending.js",
+			"settings":
+			{
+				"buffer_size": 1987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/api/invitation.js",
+			"settings":
+			{
+				"buffer_size": 3531,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/views/index.js",
+			"settings":
+			{
+				"buffer_size": 801,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/index.js",
+			"settings":
+			{
+				"buffer_size": 1359,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/containers/App.js",
+			"settings":
+			{
+				"buffer_size": 7430,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/styles/site.less",
+			"settings":
+			{
+				"buffer_size": 2283,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/about/PaymentDetails.js",
+			"settings":
+			{
+				"buffer_size": 1011,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/about/SuggestedTracks.js",
+			"settings":
+			{
+				"buffer_size": 636,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/api.js",
+			"settings":
+			{
+				"buffer_size": 1574,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/layout/Header.js",
+			"settings":
+			{
+				"buffer_size": 2363,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/semantic-ui-less/semantic.less",
+			"settings":
+			{
+				"buffer_size": 2650,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/Invitation.js",
+			"settings":
+			{
+				"buffer_size": 1120,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/models/Invitation.js",
+			"settings":
+			{
+				"buffer_size": 416,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".env",
+			"settings":
+			{
+				"buffer_size": 524,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/semantic/semantic.less",
+			"settings":
+			{
+				"buffer_size": 3532,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 2504,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/rsvpsteps/GuestPreferences.js",
+			"settings":
+			{
+				"buffer_size": 6416,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/Attendee.js",
+			"settings":
+			{
+				"buffer_size": 1033,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "webpack.config.dev.js",
+			"settings":
+			{
+				"buffer_size": 492,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "preserv",
+		"selected_items":
+		[
+			[
+				"preserv",
+				"MultiEditUtils: Preserve Case"
+			],
+			[
+				"preser",
+				"MultiEditUtils: Preserve Case"
+			],
+			[
+				"prese",
+				"MultiEditUtils: Preserve Case"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"blame",
+				"Git: Blame"
+			],
+			[
+				"ipd",
+				"Snippet: ipdb debug tool"
+			],
+			[
+				"diff",
+				"Git: Diff Current File"
+			],
+			[
+				"dif",
+				"Git: Diff Current File"
+			],
+			[
+				"ip",
+				"Snippet: ipdb debug tool"
+			],
+			[
+				"ipdb",
+				"Snippet: ipdb debug tool"
+			],
+			[
+				"bla",
+				"Git: Blame"
+			],
+			[
+				"blam",
+				"Git: Blame"
+			],
+			[
+				"logger",
+				"Snippet: djangologger"
+			],
+			[
+				"logg",
+				"Snippet: djangologger"
+			],
+			[
+				"log",
+				"Snippet: djangologger"
+			],
+			[
+				"djangolo",
+				"Snippet: djangologger"
+			],
+			[
+				"snipp log",
+				"Snippet: djangologger"
+			],
+			[
+				"sql",
+				"SQL Beautifier: Format Current SQL File"
+			],
+			[
+				"git dif",
+				"Git: Diff Current File"
+			],
+			[
+				"book",
+				"SublimeBookmarks: Show All Bookmarks "
+			],
+			[
+				"add",
+				"SublimeBookmarks: Add Bookmark"
+			],
+			[
+				"go",
+				"SublimeBookmarks: Goto Bookmark"
+			],
+			[
+				"sub",
+				"SublimeBookmarks: Add Bookmark"
+			],
+			[
+				"bo",
+				"Bookmarks: Select Previous"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"nex",
+				"SublimeBookmarks: Goto Next Bookmark"
+			],
+			[
+				"sho a",
+				"SublimeBookmarks: Show All Bookmarks "
+			],
+			[
+				"bookma",
+				"SublimeBookmarks: Show All Bookmarks "
+			],
+			[
+				"goto bo",
+				"SublimeBookmarks: Goto Bookmark"
+			],
+			[
+				"goto",
+				"SublimeBookmarks: Goto Next Bookmark"
+			],
+			[
+				"bookmarks",
+				"SublimeBookmarks: Show All Bookmarks "
+			],
+			[
+				"sublime",
+				"SublimeBookmarks: Goto Bookmark"
+			],
+			[
+				"boo",
+				"Bookmarks: Select Next"
+			],
+			[
+				"addb",
+				"SublimeBookmarks: Add Bookmark"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pret",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"a",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"enable",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"dis",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"ena",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"ana",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"disable",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"Snippet: ipdb",
+				"Snippet: ipdb debug tool"
+			],
+			[
+				"sn",
+				"Snippet: nose pdb debug tool"
+			],
+			[
+				"lint this",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"djani",
+				"Django: Boilerplate"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"todo",
+				"TodoReview: Open Files"
+			],
+			[
+				"lint t",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"togg",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"toggl",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"pre",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"git",
+				"Git: Commit history"
+			],
+			[
+				"git com",
+				"Git: Quick Commit (current file)"
+			],
+			[
+				"l",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"llint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lin",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"tog",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"lint th",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lin tog",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"hist",
+				"Git: Commit history"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"bl",
+				"Git: Blame"
+			],
+			[
+				"git hi",
+				"Git: Commit history"
+			],
+			[
+				"git bl",
+				"Git: Blame"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"gitbl",
+				"Git: Blame"
+			],
+			[
+				"prety",
+				"HTMLPrettify"
+			],
+			[
+				"toggle lint",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"to",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"remo",
+				"Package Control: Remove Channel"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"set babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"isnt",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Tidy CSS"
+			],
+			[
+				"remov",
+				"Package Control: Remove Channel"
+			]
+		],
+		"width": 548.0
+	},
+	"console":
+	{
+		"height": 523.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": true
+	},
+	"expanded_folders":
+	[
+		"/home/danny/dev/repos/danny-gemma",
+		"/home/danny/dev/repos/danny-gemma/client",
+		"/home/danny/dev/repos/danny-gemma/client/scripts",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers",
+		"/home/danny/dev/repos/danny-gemma/client/semantic",
+		"/home/danny/dev/repos/danny-gemma/client/semantic/site",
+		"/home/danny/dev/repos/danny-gemma/routes",
+		"/home/danny/dev/repos/danny-gemma/routes/api",
+		"/home/danny/dev/repos/danny-gemma/routes/views",
+		"/home/danny/dev/repos/danny-gemma/templates",
+		"/home/danny/dev/repos/danny-gemma/templates/views",
+		"/home/danny/dev/repos/danny-gemma/node_modules/spotify-sdk",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/_site",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/definitions",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/definitions/globals",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/themes",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/themes/default",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/themes/default/elements",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/themes/default/globals"
+	],
+	"file_history":
+	[
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-react/src/elements/Loader/Loader.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/AccommodationGrid.js",
+		"/home/danny/dev/repos/danny-gemma/.gitignore",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/ScrollToTop.js",
+		"/home/danny/dev/repos/danny-gemma/public/styles/site.less",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/application.js",
+		"/home/danny/dev/repos/danny-gemma/webpack.config.dev.js",
+		"/home/danny/dev/repos/danny-gemma/.babelrc",
+		"/home/danny/dev/repos/danny-gemma/.env",
+		"/home/danny/dev/repos/danny-gemma/webpack.config.base.js",
+		"/home/danny/dev/repos/danny-gemma/routes/middleware.js",
+		"/home/danny/dev/repos/danny-gemma/client/semantic/site/globals/site.variables",
+		"/home/danny/dev/repos/danny-gemma/client/semantic/site/elements/container.overrides",
+		"/home/danny/dev/repos/danny-gemma/client/semantic/site/elements/test",
+		"/home/danny/dev/repos/danny-gemma/client/semantic/site/elements/container.variables",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/theme.less",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/theme.config",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/theme.config.example",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Home.js",
+		"/home/danny/dev/repos/danny-gemma/routes/api/attendees.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/spotify.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/GuestPreferences.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Login.js",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/definitions/globals/site.less",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/models/Invitation.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Mobile.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/App.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Header.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/AccommodationItems.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/AccommodationChoice.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Thankyou.js",
+		"/home/danny/dev/repos/danny-gemma/TODO",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Basics.js",
+		"/home/danny/dev/repos/danny-gemma/templates/views/index.pug",
+		"/home/danny/dev/repos/danny-gemma/webpack.config.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Spotify.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/Rsvp.js",
+		"/home/danny/dev/repos/danny-gemma/routes/views/index.js",
+		"/home/danny/dev/repos/danny-gemma/routes/index.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/api.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/PaymentDetails.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Location.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Attending.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Accommodation.js",
+		"/home/danny/dev/repos/danny-gemma/keystone.js",
+		"/home/danny/dev/repos/danny-gemma/client/semantic/theme.config",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/SizeWarning.js",
+		"/home/danny/dev/repos/danny-gemma/client/semantic/site/site.variables",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/definitions/globals/site.js",
+		"/usr/share/applications/google-chrome-low-dpi.desktop",
+		"/usr/share/applications/google-chrome.desktop",
+		"/home/danny/dev/repos/danny-gemma/danny-gemma.sublime-workspace",
+		"/home/danny/dev/edrolo/edrolo/tod_project/classysettings/dev.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/classysettings/local.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/cypress/fixtures/example.json",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/admin/components/lessons/edit/questiontypes/MultiChoiceQuestion.jsx",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/admin/components/lessons/edit/questiontypes/MultiChoiceQuestion.spec.js",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/admin/components/lessons/edit/Question.jsx",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/domains/app/components/buttons/Lock/Lock.spec.js",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/tests/test_profiles.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/requirements/base.pip",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/admin.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/templates/chunkview/chunkview.html",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/views.py",
+		"/home/danny/dev/edrolo/puppet/modules/edrolo/manifests/users.pp",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/migrations/0050_remove_grace_period_access_flags.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/common/tests.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/models.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/tests/test_access.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/migrations/0051_remove_owned_and_phony_owned.py",
+		"/home/danny/.dotfiles/shell/edrolorc.link",
+		"/home/danny/dev/edrolo/edrolo/tod_project/fabfile/__init__.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer/loaders/test_entity_loaders.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/test_lessons.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/tests/tests.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/models/__init__.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/test_tracking.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/test_selenium.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/test_grid.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/bookmarks/tests/test_ajax.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/test_ajax.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/test_quiz.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/views/school_classes.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/utils/__init__.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/payments/tests.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/serializers/tod.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/permissions.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/migrations/0018_enrolments_13_refresh_access_flags.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/serializers/profiles.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/stache/tests.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/scripts/create_load_testers.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/scripts/duplicate_class_data.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/views/common.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/serializers/progress.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/serializers/summary.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/summary.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/common/middleware.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/classysettings/au.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/notifications/__init__.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/tasks.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/test_notification.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/notifications/methods.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/views.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/utils.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer/exporter.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/tod/tests/mocks.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/migrations/0002_auto_20150814_1948.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer/test_importer.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/scripts/trial_classes.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/scripts/purchases_to_phony_own.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/scripts/owned_branches_vero_event_dump_2015-05.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/exams/migrations/0021_auto_20170524_1634.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/stache/managers.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/stache/models.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/views/study_planner.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/common/utils.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/exams/views.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/exams/models.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/migrations/0008_enrolments_3_data_migration.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/admin/components/lessons/edit/Chunk.jsx",
+		"/home/danny/dev/edrolo/edrolo/tod_project/podio/models.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/components/exams/ExamQuestion.jsx",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer/forms.py",
+		"/home/danny/.virtualenvs/edrolo/lib/python2.7/site-packages/rest_framework/views.py",
+		"/home/danny/.virtualenvs/edrolo/lib/python2.7/site-packages/rest_framework/renderers.py",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/urlRoutes.js",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/components/exams/entry.js",
+		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/components/exams/Exam.jsx"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 271.0,
+		"where_history":
+		[
+			"/home/danny/dev/repos/danny-gemma,,,-*dist*/",
+			"/home/danny/dev/repos/danny-gemma, !/home/danny/dev/repos/danny-gemma/public/dist",
+			"/home/danny/dev/repos/danny-gemma, -/home/danny/dev/repos/danny-gemma/public/dist",
+			"/home/danny/dev/repos/danny-gemma -/home/danny/dev/repos/danny-gemma/public/dist",
+			"/home/danny/dev/repos/danny-gemma",
+			"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less",
+			"/home/danny/dev/repos/danny-gemma",
+			"/home/danny/dev/repos/danny-gemma/node_modules/spotify-sdk",
+			"/home/danny/dev/repos/danny-gemma",
+			"/home/danny/dev/edrolo/edrolo",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/.virtualenvs",
+			"/home/danny/dev/edrolo/edrolo",
+			"/home/danny/.virtualenvs",
+			"/home/danny/dev/edrolo/edrolo",
+			"/home/danny/.virtualenvs",
+			"/home/danny/dev/edrolo/edrolo",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/.virtualenvs/edrolo",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/.virtualenvs/edrolo",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/, test*.py",
+			"<open files>",
+			"",
+			"<open files>",
+			"",
+			"<open files>",
+			"",
+			"/home/danny/dev/edrolo/edrolo/, test*.py",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/, urls.py",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/, urls.py",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/envs",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/tod_project",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/tod_project",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/tod_project",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/tod_project",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/admin",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/",
+			"/home/danny/dev/edrolo/puppet",
+			"/home/danny/dev/edrolo/edrolo-infrastructure",
+			"/home/danny/dev/edrolo/puppet",
+			"",
+			"/home/danny/dev/edrolo/puppet/modules/nginx",
+			"/home/danny/dev/edrolo/puppet",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/static/scss/admin",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react, *.spec.js",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/envs/edrolo/lib/python2.7/site-packages/import_export",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/envs/edrolo/lib/python2.7/site-packages/import_export",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/envs/edrolo/lib/python2.7/site-packages/import_export",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/envs/edrolo/lib/python2.7/site-packages/import_export",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/",
+			"/home/danny/.dotfiles",
+			"/home/danny/dev/.dotfiles",
+			"/home/danny/dev/edrolo/edrolo/tod_project/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django",
+			"/home/danny/dev/edrolo/edrolo/tod_project, *.csv",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django, *.csv",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/",
+			"/home/danny/dev/edrolo/edrolo/",
+			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/webpack"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"danny",
+			"whatever",
+			"cropped",
+			"AccommodationGrid",
+			"basics",
+			"Basics",
+			"ceremony",
+			"accomoda",
+			"accomodat",
+			"Cookies.set",
+			"PaymentDetails",
+			"invitation\\.attending",
+			"attending",
+			"Accommodation",
+			"Basics",
+			"em>",
+			"em",
+			"DIY",
+			"BYO Camping",
+			"accomodation",
+			"<Link",
+			"following",
+			"notstaying",
+			"sections",
+			"console.log",
+			"console",
+			"PropTypes",
+			"TEST_EMAIL",
+			"BASE_URL",
+			"localhost:8080",
+			"eart\" size=\"massive\" />\n        <Header>Thankyou for RSVPing\n        \t<br/>\n        \t{invitation.attending\n        \t\t? 'See you there!'\n        \t\t: 'Sorry you cant make it!'\n        \t}\n        </Header>\n        <Link to=\"/\">",
+			"screensizewarningDismissed",
+			"accomButtons",
+			"mobile",
+			"isMobile()",
+			"rsvpNavButtonWrapper",
+			"Container",
+			"<Container",
+			"200",
+			"Login",
+			"App",
+			"count > 1",
+			"count",
+			"middle",
+			": function()",
+			"Mobile",
+			"@computer",
+			"siteFolder",
+			"material",
+			"Segment",
+			"aboutPage",
+			"SemanticHeader",
+			"App",
+			"large",
+			"Item",
+			"Header",
+			"Route",
+			"component",
+			"this.props.",
+			"renderLoginForm",
+			"--force-device-scale-factor=2",
+			"force-device-scale-factor=1.2",
+			"locals",
+			"rsvpEmail",
+			"accounts.spotify",
+			"api.",
+			"accounts.spotify.com",
+			"SPOTIFY_CLIENT_ID",
+			"updateETA",
+			"EtaOption",
+			"hsc",
+			"base.sql",
+			"vcaa-disclaimer",
+			"it.skip",
+			"question",
+			"lesson.get",
+			"lesson",
+			"':",
+			"\"",
+			"sinon",
+			"Lock",
+			"<Lock",
+			"Lock",
+			"assertInHTML",
+			"assertInhtml",
+			"test_updated_at_incremented_with_update",
+			"chunkview.html",
+			"react-input-datalist",
+			"funds_settled",
+			"True",
+			"REMOVED,          True",
+			",          True",
+			"REMOVED,          True",
+			",          True",
+			"False",
+			",          True,               ",
+			"          True,",
+			"DUPLICATED",
+			"access_status",
+			"profile_in_grace_period",
+			"in_grace_period",
+			"ACCESS",
+			"X",
+			"False,              False",
+			".",
+			"ACCESS",
+			"in_grace_period",
+			"data",
+			"should",
+			"test_enrolment_gives_no_access_for_unknown_status",
+			"test_course_progress_link_is_in_html",
+			"get_resume_url",
+			"get_resume",
+			"get_resume_url",
+			"test_get_resume_urls_unvisited_returns_first_chunk_url",
+			"class",
+			"ChunkVisit",
+			"ChunkVisits",
+			"chunk_visits",
+			"get_last_visited_chunk_for_course",
+			"get_resume_urls",
+			"test_get_resume_urls_returns_most_recent_chunk_url",
+			"test_anonymous_user_cant_access_branches",
+			"def can_access_branch",
+			"OwnershipTests",
+			"test_student_with_unpaid_enrolment_gets_access_within_grace_period",
+			"test_show_solution_is_in_context",
+			"test_visited_chunk_id_set_is_in_context"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"AccommodationItems",
+			"record_owned_branches_task",
+			"record_accessible_branches_task",
+			"leaf_nodes",
+			"CanAccessPrivilegedContent",
+			"from log_utils import test_log",
+			"test_log(",
+			"from tod_django.log_utils import test_log",
+			"$1test_debug(",
+			"from test_utils import debug_log",
+			"debug_log",
+			"import test_debug",
+			"",
+			"$1test_debug(",
+			"$1logger.debug(",
+			"current_or_expired_within_month",
+			"core/utils/refluxConnector",
+			"_get_classes_to_enrol",
+			"exists",
+			"_create",
+			".errors",
+			" errors",
+			" object",
+			" $0_find_school_classes(",
+			" _find_school_classes(",
+			"_get_or_create_training_classes",
+			"destructive_mode",
+			"entity_loaders",
+			"destructive",
+			"$0settings=self.get_settings()",
+			"",
+			"find_object(",
+			"find_object",
+			"get_object",
+			".object",
+			"object",
+			"$1,11",
+			"12",
+			"resource_name",
+			"resource",
+			"log_import_error",
+			"include_inactive_enrolments",
+			"WistiaProjectActions",
+			"WistiaMediaActions",
+			"{contentTypes.LESSON}",
+			"contentTypes.LESSON",
+			"WistiaProjectStore",
+			"WistiaMediaStore",
+			"WistiaSectionStore",
+			"new schema",
+			"new schema.Values",
+			"new schema.Entity",
+			"new schema.Array",
+			"$1\n/* eslint-disable no-unused-expressions */",
+			"$1'",
+			"LOCK_EXAM_REQUEST",
+			"LOCK_LESSON_RESOURCE_REQUEST",
+			"sharedWithAllClasses",
+			"teacherMode",
+			"shareWithAllClasses",
+			"sharedWithAllClasses",
+			"onNotGrokked",
+			"onGrokked",
+			"getCourseIdForRouteSlug",
+			"createClassCourseSelectors",
+			"getPortalBreadcrumbsToTemplate",
+			"submitQuestionGrokked",
+			"ProgressBar",
+			"calculateStudentLessonProgressSummary",
+			"import * as contentSelectors from 'edrolo/selectors/content';",
+			"getClassIdRouteParam",
+			"getLessonIdRouteParam",
+			"routeSelectors.getClassIdFromRoute",
+			"'id'",
+			"keyGenerators.studentLessonProgress",
+			"getAllStudentSittingProgress",
+			"getAllStudentLessonProgress",
+			"makeGetLessonClassProgressAverages",
+			"STUDENT_SITTING_PROGRESS",
+			"STUDENT_LESSON_PROGRESS",
+			"getAllLessonProgress",
+			"SUBMIT_LESSON_SELF_RATING_FAILURE",
+			"POPOVER_CONTROL_SET_SIGNAL",
+			"POPOVER_CONTROL_REGISTER_SIGNAL",
+			"POPOVER_CONTROL_CLOSE_SIGNAL",
+			"hasClassAccess",
+			"makeGetTopicExams",
+			"$1defaultValue$2",
+			"global.__static__",
+			"global.getSafely(",
+			"</$1$2",
+			"<$1$2",
+			"$2",
+			"$1",
+			"",
+			"$2",
+			"",
+			"url(\"img",
+			"url\\(\"~img",
+			"hasTeacherAccessToClass",
+			"hasTeacherAccess",
+			"navigateToLessonQuestion",
+			"routing.params",
+			"import * as studyPlannerActions from 'edrolo/domains/studyplanner/actions'",
+			"getClassRolesForCourse",
+			"$1 { $2: $3 })",
+			"somedayDoSomethingBetterThanThisHack",
+			"from 'lazylib/mathquill",
+			"selectors",
+			"reducer",
+			"WistiaPlayer",
+			"SafeHTML",
+			"$1({value}) => $2(value)$3",
+			"</FormControl>",
+			"$1FormControl$3",
+			"<FormControl",
+			"GROKKED",
+			"grokked",
+			"SUBMIT_MULTI_CHOICE_RESPONSE",
+			"edrolo/domains/exams/reducer",
+			"'edrolo/domains/app/components/LoadingIndicator'",
+			"from 'edrolo/domains/app/components/LoadingIndicator'",
+			"getFlatQuestionsForExam",
+			"ForRoute",
+			"edrolo/propTypes",
+			"userHasClassTeacherAccess",
+			"render_bundle 'edrOLDo'",
+			"state.userProgress"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "client/scripts/components/Home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1066,
+								1066
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/scripts/components/Login.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								260,
+								260
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 540,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								385,
+								385
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/scripts/components/AccommodationItems.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								937,
+								937
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 690.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/scripts/components/Spotify.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 345.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/scripts/containers/Rsvp.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3201,
+								3201
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/scripts/components/about/ImportantInfo.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5110,
+								5110
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/scripts/components/about/Accommodation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								281
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "client/scripts/components/about/Location.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								750,
+								750
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": ".git/index",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 53602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "client/scripts/components/rsvpsteps/Thankyou.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 650,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "TODO",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								290,
+								290
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 276.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "client/scripts/components/about/WishingTree.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								210,
+								210
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "client/scripts/components/rsvpsteps/Attending.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								512,
+								512
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 489.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "routes/api/invitation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3517,
+								3517
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3196.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "routes/views/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "routes/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1004,
+								1004
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "client/scripts/containers/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3802,
+								3802
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2755.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "public/styles/site.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 628.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "client/scripts/components/about/PaymentDetails.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								319,
+								319
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "client/scripts/components/about/SuggestedTracks.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								535,
+								535
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "client/scripts/api.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								752,
+								752
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "client/scripts/components/layout/Header.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2137,
+								2137
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "node_modules/semantic-ui-less/semantic.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2650,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "models/Invitation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								527,
+								527
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "client/scripts/models/Invitation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								277,
+								277
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": ".env",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								378,
+								378
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "client/semantic/semantic.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3532,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3399,
+								3399
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1065.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2114,
+								2114
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (NPM).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 888.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "client/scripts/components/rsvpsteps/GuestPreferences.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "models/Attendee.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								424,
+								424
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "webpack.config.dev.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 133.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 388.0
+	},
+	"pinned_build_system": "",
+	"project": "danny-gemma.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"login",
+				"danny-gemma/client/scripts/components/Login.js"
+			],
+			[
+				"home",
+				"danny-gemma/client/scripts/components/Home.js"
+			],
+			[
+				"loca",
+				"danny-gemma/client/scripts/components/about/Location.js"
+			],
+			[
+				"impi",
+				"danny-gemma/client/scripts/components/about/ImportantInfo.js"
+			],
+			[
+				"impor",
+				"danny-gemma/client/scripts/components/about/ImportantInfo.js"
+			],
+			[
+				"site",
+				"danny-gemma/public/styles/site.less"
+			],
+			[
+				"attend",
+				"danny-gemma/models/Attendee.js"
+			],
+			[
+				"header",
+				"danny-gemma/client/scripts/components/layout/Header.js"
+			],
+			[
+				"imp",
+				"danny-gemma/client/scripts/components/about/ImportantInfo.js"
+			],
+			[
+				"app",
+				"danny-gemma/client/scripts/containers/App.js"
+			],
+			[
+				"sem",
+				"danny-gemma/client/semantic/semantic.less"
+			],
+			[
+				"seman",
+				"semantic-ui-less/semantic.less"
+			],
+			[
+				"impo",
+				"danny-gemma/client/scripts/components/about/ImportantInfo.js"
+			],
+			[
+				"wish",
+				"danny-gemma/client/scripts/components/about/WishingTree.js"
+			],
+			[
+				"",
+				"danny-gemma/client/scripts/components/AccommodationItems.js"
+			],
+			[
+				".env",
+				"danny-gemma/.env"
+			],
+			[
+				"site.",
+				"danny-gemma/public/styles/site.less"
+			],
+			[
+				"accom",
+				"danny-gemma/client/scripts/components/AccommodationItems.js"
+			],
+			[
+				"wishin",
+				"danny-gemma/client/scripts/components/about/WishingTree.js"
+			],
+			[
+				"paymen",
+				"danny-gemma/client/scripts/components/about/PaymentDetails.js"
+			],
+			[
+				"pack",
+				"danny-gemma/package.json"
+			],
+			[
+				"basi",
+				"danny-gemma/client/scripts/components/about/Basics.js"
+			],
+			[
+				"api",
+				"danny-gemma/client/scripts/api.js"
+			],
+			[
+				"invi",
+				"danny-gemma/client/scripts/models/Invitation.js"
+			],
+			[
+				"invit",
+				"danny-gemma/models/Invitation.js"
+			],
+			[
+				"bas",
+				"danny-gemma/client/scripts/components/about/Basics.js"
+			],
+			[
+				"pay",
+				"danny-gemma/client/scripts/components/about/PaymentDetails.js"
+			],
+			[
+				"web",
+				"danny-gemma/webpack.config.dev.js"
+			],
+			[
+				"invitation",
+				"danny-gemma/models/Invitation.js"
+			],
+			[
+				"index",
+				"danny-gemma/templates/views/index.pug"
+			],
+			[
+				"webpa",
+				"danny-gemma/webpack.config.js"
+			],
+			[
+				".git",
+				"danny-gemma/.gitignore"
+			],
+			[
+				"pug",
+				"danny-gemma/templates/views/index.pug"
+			],
+			[
+				"inde",
+				"danny-gemma/templates/views/index.pug"
+			],
+			[
+				"site.le",
+				"danny-gemma/public/styles/site.less"
+			],
+			[
+				"site.l",
+				"danny-gemma/public/styles/site.less"
+			],
+			[
+				"mobile",
+				"danny-gemma/client/scripts/components/Mobile.js"
+			],
+			[
+				"accommo",
+				"danny-gemma/client/scripts/components/rsvpsteps/AccommodationChoice.js"
+			],
+			[
+				"tod",
+				"danny-gemma/TODO"
+			],
+			[
+				"site.less",
+				"danny-gemma/public/styles/site.less"
+			],
+			[
+				"appl",
+				"danny-gemma/client/scripts/application.js"
+			],
+			[
+				"invita",
+				"danny-gemma/client/scripts/models/Invitation.js"
+			],
+			[
+				"spo",
+				"danny-gemma/client/scripts/spotify.js"
+			],
+			[
+				"webapck",
+				"danny-gemma/webpack.config.js"
+			],
+			[
+				"site.les",
+				"danny-gemma/public/styles/site.less"
+			],
+			[
+				"index.pu",
+				"danny-gemma/templates/views/index.pug"
+			],
+			[
+				"base.sql",
+				"edrolo/tod_project/tod_django/sql_dump/base.sql"
+			],
+			[
+				"lessoneditquestion",
+				"edrolo/tod_project/tod_django/react/src/admin/components/lessons/edit/Question.jsx"
+			],
+			[
+				"spec.js",
+				"edrolo/tod_project/tod_django/react/src/edrolo/domains/app/components/buttons/Lock/Lock.spec.js"
+			],
+			[
+				"multichoi",
+				"edrolo/tod_project/tod_django/react/src/admin/components/lessons/edit/questiontypes/MultiChoiceQuestion.jsx"
+			],
+			[
+				"cypress/fixtures/",
+				"edrolo/tod_project/tod_django/react/cypress/fixtures/example.json"
+			],
+			[
+				"local",
+				"edrolo/tod_project/classysettings/local.py"
+			],
+			[
+				"dev.",
+				"edrolo/tod_project/classysettings/dev.py"
+			],
+			[
+				"profilesauto",
+				"edrolo/tod_project/tod_django/profiles/migrations/0051_auto_20170529_1014.py"
+			],
+			[
+				"fabfile__",
+				"edrolo/tod_project/fabfile/__init__.py"
+			],
+			[
+				"puppetedrolouser",
+				"puppet/modules/edrolo/manifests/users.pp"
+			],
+			[
+				"auto",
+				"edrolo/tod_project/tod_django/profiles/migrations/0050_auto_20170525_1258.py"
+			],
+			[
+				"chunkview.html",
+				"edrolo/tod_project/tod_django/templates/chunkview/chunkview.html"
+			],
+			[
+				"requbase",
+				"edrolo/tod_project/requirements/base.pip"
+			],
+			[
+				"profilesmodels",
+				"edrolo/tod_project/tod_django/profiles/models.py"
+			],
+			[
+				"importerte",
+				"edrolo/tod_project/tod_django/importer/loaders/test_entity_loaders.py"
+			],
+			[
+				"requirementsbase",
+				"edrolo/tod_project/requirements/base.pip"
+			],
+			[
+				"profilemodels",
+				"edrolo/tod_project/tod_django/profiles/models.py"
+			],
+			[
+				"apitests",
+				"edrolo/tod_project/tod_django/api/tests/tests.py"
+			],
+			[
+				"test_trac",
+				"edrolo/tod_project/tod_django/tod/tests/test_tracking.py"
+			],
+			[
+				"test_aja",
+				"edrolo/tod_project/tod_django/tod/tests/test_ajax.py"
+			],
+			[
+				"test_gr",
+				"edrolo/tod_project/tod_django/tod/tests/test_grid.py"
+			],
+			[
+				"test_quiz",
+				"edrolo/tod_project/tod_django/tod/tests/test_quiz.py"
+			],
+			[
+				"test_lessons",
+				"edrolo/tod_project/tod_django/tod/tests/test_lessons.py"
+			],
+			[
+				"test_profiles",
+				"edrolo/tod_project/tod_django/profiles/tests/test_profiles.py"
+			],
+			[
+				"test_qu",
+				"edrolo/tod_project/tod_django/tod/tests/test_quiz.py"
+			],
+			[
+				"profilemodel",
+				"edrolo/tod_project/tod_django/profiles/models.py"
+			],
+			[
+				"dev",
+				"edrolo/tod_project/classysettings/dev.py"
+			],
+			[
+				"profilesmigr",
+				"edrolo/tod_project/tod_django/profiles/migrations/0008_enrolments_3_data_migration.py"
+			],
+			[
+				"examq",
+				"edrolo/tod_project/tod_django/react/src/edrolo/components/exams/ExamQuestion.jsx"
+			],
+			[
+				"summary",
+				"edrolo/tod_project/tod_django/tod/summary.py"
+			],
+			[
+				"viewsstud",
+				"edrolo/tod_project/tod_django/api/views/study_planner.py"
+			],
+			[
+				"exammodels",
+				"edrolo/tod_project/tod_django/exams/models.py"
+			],
+			[
+				"examurl",
+				"edrolo/tod_project/tod_django/exams/urls.py"
+			],
+			[
+				"urlrout",
+				"edrolo/tod_project/tod_django/react/src/edrolo/urlRoutes.js"
+			],
+			[
+				"examentry",
+				"edrolo/tod_project/tod_django/react/src/edrolo/components/exams/entry.js"
+			],
+			[
+				"exam",
+				"edrolo/tod_project/tod_django/react/src/edrolo/components/exams/Exam.jsx"
+			],
+			[
+				"todur",
+				"edrolo/tod_project/tod_django/urls.py"
+			],
+			[
+				"djangoapiper",
+				"edrolo/tod_project/tod_django/api/permissions.py"
+			],
+			[
+				"0049",
+				"edrolo/tod_project/tod_django/profiles/migrations/0049_auto_20170524_1401.py"
+			],
+			[
+				"importer",
+				"edrolo/tod_project/tod_django/importer/importer.py"
+			],
+			[
+				"lissstest_ext",
+				"edrolo/tod_project/liss/tests/test_external.py"
+			],
+			[
+				"log",
+				"edrolo/tod_project/log_utils.py"
+			],
+			[
+				"test",
+				"edrolo/tod_project/classysettings/test.py"
+			],
+			[
+				"profilenotif",
+				"edrolo/tod_project/tod_django/profiles/notifications/__init__.py"
+			],
+			[
+				"profilesnotif",
+				"edrolo/tod_project/tod_django/profiles/notifications/__init__.py"
+			],
+			[
+				"utils.py",
+				"edrolo/tod_project/tod_django/common/utils.py"
+			],
+			[
+				"tod_djangoview",
+				"edrolo/tod_project/tod_django/views.py"
+			],
+			[
+				"apitest_ex",
+				"edrolo/tod_project/tod_django/api/tests/test_exams.py"
+			],
+			[
+				"podiotests",
+				"edrolo/tod_project/podio/tests.py"
+			],
+			[
+				"stachemanage",
+				"edrolo/tod_project/stache/managers.py"
+			],
+			[
+				"log_u",
+				"edrolo/tod_project/log_utils.py"
+			],
+			[
+				"log_util",
+				"edrolo/tod_project/log_utils.py"
+			],
+			[
+				"test_",
+				"edrolo/tod_project/test_utils.py"
+			],
+			[
+				"requirements",
+				"edrolo/tod_project/requirements/base.pip"
+			],
+			[
+				"profiles",
+				"edrolo/tod_project/tod_django/profiles/tests/test_profiles.py"
+			],
+			[
+				"__",
+				"edrolo/tod_project/__init__.py"
+			],
+			[
+				"serializerprofi",
+				"edrolo/tod_project/tod_django/api/serializers/profiles.py"
+			],
+			[
+				"profilestests",
+				"edrolo/tod_project/tod_django/profiles/tests/test_profiles.py"
+			],
+			[
+				"classytest",
+				"edrolo/tod_project/classysettings/test.py"
+			],
+			[
+				"todmodels__ini",
+				"edrolo/tod_project/tod_django/tod/models/__init__.py"
+			],
+			[
+				"profilemigrpoi",
+				"edrolo/tod_project/tod_django/profiles/migrations/0047_add_poc_index.py"
+			],
+			[
+				"util_",
+				"edrolo/tod_project/utils/__init__.py"
+			],
+			[
+				"usercourses",
+				"edrolo/tod_project/tod_django/react/src/edrolo/stores/UserCoursesStore.jsx"
+			],
+			[
+				"coursli",
+				"edrolo/tod_project/tod_django/react/src/edrolo/components/account/classes/CourseList.jsx"
+			],
+			[
+				"account",
+				"edrolo/tod_project/tod_django/react/src/edrolo/components/account/Account.jsx"
+			],
+			[
+				"courseaction",
+				"edrolo/tod_project/tod_django/react/src/edrolo/actions/CourseActions.js"
+			],
+			[
+				"coursesto",
+				"edrolo/tod_project/tod_django/react/src/admin/stores/CourseStore.js"
+			],
+			[
+				"coursepro",
+				"edrolo/tod_project/tod_django/react/src/edrolo/stores/CourseProgressStore.jsx"
+			],
+			[
+				"common.p",
+				"edrolo/tod_project/tod_django/api/views/common.py"
+			],
+			[
+				"todutils",
+				"edrolo/tod_project/tod_django/tod/tests/test_utils.py"
+			],
+			[
+				"apiurls",
+				"edrolo/tod_project/tod_django/api/urls.py"
+			],
+			[
+				"apiroute",
+				"edrolo/tod_project/tod_django/react/src/core/apiRoutes.js"
+			],
+			[
+				"profilesmodel",
+				"edrolo/tod_project/tod_django/profiles/models.py"
+			],
+			[
+				"_video",
+				"edrolo/tod_project/tod_django/profiles/templates/profiles/_video_progress.html"
+			],
+			[
+				"course_de",
+				"edrolo/tod_project/tod_django/templates/lessons/course_detail.html"
+			],
+			[
+				"notesprofile",
+				"notes/profiles/business_logic.rst"
+			],
+			[
+				"puppetusers.pp",
+				"puppet/modules/edrolo/manifests/users.pp"
+			],
+			[
+				"yourco",
+				"edrolo/tod_project/tod_django/react/src/edrolo/components/account/courses/YourCourses.jsx"
+			],
+			[
+				"global",
+				"edrolo/tod_project/tod_django/react/src/core/utils/globalMathsExtensions.js"
+			],
+			[
+				"setup",
+				"edrolo/tod_project/tod_django/react/utils/setupTestEnv.js"
+			],
+			[
+				"accountcourse",
+				"edrolo/tod_project/tod_django/react/src/edrolo/components/account/classes/CourseList.jsx"
+			],
+			[
+				"todmigrations0047",
+				"edrolo/tod_project/tod_django/profiles/migrations/0047_auto_20170512_1058.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 989.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/dev/edrolo/react.sublime-project"
+			],
+			[
+				"tod",
+				"~/dev/edrolo/tod.sublime-project"
+			]
+		],
+		"width": 760.0
+	},
+	"select_symbol":
+	{
+		"height": 566.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 2382.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 407.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
