@@ -128,7 +128,6 @@ exports.getTracks = function(req, res) {
     .populate('attendee')
     .exec((err, tracks) => {
       if (err) {
-        debugger
         return res.apiError('database error', err);
       }
 
