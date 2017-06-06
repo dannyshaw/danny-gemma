@@ -21,8 +21,8 @@ Attendee.add({
   createdAt: { type: Date, default: Date.now, noedit: true }
 });
 
-
 Attendee.relationship({ path: 'tracks', ref: 'SpotifyTrack', refPath: 'attendee' });
+Attendee.relationship({ path: 'invitation', ref: 'Invitation', refPath: 'attendees' });
 
 transform.toJSON(Attendee);
 

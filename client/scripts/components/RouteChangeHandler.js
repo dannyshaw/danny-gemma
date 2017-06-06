@@ -2,9 +2,10 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 
-class ScrollToTop extends React.Component {
+class RouteChangeHandler extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
+      global.ga('send', 'pageview', this.props.location.pathname);
       if (this.props.location.pathname.startsWith('/rsvp/guestpreferences/') &&
       	prevProps.location.pathname.startsWith('/rsvp/guestpreferences/'))	{
       	return;
@@ -18,4 +19,4 @@ class ScrollToTop extends React.Component {
   }
 }
 
-export default withRouter(ScrollToTop)
+export default withRouter(RouteChangeHandler)

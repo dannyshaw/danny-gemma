@@ -12,7 +12,7 @@ const AccommodationOption = ({
 	children,
 	onChange,
 }) => (
-  <Item centered raised>
+  <Item>
     <Item.Image src={imageSrc} />
     <Item.Content>
       <Item.Header>

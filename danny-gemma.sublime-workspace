@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"Imo",
+				"ImogenHurrion"
+			],
+			[
+				"Robyn",
+				"RobynHartlett"
+			],
+			[
+				"Dou",
+				"DougLangford"
+			],
+			[
+				"Mar",
+				"MarinaWatson"
+			],
+			[
+				"Hon",
+				"HoneWatson"
+			],
+			[
+				"Cat",
+				"CatEvans"
+			],
+			[
+				"Bill",
+				"BillyWright"
+			],
+			[
+				"And",
+				"AndyLiddell"
+			],
+			[
+				"Laur",
+				"LauraBolando"
+			],
+			[
+				"proces",
+				"processInvite"
+			],
+			[
+				"proce",
+				"processInvite"
+			],
+			[
+				"invi",
+				"invitations"
+			],
+			[
 				"less",
 				"lessLoader"
 			],
@@ -466,306 +514,27 @@
 			[
 				"border",
 				"border-radius"
-			],
-			[
-				"class",
-				"className"
-			],
-			[
-				"U",
-				"uppercase"
-			],
-			[
-				"remove",
-				"removedStudents"
-			],
-			[
-				"remov",
-				"removedStudents"
-			],
-			[
-				"removed",
-				"removedStudents"
-			],
-			[
-				"getR",
-				"getRemovedStudents"
-			],
-			[
-				"enro",
-				"enrolments_to_remove\tparam"
-			],
-			[
-				"_find",
-				"_find_school_classes_with_training\tfunction"
-			],
-			[
-				"back",
-				"backgroundOpacity"
-			],
-			[
-				"sele",
-				"selectYellow"
-			],
-			[
-				"gr",
-				"green"
-			],
-			[
-				"ST",
-				"STATUS_ERROR\tstatement"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "client/scripts/components/Home.js",
-			"settings":
-			{
-				"buffer_size": 1505,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/Login.js",
-			"settings":
-			{
-				"buffer_size": 801,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
-			"settings":
-			{
-				"buffer_size": 540,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/AccommodationItems.js",
-			"settings":
-			{
-				"buffer_size": 5346,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/Spotify.js",
-			"settings":
-			{
-				"buffer_size": 4025,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/containers/Rsvp.js",
-			"settings":
-			{
-				"buffer_size": 5398,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/ImportantInfo.js",
-			"settings":
-			{
-				"buffer_size": 5163,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/Accommodation.js",
-			"settings":
-			{
-				"buffer_size": 551,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/Location.js",
-			"settings":
-			{
-				"buffer_size": 1492,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".git/index",
-			"settings":
-			{
-				"buffer_size": 53602,
-				"encoding": "Hexadecimal",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/rsvpsteps/Thankyou.js",
-			"settings":
-			{
-				"buffer_size": 650,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "info - friday evening/sat morning arrival,\nclosing ceremony - 11am\nrsvp/accommodation - payment date, bank details\ndress code - big brown\nkids\nbyo for friday night and stash for after bar runs out\nspotify search\nno posting on facebook, there'll be a hashtag for instagram\njuggle with jono\n\nwishing tree\n\nsurvival guide\n\t-heels\n\t-torch\n\t-insect repelant\n\t-suncream\n\nsat/sunday plans\n\t- weribee gorge etc\n\t- sunday morning breakfast\n\n\nshowers, bathrooms facilities\npayment details on accom page\nboys bowling in the morning.\nknitting option on guest attendance\n\n\n\ntime\ncolor not blue\nwishing tree\n",
-			"file": "TODO",
-			"file_size": 595,
-			"file_write_time": 131409556104998667,
-			"settings":
-			{
-				"buffer_size": 594,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/WishingTree.js",
-			"settings":
-			{
-				"buffer_size": 1452,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/rsvpsteps/Attending.js",
-			"settings":
-			{
-				"buffer_size": 1987,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "routes/api/invitation.js",
 			"settings":
 			{
-				"buffer_size": 3531,
+				"buffer_size": 3573,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routes/views/index.js",
-			"settings":
-			{
-				"buffer_size": 801,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/index.js",
-			"settings":
-			{
-				"buffer_size": 1359,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/containers/App.js",
-			"settings":
-			{
-				"buffer_size": 7430,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/styles/site.less",
-			"settings":
-			{
-				"buffer_size": 2283,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/PaymentDetails.js",
-			"settings":
-			{
-				"buffer_size": 1011,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/about/SuggestedTracks.js",
-			"settings":
-			{
-				"buffer_size": 636,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/api.js",
-			"settings":
-			{
-				"buffer_size": 1574,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/layout/Header.js",
-			"settings":
-			{
-				"buffer_size": 2363,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "node_modules/semantic-ui-less/semantic.less",
-			"settings":
-			{
-				"buffer_size": 2650,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
+			"contents": "var keystone = require('keystone');\nvar transform = require('model-transform');\nvar Types = keystone.Field.Types;\n\nvar Invitation = new keystone.List('Invitation',{\n    defaultSort: 'createdAt',\n    track: true,\n    drilldown: 'attendees',\n});\n\nInvitation.add({\n  code: { type: String, required: true, index: true, initial: true },\n  address: { type: String },\n  attendees: { type: Types.Relationship, ref: 'Attendee', many: true },\n  attending: { type: Boolean },\n  eta: { type: Types.Select, options: [\n    { value: 'friday-eve', label: 'Friday Evening After 6' },\n    { value: 'saturday-morning', label: 'Saturday Morning After 11' },\n  ]},\n  sunday: { type: Boolean },\n  message: { type: Types.Textarea },\n  accommodation: { type: Types.Select, options: [\n    { value: 'dorm', label: 'Dorm Bunk' },\n    { value: 'byocamp', label: 'BYO Camping' },\n    { value: 'glamping', label: 'Glamping Bell Tent' },\n    { value: 'caravanpark', label: 'Caravan Park Cabin' },\n    { value: 'other', label: 'Other' },\n  ]},\n});\n\n// Invitation.schema.path('accommodation').set(function (newVal) {\n//   var originalVal = this.accommodation;\n//   debugger\n//   if (accommodation) {\n//     this._accomodationChanged = true;\n//   }\n// });\n// Invitation.schema.pre('save', function (next) {\n//   if (this._accomodationChanged) {\n//     debugger\n//   }\n//   next();\n// })\n\n// transform.toJSON(Invitation);\n\nInvitation.defaultColumns = 'code, attendees';\nInvitation.register();\n",
 			"file": "models/Invitation.js",
+			"file_size": 1419,
+			"file_write_time": 131411827965404647,
 			"settings":
 			{
-				"buffer_size": 1120,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/models/Invitation.js",
-			"settings":
-			{
-				"buffer_size": 416,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".env",
-			"settings":
-			{
-				"buffer_size": 524,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/semantic/semantic.less",
-			"settings":
-			{
-				"buffer_size": 3532,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 2504,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/scripts/components/rsvpsteps/GuestPreferences.js",
-			"settings":
-			{
-				"buffer_size": 6416,
+				"buffer_size": 1458,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -779,10 +548,43 @@
 			}
 		},
 		{
-			"file": "webpack.config.dev.js",
+			"file": "models/InviteSave.js",
 			"settings":
 			{
-				"buffer_size": 492,
+				"buffer_size": 484,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/rsvpsteps/GuestPreferences.js",
+			"settings":
+			{
+				"buffer_size": 6411,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/layout/Header.js",
+			"settings":
+			{
+				"buffer_size": 2363,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/scripts/components/Home.js",
+			"settings":
+			{
+				"buffer_size": 1505,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\n  \"invitation\": {\n    \"updatedAt\": \"2017-06-05T12:27:51.545Z\",\n    \"createdAt\": \"2017-06-05T12:27:51.545Z\",\n    \"address\": \"22 Longstone Road, Tooting, London, SW17 9BN, , United Kingdom\",\n    \"__v\": 0,\n    \n    \"_id\": \"59354e47e6157e1ca77fa060\",\n    \"code\": \"EABEC\",\n    \"sunday\": false,\n    \"attending\": false,\n    \"attendees\": [\n      {\n        \"_id\": \"59354e47e6157e1ca77fa012\",\n        \"__v\": 0,\n        \"createdAt\": \"2017-06-05T12:27:51.346Z\",\n        \"stitchin\": false,\n        \"dietaryprefs\": \"vegetarian\",\n        \"name\": {\n          \"first\": \"Fiona \",\n          \"last\": \"Brehony\"\n        \"email\": \"fiona.brehony@hotmail.co.uk\",\n        },\n        \"tracks\": []\n      }\n    ]\n  }\n}",
+			"settings":
+			{
+				"buffer_size": 691,
 				"line_ending": "Unix"
 			}
 		}
@@ -795,15 +597,19 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "preserv",
+		"last_filter": "preser",
 		"selected_items":
 		[
 			[
-				"preserv",
+				"preser",
 				"MultiEditUtils: Preserve Case"
 			],
 			[
-				"preser",
+				"pret",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"preserv",
 				"MultiEditUtils: Preserve Case"
 			],
 			[
@@ -945,10 +751,6 @@
 			[
 				"remove",
 				"Package Control: Remove Package"
-			],
-			[
-				"pret",
-				"Pretty JSON: Format (Pretty Print) JSON"
 			],
 			[
 				"pretty",
@@ -1171,18 +973,13 @@
 		"/home/danny/dev/repos/danny-gemma",
 		"/home/danny/dev/repos/danny-gemma/client",
 		"/home/danny/dev/repos/danny-gemma/client/scripts",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/containers",
-		"/home/danny/dev/repos/danny-gemma/client/semantic",
-		"/home/danny/dev/repos/danny-gemma/client/semantic/site",
+		"/home/danny/dev/repos/danny-gemma/models",
 		"/home/danny/dev/repos/danny-gemma/routes",
 		"/home/danny/dev/repos/danny-gemma/routes/api",
 		"/home/danny/dev/repos/danny-gemma/routes/views",
 		"/home/danny/dev/repos/danny-gemma/templates",
 		"/home/danny/dev/repos/danny-gemma/templates/views",
+		"/home/danny/dev/repos/danny-gemma/updates-bak",
 		"/home/danny/dev/repos/danny-gemma/node_modules/spotify-sdk",
 		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less",
 		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/_site",
@@ -1195,15 +992,48 @@
 	],
 	"file_history":
 	[
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/App.js",
+		"/home/danny/dev/repos/danny-gemma/updates-bak/0.0.2-attendees.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/spotify-demo.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Mobile.js",
+		"/home/danny/dev/repos/danny-gemma/updates-bak/0.0.1-admins.js",
+		"/home/danny/dev/repos/danny-gemma/models/Invitation.js",
+		"/home/danny/dev/repos/danny-gemma/updates/0.0.2-attendees.js",
+		"/home/danny/dev/repos/danny-gemma/webpack.config.dev.js",
+		"/home/danny/dev/repos/danny-gemma/models/Attendee.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/GuestPreferences.js",
+		"/home/danny/dev/repos/danny-gemma/package.json",
+		"/home/danny/dev/repos/danny-gemma/client/semantic/semantic.less",
+		"/home/danny/dev/repos/danny-gemma/.env",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/models/Invitation.js",
+		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/semantic.less",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Header.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/api.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/SuggestedTracks.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/PaymentDetails.js",
+		"/home/danny/dev/repos/danny-gemma/public/styles/site.less",
+		"/home/danny/dev/repos/danny-gemma/routes/index.js",
+		"/home/danny/dev/repos/danny-gemma/routes/views/index.js",
+		"/home/danny/dev/repos/danny-gemma/routes/api/invitation.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Attending.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/WishingTree.js",
+		"/home/danny/dev/repos/danny-gemma/TODO",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Thankyou.js",
+		"/home/danny/dev/repos/danny-gemma/.git/index",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Location.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Accommodation.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/ImportantInfo.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/Rsvp.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/AccommodationItems.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/AccommodationChoice.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Home.js",
+		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Login.js",
 		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-react/src/elements/Loader/Loader.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/AccommodationGrid.js",
 		"/home/danny/dev/repos/danny-gemma/.gitignore",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/ScrollToTop.js",
-		"/home/danny/dev/repos/danny-gemma/public/styles/site.less",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/application.js",
-		"/home/danny/dev/repos/danny-gemma/webpack.config.dev.js",
 		"/home/danny/dev/repos/danny-gemma/.babelrc",
-		"/home/danny/dev/repos/danny-gemma/.env",
 		"/home/danny/dev/repos/danny-gemma/webpack.config.base.js",
 		"/home/danny/dev/repos/danny-gemma/routes/middleware.js",
 		"/home/danny/dev/repos/danny-gemma/client/semantic/site/globals/site.variables",
@@ -1213,32 +1043,13 @@
 		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/theme.less",
 		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/theme.config",
 		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/theme.config.example",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Home.js",
 		"/home/danny/dev/repos/danny-gemma/routes/api/attendees.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/spotify.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/GuestPreferences.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Login.js",
 		"/home/danny/dev/repos/danny-gemma/node_modules/semantic-ui-less/definitions/globals/site.less",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/models/Invitation.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Mobile.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/App.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/layout/Header.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/AccommodationItems.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/AccommodationChoice.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Thankyou.js",
-		"/home/danny/dev/repos/danny-gemma/TODO",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Basics.js",
 		"/home/danny/dev/repos/danny-gemma/templates/views/index.pug",
 		"/home/danny/dev/repos/danny-gemma/webpack.config.js",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/components/Spotify.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/Rsvp.js",
-		"/home/danny/dev/repos/danny-gemma/routes/views/index.js",
-		"/home/danny/dev/repos/danny-gemma/routes/index.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/api.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/PaymentDetails.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Location.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/rsvpsteps/Attending.js",
-		"/home/danny/dev/repos/danny-gemma/client/scripts/components/about/Accommodation.js",
 		"/home/danny/dev/repos/danny-gemma/keystone.js",
 		"/home/danny/dev/repos/danny-gemma/client/semantic/theme.config",
 		"/home/danny/dev/repos/danny-gemma/client/scripts/containers/SizeWarning.js",
@@ -1308,31 +1119,18 @@
 		"/home/danny/dev/edrolo/edrolo/tod_project/scripts/owned_branches_vero_event_dump_2015-05.py",
 		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/exams/migrations/0021_auto_20170524_1634.py",
 		"/home/danny/dev/edrolo/edrolo/tod_project/stache/managers.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/stache/models.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/api/views/study_planner.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/common/utils.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/exams/views.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/exams/models.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/profiles/migrations/0008_enrolments_3_data_migration.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/admin/components/lessons/edit/Chunk.jsx",
-		"/home/danny/dev/edrolo/edrolo/tod_project/podio/models.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/components/exams/ExamQuestion.jsx",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/importer/forms.py",
-		"/home/danny/.virtualenvs/edrolo/lib/python2.7/site-packages/rest_framework/views.py",
-		"/home/danny/.virtualenvs/edrolo/lib/python2.7/site-packages/rest_framework/renderers.py",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/urlRoutes.js",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/components/exams/entry.js",
-		"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src/edrolo/components/exams/Exam.jsx"
+		"/home/danny/dev/edrolo/edrolo/tod_project/stache/models.py"
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 77.0
 	},
 	"find_in_files":
 	{
 		"height": 271.0,
 		"where_history":
 		[
+			"/home/danny/dev/repos/danny-gemma/client",
 			"/home/danny/dev/repos/danny-gemma,,,-*dist*/",
 			"/home/danny/dev/repos/danny-gemma, !/home/danny/dev/repos/danny-gemma/public/dist",
 			"/home/danny/dev/repos/danny-gemma, -/home/danny/dev/repos/danny-gemma/public/dist",
@@ -1459,15 +1257,29 @@
 			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django",
 			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/src",
 			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/",
-			"/home/danny/dev/edrolo/edrolo/",
-			"/home/danny/dev/edrolo/edrolo/tod_project/tod_django/react/webpack"
+			"/home/danny/dev/edrolo/edrolo/"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"InviteSave",
+			"Attendee",
+			"console.log",
+			"console",
+			"Jo",
+			"AndrewDunlop",
+			"this.state.err",
+			"joe",
+			"LukeRowsell",
+			"Luke",
+			"}\n",
+			"Luke",
+			"hurr",
+			"Fish",
+			"processInvite",
 			"danny",
 			"whatever",
 			"cropped",
@@ -1580,22 +1392,7 @@
 			"test_enrolment_gives_no_access_for_unknown_status",
 			"test_course_progress_link_is_in_html",
 			"get_resume_url",
-			"get_resume",
-			"get_resume_url",
-			"test_get_resume_urls_unvisited_returns_first_chunk_url",
-			"class",
-			"ChunkVisit",
-			"ChunkVisits",
-			"chunk_visits",
-			"get_last_visited_chunk_for_course",
-			"get_resume_urls",
-			"test_get_resume_urls_returns_most_recent_chunk_url",
-			"test_anonymous_user_cant_access_branches",
-			"def can_access_branch",
-			"OwnershipTests",
-			"test_student_with_unpaid_enrolment_gets_access_within_grace_period",
-			"test_show_solution_is_in_context",
-			"test_visited_chunk_id_set_is_in_context"
+			"get_resume"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1746,19 +1543,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "client/scripts/components/Home.js",
+					"file": "routes/api/invitation.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1505,
+						"buffer_size": 3573,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1066,
-								1066
+								3457,
+								3457
 							]
 						],
 						"settings":
@@ -1768,30 +1565,31 @@
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2587.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/scripts/components/Login.js",
+					"file": "models/Invitation.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 801,
+						"buffer_size": 1458,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								260,
-								260
+								1352,
+								1352
 							]
 						],
 						"settings":
@@ -1813,222 +1611,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "client/scripts/components/rsvpsteps/AccommodationChoice.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 540,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								385,
-								385
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/scripts/components/AccommodationItems.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								937,
-								937
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 690.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/scripts/components/Spotify.js",
+					"file": "models/Attendee.js",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 4025,
+						"buffer_size": 1033,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 345.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/scripts/containers/Rsvp.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5398,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3201,
-								3201
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2378.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "client/scripts/components/about/ImportantInfo.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5163,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5110,
-								5110
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1200.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "client/scripts/components/about/Accommodation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 551,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								281,
-								281
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "client/scripts/components/about/Location.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1492,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								750,
-								750
+								1033,
+								1033
 							]
 						],
 						"settings":
@@ -2049,12 +1644,47 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": ".git/index",
+					"buffer": 3,
+					"file": "models/InviteSave.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 53602,
+						"buffer_size": 484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								206,
+								206
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/scripts/components/rsvpsteps/GuestPreferences.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6411,
 						"regions":
 						{
 						},
@@ -2067,34 +1697,6 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "client/scripts/components/rsvpsteps/Thankyou.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 650,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								152,
-								152
-							]
-						],
-						"settings":
-						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
 							"git_gutter_is_enabled": true,
@@ -2107,386 +1709,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "TODO",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 594,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								290,
-								290
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 276.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 22,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "client/scripts/components/about/WishingTree.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1452,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								210,
-								210
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "client/scripts/components/rsvpsteps/Attending.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1987,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								512,
-								512
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 489.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 28,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "routes/api/invitation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3531,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3517,
-								3517
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3196.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 25,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "routes/views/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 801,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								493,
-								493
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 27,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "routes/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1359,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1004,
-								1004
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 26,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "client/scripts/containers/App.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7430,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3802,
-								3802
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2755.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "public/styles/site.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2283,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								648,
-								648
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 628.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "client/scripts/components/about/PaymentDetails.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1011,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								319,
-								319
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "client/scripts/components/about/SuggestedTracks.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 636,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								535,
-								535
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "client/scripts/api.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1574,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								752,
-								752
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 24,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
+					"buffer": 5,
 					"file": "client/scripts/components/layout/Header.js",
 					"semi_transient": false,
 					"settings":
@@ -2498,8 +1725,8 @@
 						"selection":
 						[
 							[
-								2137,
-								2137
+								2161,
+								2161
 							]
 						],
 						"settings":
@@ -2513,296 +1740,27 @@
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 939.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
-					"file": "node_modules/semantic-ui-less/semantic.less",
+					"buffer": 6,
+					"file": "client/scripts/components/Home.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2650,
+						"buffer_size": 1505,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "models/Invitation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1120,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								527,
-								527
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 29,
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "client/scripts/models/Invitation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 416,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								277,
-								277
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 30,
-					"type": "text"
-				},
-				{
-					"buffer": 26,
-					"file": ".env",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 524,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								378,
-								378
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 27,
-					"file": "client/semantic/semantic.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3532,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3399,
-								3399
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1065.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 28,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2504,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2114,
-								2114
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (NPM).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 888.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
-					"type": "text"
-				},
-				{
-					"buffer": 29,
-					"file": "client/scripts/components/rsvpsteps/GuestPreferences.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6416,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								502,
-								502
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 30,
-					"file": "models/Attendee.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1033,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								424,
-								424
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 31,
-					"file": "webpack.config.dev.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 492,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								45,
-								45
+								61,
+								61
 							]
 						],
 						"settings":
@@ -2818,7 +1776,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								596,
+								596
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/home/danny/dev/repos/danny-gemma",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -2826,7 +1812,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 39.0
 	},
 	"input":
 	{
@@ -2855,6 +1841,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 156.0
+	},
 	"output.find_results":
 	{
 		"height": 388.0
@@ -2863,7 +1853,7 @@
 	"project": "danny-gemma.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2873,12 +1863,40 @@
 		"selected_items":
 		[
 			[
-				"login",
-				"danny-gemma/client/scripts/components/Login.js"
+				"updates-ba",
+				"danny-gemma/updates-bak/0.0.2-attendees.js"
+			],
+			[
+				"header",
+				"danny-gemma/client/scripts/components/layout/Header.js"
 			],
 			[
 				"home",
 				"danny-gemma/client/scripts/components/Home.js"
+			],
+			[
+				"app",
+				"danny-gemma/client/scripts/containers/App.js"
+			],
+			[
+				"apiin",
+				"danny-gemma/routes/api/invitation.js"
+			],
+			[
+				"attendees",
+				"danny-gemma/updates-bak/0.0.2-attendees.js"
+			],
+			[
+				"0.0.2",
+				"danny-gemma/updates/0.0.2-attendees.js"
+			],
+			[
+				"inviat",
+				"danny-gemma/models/Invitation.js"
+			],
+			[
+				"login",
+				"danny-gemma/client/scripts/components/Login.js"
 			],
 			[
 				"loca",
@@ -2901,16 +1919,8 @@
 				"danny-gemma/models/Attendee.js"
 			],
 			[
-				"header",
-				"danny-gemma/client/scripts/components/layout/Header.js"
-			],
-			[
 				"imp",
 				"danny-gemma/client/scripts/components/about/ImportantInfo.js"
-			],
-			[
-				"app",
-				"danny-gemma/client/scripts/containers/App.js"
 			],
 			[
 				"sem",
@@ -3363,26 +2373,6 @@
 			[
 				"puppetusers.pp",
 				"puppet/modules/edrolo/manifests/users.pp"
-			],
-			[
-				"yourco",
-				"edrolo/tod_project/tod_django/react/src/edrolo/components/account/courses/YourCourses.jsx"
-			],
-			[
-				"global",
-				"edrolo/tod_project/tod_django/react/src/core/utils/globalMathsExtensions.js"
-			],
-			[
-				"setup",
-				"edrolo/tod_project/tod_django/react/utils/setupTestEnv.js"
-			],
-			[
-				"accountcourse",
-				"edrolo/tod_project/tod_django/react/src/edrolo/components/account/classes/CourseList.jsx"
-			],
-			[
-				"todmigrations0047",
-				"edrolo/tod_project/tod_django/profiles/migrations/0047_auto_20170512_1058.py"
 			]
 		],
 		"width": 0.0

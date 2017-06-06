@@ -24,7 +24,7 @@ import {
 
 import Invitation from '../models/Invitation';
 import Mobile from '../components/Mobile';
-import ScrollToTop from '../components/ScrollToTop';
+import RouteChangeHandler from '../components/RouteChangeHandler';
 import * as API from '../api';
 
 import Rsvp from './Rsvp';
@@ -64,6 +64,7 @@ class App extends React.Component {
     if (!this.isCodeValid()) {
       this.setState({ error: "Code must be 5 characters." })
     } else {
+      ga('set', 'userId', this.state.inviteCode);
       API.getInvitation(this.state.inviteCode)
         .then(({data, error}) => {
           if (error) {
@@ -104,7 +105,10 @@ class App extends React.Component {
     this.setState({ invitation: invitation, saving: true }, () => {
       API
         .updateInvitation(this.state.inviteCode, invitation)
-        .then(() => global.setTimeout(() => this.setState({ saving: false }), 300))
+        .then(() => {
+          global.ga('send', 'event', 'Invitation', 'save');
+          global.setTimeout(() => this.setState({ saving: false }), 300)
+        })
         .then(then)
       ;
     })
@@ -114,6 +118,7 @@ class App extends React.Component {
     if (this.state.inviteCode) {
       this.login(this.state.inviteCode)
     }
+
   }
 
   handleDismissSizeWarning = () => {
@@ -136,8 +141,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router onUpdate={() => window.scrollTo(0, 0)} >
-        <ScrollToTop>
+      <Router>
+        <RouteChangeHandler>
         <div>
           <Loader size='tiny' inline active={this.state.saving} className="saveIndicator">saving</Loader>
           <Header
@@ -202,7 +207,7 @@ class App extends React.Component {
             <Image src="/images/gemma_and_danny_smaller.jpg" size="small" className="minime gone" />
           )} />
         </div>
-        </ScrollToTop>
+        </RouteChangeHandler>
       </Router>
     );
   }
