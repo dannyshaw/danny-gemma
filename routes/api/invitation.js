@@ -108,12 +108,13 @@ function processAttendee(attendee, data, existingTracks) {
 function saveTrack(track, attendee) {
   SpotifyTrack.model.findOne({
     'spotifyId': track.spotifyId
-  }).exec((err, track) => {
+  }).exec((err, existingTrack) => {
     if (err) {
       return res.apiError('database error', err);
     }
+    debugger
 
-    if(!track) {
+    if(!existingTrack) {
       const newTrack = SpotifyTrack.model(track)
       newTrack.attendee = attendee;
       newTrack.save();

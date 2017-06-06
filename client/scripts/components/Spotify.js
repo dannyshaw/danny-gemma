@@ -67,6 +67,7 @@ class Spotify extends React.Component {
 					tracks: tracks.map(track => SpotifyTrack.fromTrack(track)),
 					loading: false,
 				})
+				global.ga('send', 'event', 'Spotify', 'search');
 			})
 			.catch(error => {
 				this.setState({'searchString': error })
@@ -114,7 +115,10 @@ class Spotify extends React.Component {
 						<Grid.Row>
 						{this.state.tracks.length > 0 && this.props.onSelect && (
 							<Button
-								onClick={() => this.props.onSelect(selectedTrack)}
+								onClick={() => {
+									global.ga('send', 'event', 'Spotify', 'trackAdded');
+									this.props.onSelect(selectedTrack)
+								}}
 								inverted={this.props.inverted}
 								disabled={!selectedTrack}
 								primary

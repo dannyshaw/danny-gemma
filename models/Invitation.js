@@ -46,6 +46,7 @@ Invitation.schema.pre('save', function (next) {
   var Glamper = keystone.list('Glamper');
   if (this._weHaveAGlamper) {
     const save = new Glamper.model({
+      who: this.attendees.map(attendee => attendee.name.first).join('&'),
       invitation: this,
     }).save((err) => {
       next()
