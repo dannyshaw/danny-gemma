@@ -137,5 +137,48 @@ exports.getTracks = function(req, res) {
     })
 }
 
+function getInvites(where, callback) {
+  Invitation.model
+    .find(where)
+    .populate('attendees')
+    .exec((err, invitations) => {
+      if (err) {
+        return res.apiError('database error', err);
+      }
 
+      const emails = invitations.reduce((acc, invitation) => {
+        return acc.concat(invitation.attendees.map(attendee => attendee.email))
+      }, [])
+
+      callback(emails)
+    })
+  ;
+}
+
+exports.getNoResponse = function(req, res) {
+  const epoch = new Date('2017/6/07 01:00')
+  getInvites({ updatedAt: { $lt: epoch } }, emails => {
+    res.apiResponse({ emails: emails });
+  })
+}
+
+exports.getAccomSet = function(req, res) {
+  const epoch = new Date('2017/6/07 01:00')
+  getInvites({
+    updatedAt: { $gt: epoch },
+    accommodation: { $ne: null },
+  }, emails => {
+    res.apiResponse({ emails: emails });
+  })
+}
+
+exports.getNoAccomSet = function(req, res) {
+  const epoch = new Date('2017/6/07 01:00')
+  getInvites({
+    updatedAt: { $gt: epoch },
+    accommodation: null,
+  }, emails => {
+    res.apiResponse({ emails: emails });
+  })
+}
 

@@ -30,8 +30,13 @@ exports = module.exports = function(app) {
   app.get('/api/attendees/:id', keystone.middleware.api, routes.api.attendees.get);
 
   app.get('/api/invitation/tunes', keystone.middleware.api, routes.api.invitation.getTracks);
+  app.get('/api/invitation/noresponse', keystone.middleware.api, routes.api.invitation.getNoResponse);
+  app.get('/api/invitation/accomset', keystone.middleware.api, routes.api.invitation.getAccomSet);
+  app.get('/api/invitation/noaccom', keystone.middleware.api, routes.api.invitation.getNoAccomSet);
+
   app.post('/api/invitation/:code', keystone.middleware.api, routes.api.invitation.update);
   app.get('/api/invitation/:code', keystone.middleware.api, routes.api.invitation.get);
+
 
   // Index and
   app.get('/t/:id', middleware.trackAttendeePageView, routes.views.index);
